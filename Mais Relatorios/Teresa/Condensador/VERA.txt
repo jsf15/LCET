@@ -1,0 +1,14 @@
+falei com o figueirinhas sobre os erros que me estao a dar para as resistencias e ele disse que era normal que eu tinha de comentar neles e dizer k 
+possivelmente este método não é muito bom para medira as resistencias, principalmente porque a corrente que passa na resistencia é muito pequena comparativamente
+com a que passa no condensador, por isso o pequeno erro na medida implica um grande erro na resistencia,e aquilo fica tudo maluco
+
+o valor da capacidade do condensador está um bocado elevada, apesar de haver um valor que é muito parecido com a realidade, é o assinalado a vermelho
+
+ainda falta calcular a constante dielectrica, em principio vou calcula-la com a média e com o melhor valor da capacidade
+
+disse ao gonçalo que podia fazer esta introdução, apetece-me, e o stor teve a explicar-me de onde veem as formulas k usamos e assim.
+
+COMO TÁ o CAMPO MAGNETICO? O RICARDO INSTALOU-ME O MATEMÁTICA! VOU VER SE CONSIGO VER ALGUMA COISA.
+O STOR TEVE A EXPLICAR-ME O QUE QUER PARA A ANÁLISE DE RESULTADOS.
+
+ 

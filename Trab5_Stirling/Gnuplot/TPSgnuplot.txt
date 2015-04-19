@@ -1,0 +1,30 @@
+reset
+set term aqua 0
+set notable
+set isosamples 15,15
+set ylabel "Pressão (hPa)" offset 0,-2,0
+set xlabel "Volume (cm^3)"
+set key font ",15"
+set ticslevel 0
+set xrange [550:1200]
+set yrange [-100:850]
+set style line 1 lc rgb '#0060ad' lt 1 lw 2 pt 7 ps 1.5   # --- blue
+
+
+plot "< awk '{if($4 != \"red\") print}' TPS.dat" using ($3*pi*6*6):2 notitle ,\
+"< awk '{if($4 == \"red\") print}' TPS.dat" using ($3*pi*6*6):2 lt 4 notitle ,\
+
+reset
+set term aqua 1
+set notable
+set xrange [0:500]
+set yrange [-100:800]
+set y2range [4:11]
+set y2tics 0, 1
+set ytics nomirror
+set xlabel "t(s)
+set ylabel "Pressão (hPa)"
+set y2label "Distância (cm)"
+
+plot "TPS.dat" using 1:2 with lines notitle axes x1y1,\
+"TPS.dat" using 1:3 with lines notitle axes x1y2,\

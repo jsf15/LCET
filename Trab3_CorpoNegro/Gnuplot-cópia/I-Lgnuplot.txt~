@@ -1,0 +1,29 @@
+set title "Intensidade função de comprimento de onda" font ",15"
+set ylabel "Intensidade()"
+set xlabel "Comprimento de onda (m^-1)"
+set yrange [0:1.1]
+set xrange[500:6000]
+h=6.62606957*10**(-34)
+c=299792458
+k=1.3806488*10**(-23)
+B=2.8977685*10**(-3)
+
+f(x)=a*(2*pi*h*c*c/(((x-b)*10**(-9))**5))*(1/(exp((h*c)/(k*t1*((x-b)*10**(-9))))-1))/(d*t1**5)
+g(x)=a*(2*pi*h*c*c/(((x)*10**(-9))**5))*(1/(exp((h*c)/(k*T*((x)*10**(-9))))-1))/(d*T**5)
+
+d=(2*pi*h*c*c/(B**5))*(1/(exp((h*c)/(k*B))-1))
+a=1;
+b=10;  #*10**(-9);
+t1=2404.311392;
+T=2404.311392;
+fit f(x) 'I-L.dat' using 1:($2/10.3933333333) via b
+
+#set key left top
+
+#plot "ADB1.dat" u 1:2 lt rgb "blue" t "Compressão Abiabática" ,\
+#f1(x) lt rgb "#228B22" notitle 
+
+plot f(x) notitle lt rgb 'blue' , g(x) notitle , "I-L.dat" u 1:($2/10.3933333333) lt rgb "blue" t "ahhh"
+
+#plot "< awk '{if($4 != \"red\") print}' ADB1.dat" u 1:2 lt rgb "blue" t "Compressão Adiabática"  , "< awk '{if($4 == \"red\") print}' ADB1.dat" u 1:2 lt rgb "red" notitle ,\
+f1(x) lt rgb "#228B22" notitle 

@@ -1,0 +1,16 @@
+ h(x)=8*pi*h*c/(x*x*x*x*x*(exp(h*c/(x*K*t))-1))
+ f(x)=8*pi*h*c/(x*x*x*x*x*(exp(h*c/(K*T*x))-1)); 
+ g(x)=8*pi*h*c/(x*x*x*x*x*(exp(h*c/(K*Y*x))-1));
+ pi = 3.14159265; 
+ set xrange [0:9e-6] 
+ K=1.3806503e-23
+ c=3e8
+ h=6.626e-34
+ T=2400
+ t=1250
+ Y=2000
+ set title "Distribuicao de Planck para 12V"
+ set xlabel "comprimentos de onda (metros)" 
+ set ylabel "intensidade (normalizada)" 
+ set label "[6.99806E-07, 2.23E-01]" at 7.4E-07, 2.23E-01
+ plot "pontosV12.dat" title 'pontos', f(x)/13604 title 'distribuicao de planck para T=2400K', g(x)/5495 title 'distribuicao de planck para T=2000K', h(x)/520 title 'distribuicao de planck para T=1250K 

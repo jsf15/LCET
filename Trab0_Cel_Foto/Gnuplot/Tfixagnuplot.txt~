@@ -1,0 +1,13 @@
+set title "Corrente com tensão fixa" font ",15"
+set ylabel "Corrente (mA)"
+set xlabel "Nível de iluminação (%)"
+set yrange [0.5:2.0]
+set xrange [40:105]
+
+
+plot "< awk '{if($3 != \"red\") print}' Tfixa.dat" u 1:2:(0.001) w yerr lt rgb "blue" t "Tensão U=1.7V" ,\
+"< awk '{if($3 == \"red\") print}' Tfixa.dat" u 1:2:(0.001) w yerr lt rgb "red" notitle ,\
+ f1(x) lt rgb "#228B22" notitle 
+
+#Resultados
+#f= (0.0230571 +/- 0.0006784) * x + (-0.48128 +/- 0.05595)

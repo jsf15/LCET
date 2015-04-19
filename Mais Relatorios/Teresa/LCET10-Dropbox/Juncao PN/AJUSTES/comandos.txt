@@ -1,0 +1,114 @@
+f(x) = R*x + ln(x)*b + c;
+fit "d1.txt" via R,b,c;
+
+
+
+h(x) = *x + ln(x)*  +   ;
+plot "d1.txt" title "dados para T = ", f(x) title " ";
+set xlabel "I (A)"
+set ylabel "V (V)"
+set label "( )" at
+
+
+
+g(x) = R*x +(2*K*T/q)*ln(sqrt((r/(2*s))*(r/(2*s)) + ((x+r)/s) +1) - r/(2*s));
+
+K=1.3806504*1E-23
+q= 1.602176487*1E-19
+T=297.65
+fit "d1.txt" via R,r,s;
+
+g(x) = R*x +(k*T)*ln(sqrt((r/(2*s))*(r/(2*s)) + ((x+r)/s) +1) - r/(2*s));
+
+g(x) = R*x +(k*T)*ln(sqrt((r/(2*s))*(r/(2*s)) + ((x+r)/s) +1) - r/(s));
+k=1.723*1E-4;
+T=297.65
+
+
+___________________________________
+b
+
+B(x) = K
+
+set key 390, 0.08; 
+set size 0.75;  
+set label "(351.66, 0.04091)" at 353.66 , 0.04091;
+set xlabel "T (K)";
+set ylabel "b";
+
+ F(x) = 1.88367e-005*x + 0.0346192 ;
+ B(x)= 0.0001723469*x   ;
+
+ plot "b.txt" title "b obtidos", B(x) title "valor te¾rico" , F(x) title
+ "f(x) = (1.88367e-005+/-2.719e-00)*x + (0.034619+/- 0.009318)"
+
+
+____________________________________________
+c
+
+C(x) = -a*(3*2*K/q)*x*log(x) +(2*E/q);
+q= 1.602176487*1E-19;
+K=8.617343*1E-5;
+
+
+c(x) = -a*x*log(x*b) +c*x + d;
+c(x) = - 0.134273 *x*log(x*0.988793 ) +0.918157 *x  -45.9636; 
+
+
+ajuste ao Eg
+ C(x) = -(0.0005170406)*x*log(x) +(26214340517905800000)*E*x;        
+C(x) = -(0.0005170406)*x*log(x) +(26214340517905800000)* (-4.008e-012)*
+x; 
+plot "c.txt" title "c obtidos", C(x) title "curva teorica"; c(x) title"
+c(x) = - (0.134273+/- 0.05732) * x * log ( x * (0.988793 +/- 4.202e+009) +( 0.91
+8157 +/- 5.703e+008) * x  (-45.9636 +/- 19.3 )";  
+
+
+set label "(333.65, 0.568250)" at 333.7, 0.568250
+set label "Ajuste: E =  -4.008e-012 +/- 2.041e-013" at 350, 0.6   
+
+_____________________________________________________________
+
+Ir
+
+R(x) = a*x*x*sqrt(x)*exp(-E/(2*K*x));
+K=8.617343*1E-5;
+fit R(x) "Ir.txt" via a, E;
+set yrange [0.000001:0.00008]  
+set xlabel "T (K)"   ;
+set ylabel "Ir";
+set label "(351.66,8.2390E-6)" at 351.66,8.2390E-6;
+set label "E = 1.57227 +/- 0.07714 (eV)" 260, 1.1e-5 
+set label "E = 1.57227 +/- 0.07714 (eV)" at 260, 1e-5 
+
+
+set label "E = 1.29982+/- 0.4818 (eV)" at 300, 3.7e-5;
+set label "a = 8.25016e-011 +/- 6.037e-010" at 300, 4e-5;
+set size 0.7;
+plot "Ir.txt"title "Ir obtidos", R(x) title "f(x) =*x^(5/2)*exp(-E/(2*k*x))";
+___________________________________________________________
+Is
+
+S(x)= a*x*x*x*exp(-E/(K*x));
+K=8.617343*1E-5;
+fit S(x) "Is.txt" via a, E;
+set yrange [0:0.0000014]    
+set xlabel "T (K)" ;
+set ylabel "Is";
+set key 340, 0.0001;
+set label "a= 2999.41 +/- 1574" at 330 , 0.000000000001;
+set label "E= 1.29713 +/- 0.01753 (eV)" at 330, 0.00000000001;
+set label "(367.66,2.4420E-7)" at 370.66, 2.4420E-7
+set size 0.7;
+plot "Is.txt" title "Is obtidos", S(x) title "f(x)=a*x^3*exp(-E/(k*x))";
+
+
+________________________
+ajuste simultâneo
+
+K=8.617343*1E-5;
+
+S(x)= a*x*x*x*exp(-E/(K*x));
+R(x) = b*x*x*sqrt(x)*exp(-E/(2*K*x));
+fit R(x) "Ir.txt", "Is.txt" via a,b, E;
+plot "Is.txt" title "Is obtidos", S(x) title "f(x)=a*x^3*exp(-E/(k*x))","Ir.txt"title "Ir obtidos", R(x) title "f(x) =*x^(5/2)*exp(-E/(2*k*x))";

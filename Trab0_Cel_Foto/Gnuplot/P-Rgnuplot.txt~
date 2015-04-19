@@ -1,0 +1,23 @@
+set title "Potência como função da resistência" font ",15"
+set ylabel "Potência (W)"
+set xlabel "Resistência (Ω)"
+set format y "%.1e";
+set yrange [0:0.0035]
+set xrange [0:3500]
+
+plot  "< awk '{if($13 == \"red\") print}' P-R.dat" u 1:2:3 lt rgb "red" w yerr notitle ,\
+ "< awk '{if($13 != \"red\") print}' P-R.dat" u 1:2:3 lt rgb "blue" w yerr t "0 graus" ,\
+"< awk '{if($13 == \"red\") print}' P-R.dat" u 4:5:6 lt rgb "red" w yerr notitle ,\
+ "< awk '{if($13 != \"red\") print}' P-R.dat" u 4:5:6 lt rgb "green" w yerr t "20 graus",\
+"< awk '{if($13 == \"red\") print}' P-R.dat" u 10:11:12 lt rgb "red" w yerr notitle ,\
+ "< awk '{if($13 != \"red\") print}' P-R.dat" u 10:11:12 lt rgb "yellow" w yerr t "40 graus" ,\
+"< awk '{if($13 == \"red\") print}' P-R.dat" u 7:8:9 lt rgb "red" w yerr notitle ,\
+ "< awk '{if($13 != \"red\") print}' P-R.dat" u 7:8:9 lt rgb "#00FFFF" w yerr t "40 graus"
+
+
+
+
+
+
+# "P-R.dat" u 4:5:6 w yerr t "20 graus" , "P-R.dat" u 10:11:12 w yerr t "40 graus" , "P-R.dat" u 7:8:9 w yerr t "60 graus"
+

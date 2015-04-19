@@ -1,0 +1,10 @@
+ h(x)=8*pi*h*c/(x*x*x*x*x*(exp(h*c/(x*K*t))-1))
+ f(x)=8*pi*h*c/(x*x*x*x*x*(exp(h*c/(K*T*x))-1)); 
+ pi = 3.14159265; 
+ set xrange [0:5e-6] 
+ K=1.3806503e-23
+ c=3e8
+ h=6.626e-34
+ plot "pontos.dat", f(x)*3.5e-5/1627, h(x)*3.5e-5/4049 #Este é o bom
+ plot "pontos.dat", f(x)*3.5e-5/1600, h(x)*3.5e-5/4049 #Este é o que nós gostavamos k fosse o bom
+  

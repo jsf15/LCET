@@ -1,0 +1,2 @@
+T2+(8*exp(-(25/4)*c*pi*pi*t)*(T1-T2)*(exp(6*c*pi*pi*t)*sin((pi*x)/2)+exp(4*c*pi*pi*t)*sin((3*pi*x)/2)+sin((5*pi*x)/2)))/(pi*pi)
+y=T2+(8*exp(-(25/4)*c*pi*pi*t/(L*L))*(T1-T2)*(exp(6*c*pi*pi*t/(L*L))*sin(pi*x/(2*L))+exp(4*c*pi*pi*t/(L*L))*sin(3*pi*x/(2*L))+sin(5*pi*x/(2*L))))/(pi*pi)

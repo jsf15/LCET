@@ -1,0 +1,12 @@
+set title "Compliment de onda máximo(logaritmo)" font ",15"
+set ylabel "$\lambda$ (mA)"
+set xlabel "Temperatura (K)"
+#set yrange [0:1.1]
+#set xrange[500:6000]
+
+f(x)=a*x+b
+fit f(x) 'Stefan.dat' using 1:2 via a,b
+
+#set key left top
+
+plot f(x) notitle lt rgb 'blue' ,"Stefan.dat" u 1:2 lt rgb 'blue' notitle

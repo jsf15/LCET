@@ -1,0 +1,297 @@
+%%% Tipo de documento %%%
+\documentclass[
+ reprint,
+ amsmath,amssymb,
+ aps,
+]{revtex4-1}
+
+%%% Packages %%%
+\usepackage[ansinew]{inputenc}
+\usepackage[portuges]{babel}
+\usepackage{graphicx}
+\usepackage{dcolumn}
+\usepackage{bm}
+
+%%% Alterações na geometria da pagina %%%
+\setlength{\textheight}{725pt}
+
+\begin{document}
+
+%%% Título, autores e informações dos autores, data %%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\preprint{APS/123-QED}
+
+\title{Compressão de um gás}
+
+\author{Gonçalo Quinta nº 65680, Fernando Rodrigues nº66326, Teresa Jorge nº65722 e Vera Patrício nº65726}
+\vspace{2mm}
+\affiliation{
+ \vspace{3mm}
+ \textbf{Laboratório de Complementos de Electromagnetismo e Termodinâmica}\\
+ Mestrado Integrado em Engenheria Física Tecnológica 2009/2010\\
+ Instituto Superior Técnico (IST)
+ \vspace{3mm}
+}
+
+\date{\today}
+
+
+%%% Abstract %%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{abstract}
+Neste trabalho estudou-se a compressão adiabática e a compressão isotérmica de um gás. Para o primeiro caso, encontrou-se uma dependência do logarítmo da pressão de $(-1,380\pm0,006)$ em função do logarítmo do volume, e para o segundo caso uma dependência de $(-1,050\pm0,004)$. Para o caso de compressões ideais era esperado uma dependencia de -1,4 para a adiabática e -1 para a isotérmica. As compressões não foram perfeitas, tendo existido troca de calor na compressão adiabática e variação de temperatura na compressão isotérmica, pelo que se determinaram as respectivas dependências corrigidas de aproximadamente -1,37 e -1,06.
+\vspace{2mm}
+\end{abstract}
+
+\maketitle
+
+
+%%% Introdução %%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Fundamentos teóricos e Experiência Realizada}
+
+\subsection{Calibração da montagem}
+
+Antes de dar início à experiência, calibra-se apenas o volume na montagem, já que as calibrações relativas à temperatura e pressão foram previamente efectuadas pelo fabricante do equipamento. Este processo realiza-se no programa "Data Monitor" na opção "Calibration".\cite{LFEB}
+
+\subsection{Compressão isotérmica}
+
+Prosegue-se para a primeira etapa da experiência, a compressão isotérmica do gás. Do primeiro princípio da termodinâmica\cite{LivroAzul}
+\begin{equation}
+dU = \delta Q - \delta W
+\end{equation}
+\footnotesize{U - Energia interna;\\ Q - calor;\\ W - trabalho}
+\normalsize
+\\e sabendo que $dU = 0$, porque
+\begin{equation}
+dU = nC_v dT
+\end{equation}
+\footnotesize {n - número de moles; \\$C_v$ - Calor específico molar a volume constante; \\T - temperatura}
+\normalsize
+\\e neste caso não há variação de temperatura, tira-se que 
+\begin{equation}
+\delta Q = \delta W = P dV
+\end{equation}
+Aplicando a lei dos gases ideais
+\begin{equation}
+PV = nRT
+\end{equation}
+\footnotesize{P - pressão;\\ V - volume; \\R - contante dos gazes perfeitos}
+\normalsize
+\\e integrando, conclui-se que as trocas energéticas são dadas por
+\begin{equation}
+\Delta Q = \Delta W = nRT\ln\Big(\frac{V_f}{V_i}\Big)
+\end{equation}
+
+Movendo o pistão lentamente para baixo, o sistema de aquisição de dados permite obter valores de $T$, $V$ e $P$ em sucessivos instantes do processo, que permitirão o cálculo numérico das energias envolvidas para posterior comparação com os resultados teóricos. É também possível representar graficamente essas três variáveis ou uma em função de outra, nomeadamente a pressão P em função do volume V. Para a verificação experimental dos resultados teóricos, é conveniente tomar-se logaritmos para a expressão (4) e rearranjar a expressão na forma
+\begin{equation}
+\ln(P) = \ln(nRT) - \ln(V)
+\end{equation}
+Representando $\ln(P)$ em função de $\ln(V)$, é possível comparar o declive da recta teórica, igual a -1, e o da recta experimental, para averiguar até que ponto a transformação foi de facto isotérmica.\\
+
+\subsection{Compressão adiabática}
+
+A segunda parte da experiência consiste numa compressão adiabática. Ao contrário da situação anterior, o procedimento correcto neste caso é comprimir o gás de uma forma rápida o suficiente para que as perdas de calor através do cilindro possam ser desprezáveis. 
+
+A partir de (1), conclui-se que
+\begin{equation}
+dU = - \delta W
+\end{equation}
+
+Assim, é fácil saber as trocas de energias presentes, sendo que essa variação será dada, no caso ideal, por
+\begin{equation}
+\Delta U = n C_v \Delta T
+\end{equation}
+
+Partindo de (2) e da segunda igualdade de (3), integrando e rearranjando os termos, é possível chegar à conclusão 
+\begin{equation}
+PV^{\gamma}=cte
+\end{equation}
+onde
+\begin{equation}
+\gamma = \frac{R + C_v}{C_v} = \frac{C_p}{C_v}
+\end{equation}
+\footnotesize{$C_p$ - Calor específico molar a pressão constante}
+\normalsize
+\\Analogamente à situação anterior, utilizam-se logaritmos para se obter a expressão
+\begin{equation}
+\ln(P) = \ln(cte) - \gamma \ln(V)
+\end{equation}
+de onde se retirará imediatamente o $\gamma$ experimental, dado pelo declive da recta do gráfico de ajuste, para uma posterior comparação com o valor teórico esperado. No entanto, considerando que as possíveis perdas de calor que ocorreram podem ser quantificadas por uma expressão da forma
+\begin{equation}
+\delta Q = - n \beta dT 
+\end{equation}
+então, nesse caso, a equação (11) sofrerá uma ligeira alteração no declive. Mais precisamente, $\gamma$ será corrijido, sendo agora dado por
+\begin{equation}
+\gamma' = \frac{C_p + \beta}{C_v + \beta}
+\end{equation}
+
+
+%%% Resultados %%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Resultados}
+
+Os dados recolhidos pelos sensores encontram-se nas figuras 1 e 2.
+
+\begin{figure}[h]
+\includegraphics[scale=0.32]{Imagens/iso1}
+\caption{T(t), P(t) e V(t) de compressão isotérmica}
+\end{figure}
+
+\begin{figure}[h]
+\includegraphics[scale=0.32]{Imagens/adi1}
+\caption{T(t), P(t) e V(t) da compressão adiabática}
+\end{figure}
+
+Os gráficos da pressão em função do volume, assim como os dos seus logaritmos, encontram-se nas figuras 3 e 4.
+
+\begin{figure}[h]
+\includegraphics[scale=0.32]{Imagens/iso}
+\caption{Dados da compressão isotérmica}
+\end{figure}
+
+\begin{figure}[h]
+\includegraphics[scale=0.32]{Imagens/adi}
+\caption{Dados da compressão adiabática}
+\end{figure}
+
+Não foram apresentados erros associados às medidas, uma vez que estas foram adquiridas através do programa mencionado anteriormente, que não fornece essa informação. Nas tabelas I e II encontram-se os dados usados para o cálculo no número de moles, dados provenientes do programa informático. Por uma questão de fácil leitura, optou-se por colocar nesta secção também o número de moles calculado para cada conunto de valores.
+
+\begin{table}[h!]
+\caption{Dados e cálculo do número de moles - Compressão Isotérmica}
+\begin{ruledtabular}
+\begin{tabular}{ccccc}
+\multicolumn{1}{c}{\textrm{nº}}&
+\textrm{P (kPa)}&
+\textrm{V ($cm^3$)}&
+\textrm{T (K)}&
+\textrm{n}\\
+\colrule
+1	&	171,7	&	145,9	&	309,9	&	0,00972	\\
+3	&	170,7	&	146,4	&	309,9	&	0,00970	\\
+5	&	168,7	&	148,4	&	309,3	&	0,00973	\\
+7	&	166,3	&	149,6	&	308,8	&	0,00969	\\
+182	&	103,8	&	231,9	&	300,4	&	0,00964	\\
+180	&	104,8	&	231,1	&	300	&	0,00971	\\
+178	&	105,7	&	230,3	&	301,7	&	0,00970	\\
+176	&	105,3	&	228,9	&	301,1	&	0,00963	\\
+\end{tabular}
+\end{ruledtabular}
+\end{table}
+
+\begin{table}[h!]
+\caption{Dados e cálculo do número de moles - Compressão Adiabática}
+\begin{ruledtabular}
+\begin{tabular}{ccccc}
+\multicolumn{1}{c}{\textrm{nº}}&
+\textrm{P (kPa)}&
+\textrm{V ($cm^3$)}&
+\textrm{T (K)}&
+\textrm{n}\\
+\colrule
+1	&	103,8	&	231,3	&	290	&	0,00996	\\
+3	&	105,7	&	230,8	&	290,3	&	0,01011	\\
+5	&	104,8	&	230	&	290	&	0,01000	\\
+7	&	106,7	&	229,9	&	290,3	&	0,01016	\\
+297	&	352,9	&	96,36	&	349,3	&	0,01171	\\
+281	&	354,8	&	95,75	&	349,4	&	0,01169	\\
+283	&	357,8	&	95,44	&	350,4	&	0,01172	\\
+285	&	355,8	&	94,52	&	351,2	&	0,01152	\\
+\end{tabular}
+\end{ruledtabular}
+\end{table}
+
+
+
+
+
+%%% Análise dos Resultados %%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Análise dos resultados}
+
+Relativamente à compressão isotérmica do gás, utilizaram-se dados do início e do final da transformação para se obter o números de moles médio, tendo-se obtido, respectivamente, os valores médios $n = 0,00967$ e $n = 0,00971$. Calculou-se que o detector da temperatura tivesse um determinado atraso temporal nas medições, considerando-se então que o número de moles advindos dos dados iniciais são mais fiáveis. Deste modo foi necessário calcular novos valores de temperatura para as medições finais. Estes valores forma calculados para as duas compressoes, utilizando-se a lei dos gases ideais e o número de moles correcto. Os valores das novas temperaturas encontram-se na Tabela III.
+
+\begin{table}[h!]
+\caption{Temperaturas calculadas a partir do novo número de moles (Compressão Isotérmica e Adiabática, respectivamente)}
+\begin{ruledtabular}
+\begin{tabular}{cccc}
+\multicolumn{1}{c}{\textrm{nº}}&
+\textrm{T (K)}&
+\textrm{nº}}&
+\textrm{T (K)}\\
+\colrule
+1	&	311,6	&	297	&	406,7\\
+3	&	310,8	&	281	&	406,3\\
+5	&	311,4	&	283	&	408,4\\
+7	&	309,4	&	285	&	402,3\\
+média	&	310,8	&	média	&	405,9\\
+\end{tabular}
+\end{ruledtabular}
+\end{table}
+
+Quanto ao declive da recta de ajuste à equação (6), verificou-se experimentalmente um declive $(-1,050\pm0,004)$. Como $T_i = 300,8$ K e $T_f = 310,8$ K, confirma-se que houve de facto uma variação da energia interna quando não era suposto, mais precisamente, cerca de $\Delta U = 2,01$ J. Assim, utilizando as fórmulas (12) e (13), isto é, tendo em consideração a variação de energia interna, chegou-se a um declive teórico corrigido de aproximadamente -1,06.
+
+Integrando numericamente o gráfico da esquerda da Figura 1, obteve-se um trabalho realizado sobre o gás de aproximadamente $W = - 11,45$ J. Sabendo $\Delta U$ e $\Delta W$, foi assim possível determinar as trocas de calor envolvidas, tendo dado cerca de $\Delta Q = 9,44$ J.\\
+
+Já na transformação adiabática, utilizando o mesmo método que na isotérmica, determinou-se um número de moles médio do gás $n = 0,01005$. O declive da recta de ajuste (11) foi de $(-1,380\pm0,006)$. Integrando numericamente o gráfico da esquerda da Figura 2, obteve-se $W = -26,01$ J. Tendo em conta que $T_i = 290,2$ K e $T_f = 405,9$ K, chegou-se assim à conclusão de que $\Delta U = 24,20$. 
+
+Verifica-se que houve efectivamente trocas de calor, já que, segundo a fórmula (1), $\Delta Q = \Delta W + \Delta U = -1,81$ J. Deste modo, efectuou-se uma correcção ao declive teórico de modo a este reflectir a trocas de calor existentes, sendo o resultado aproximadamente -1,37.   
+
+
+
+%%% Conclusão e críticas %%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Conclusão e críticas}
+
+Uma grande percentagem do erro experimental deve-se à dificuldade em realizar as transformações de um modo reversível ideal. A obtenção de dados da transformação adiabática foi relativamente simples, dado que necessita apenas de ser rápida o suficiente para que as perdas de calor pelo cilindro possam ser desprezáveis. Assim, não é de estranhar que o declive obtido experimentalmente, (-1,38), seja muito próximo do declive teórico corrigido que tem em conta as perdas de calor e cujo valor é (-1,37). O valor obtido já se afasta mais considerávelmente do declive teórico para uma transformação adiabática perfeita - (-1.4) - o que confirma que, de facto, existiram trocas de calor.
+
+
+Já para a transformação isotérmica, o processo de obtenção de dados foi mais delicado. O ar teve que ser comprimido lentamente para a temperatura se manter constante, mas o tempo disponível para o fazer era limitado, pelo que nos últimos segundos disponíveis foi muito difícil manter a temperatura constante. Desse modo a energia interna, $\Delta U$, variou de facto, pelo que não estávamos na presença de uma transformação isotérmica, o que justifica o grande desvio do declive obtido experimentalmente - (-1.05) - do valor unitário que era esperado para uma transformação ideal. No entanto, o valor do declive teórico calculado tendo em conta a variação da energia interna é de (-1.06), o que se aproxima satisfatoriamente do valor experimental.
+
+Estes resultados, mesmo não confirmando directamente as equações que regem uma transformação adiabática e isotérmica perfeitas, uma vez que experimentalmente não conseguimos trabalhar nessas situações, confirmam-nas indirectamente, uma vez que as correcções utilizadas têm como base essas mesmas equações e os valores de declives assim obtidos são concordantes com os experimentais.
+
+
+Existiram várias possiveis fontes de erro neste trabalho, desde uma má vedação do recipiente, a uma má calibração dos próprios sensores. O aparente aumento do número de moles ao longo de um mesmo ensaio, que não pode ocorrer, torna evidente a existência de um erro sistemático, que foi atribuído a um atraso nas medições da temperatura, que tomaria um efeito maior quando a variação desta fosse maior, que é o caso da transformação adiabática. 
+
+        
+%%% Bibliografia %%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{thebibliography}{20}
+
+\bibitem{LivroAzul} \textit{Introdução à Física} by J. D. Deus, \textit{et al.}, McGraw-Hill, 2000
+\bibitem{LFEB} \textit{Contribuição para o desenvolvimento da física experimental no IST} by A. C. Ribeiro, P. Sebastião and F. Tomé, AEIST, 2005
+
+
+\end{thebibliography}	
+
+	
+\end{document}
+
+
+%%% Modelo de tabela %%%
+
+%\begin{table}[h!]
+%\caption{Dados para o cálculo do caudal (às 9h00, 9h30, 10h00 e 10h30, respectivamente)}
+%\begin{ruledtabular}
+%\begin{tabular}{cccc}
+%\multicolumn{1}{c}{\textrm{$\Delta m$ (kg)}}&
+%\textrm{$e_\Delta m$ (Kg)}&
+%\textrm{$\Delta t$(s)}&
+%\textrm{$e_{\Delta t}$ (s)}\\
+%\colrule
+%0,100	& 	    & 90,21	& \\
+%0,100	& 0,001	& 90,66	& 0,02 \\
+%0,100 &       & 90,33 &     \\
+%0,100 &       & 91,33 &    \\
+%\end{tabular}
+%\end{ruledtabular}
+%\end{table}
+
+
+%%MODELO FIGURA%%%%
+%\begin{figure}[h]
+%\includegraphics[scale=0.25]{Imagens/T(t)}
+%\caption{Ajustes gráficos à temperatura de T1 em 5 momentos diferentes}
+%\end{figure}

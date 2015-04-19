@@ -1,0 +1,24 @@
+set title "Resistência térmica função voltagem" font ",15"
+set ylabel "Resistência térmica (J/K)"
+set xlabel "Tensão (V)"
+set format y "%.2g";
+set yrange [3:11]
+set xrange [6:16]
+
+
+
+#Fit
+f1(x)=a1*x+b1
+a1=-0.2; b1=-2.8;
+fit f1(x) 'Rt-V.dat' using 1:2 via a1,b1
+
+plot  "Rt-V.dat" u 1:2:3 lt rgb "blue" w yerr notitle ,\
+f1(x) notitle
+
+set arrow from 10,3 to 10,8.35241 nohead lt 3 
+set arrow from 10,8.35241 to 6,8.35241 nohead lt 3
+
+set arrow from 13,3 to 13,6.193823 nohead lt 3 
+set arrow from 13,6.193823 to 6,6.193823 nohead lt 3
+
+#f=-0.719529   * x +  15.5477

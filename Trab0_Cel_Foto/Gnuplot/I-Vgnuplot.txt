@@ -1,0 +1,23 @@
+set title "Característica da célula fotovoltaica" font ",15"
+set ylabel "Corrente (A)"
+set xlabel "Tensão (V)"
+set format y "%.1e";
+set yrange [0:0.003]
+set xrange [0:2.5]
+
+plot  "< awk '{if($13 == \"red\") print}' I-V.dat" u 1:2:3 lt rgb "red" w yerr notitle ,\
+ "< awk '{if($13 != \"red\") print}' I-V.dat" u 1:2:3 lt rgb "blue" w yerr t "0 graus" ,\
+"< awk '{if($13 == \"red\") print}' I-V.dat" u 4:5:6 lt rgb "red" w yerr notitle ,\
+ "< awk '{if($13 != \"red\") print}' I-V.dat" u 4:5:6 lt rgb "green" w yerr t "20 graus",\
+"< awk '{if($13 == \"red\") print}' I-V.dat" u 10:11:12 lt rgb "red" w yerr notitle ,\
+ "< awk '{if($13 != \"red\") print}' I-V.dat" u 10:11:12 lt rgb "yellow" w yerr t "40 graus" ,\
+"< awk '{if($13 == \"red\") print}' I-V.dat" u 7:8:9 lt rgb "red" w yerr notitle ,\
+ "< awk '{if($13 != \"red\") print}' I-V.dat" u 7:8:9 lt rgb "#00FFFF" w yerr t "60 graus"
+
+
+
+
+
+
+# "P-R.dat" u 4:5:6 w yerr t "20 graus" , "P-R.dat" u 10:11:12 w yerr t "40 graus" , "P-R.dat" u 7:8:9 w yerr t "60 graus"
+

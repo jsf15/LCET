@@ -1,0 +1,13 @@
+V(I)=RI+2\frac{KT}{q}ln\left ( \frac{1}{2}\sqrt{\left (\frac{I_{r}}{I_{s}} \right )^{2}+4\frac{I_{s}+I_{r}+I}{I_{s}}}-\frac{I_{r}}{2I_{s}} \right )
+
+I(v_{d})=I_{s}(e^{\frac{qv_{d}}{KT}}-1)
+
+I(v_{d})=I_{s}(e^{\frac{qv_{d}}{KT}}-1)+I_{r}e^{\frac{qv_{d}}{2KT}}
+
+I(v_{d})=I_{s}\left ( e^{\frac{qv_{d}}{KT}}-1 \right )+I_{r}\left ( e^{\frac{qv_{d}}{2KT}} -1\right )
+
+I(v_{d})=I_{s}\left ( e^{\frac{qv_{d}}{KT}}-1 \right )-I_{r}\left ( e^{\frac{qv_{d}}{2KT}} -1\right )
+
+c=\frac{KT}{q}ln(I_{s})
+
+b=2\frac{KT}{q}

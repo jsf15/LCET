@@ -1,0 +1,426 @@
+%%% Tipo de documento %%%
+\documentclass[
+ reprint,
+ amsmath,amssymb,
+ aps,
+]{revtex4-1}
+
+%%% Packages %%%
+\usepackage[ansinew]{inputenc}
+\usepackage[portuges]{babel}
+\usepackage{graphicx}
+\usepackage{dcolumn}
+\usepackage{bm}
+
+%%% Alterações na geometria da pagina %%%
+\setlength{\textheight}{750pt}
+
+\begin{document}
+
+%%% Título, autores e informações dos autores, data %%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\preprint{APS/123-QED}
+
+\title{Condutividade térmica do alumínio}
+
+\author{Gonçalo Quinta nº 65680, Fernando Rodrigues nº66326, Teresa Jorge nº65722 e Vera Patrício nº65726}
+\vspace{2mm}
+\affiliation{
+ \vspace{3mm}
+ \textbf{Laboratório de Complementos de Electromagnetismo e Termodinâmica}\\
+ Mestrado Integrado em Engenheria Física Tecnológica 2009/2010\\
+ Instituto Superior Técnico (IST)
+ \vspace{3mm}
+}
+
+\date{\today}
+
+
+%%% Abstract %%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{abstract}
+
+Foi determinada a condutividade térmica $k$ de uma barra de alumínio a partir da lei de Fourier e da equação do calor. Para o regime estacionário foram obtidos $k = (225,41\pm3,34)$ W/(Km) para uma temperatura da fonte quente de 55ºC e $k = (241,91\pm2,77)$ W/(Km) para uma temperatura de 83ºC . Já no caso do regime variável, usando uma aproximação polinomial de 2º grau, o melhor resultado obtido foi $(331,34\pm169,22)$ W/(Km), enquanto que aproximando a equação de calor por uma série de Fourier foi calculado um valor de $k = (93,45\pm0,08)$ W/(Km).
+
+\vspace{2mm}
+\end{abstract}
+
+\maketitle
+
+
+%%% Introdução %%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Introdução}
+A transferência de calor pode ser realizada por 3 formas distintas - convecção, radiação e condução - sendo esta última a que irá ser estudada. A condução de calor num material é feita por fonões e pelo deslocamento de electrões. No caso dos metais, devido à grande mobilidade dos electrões das camadas de condução e à rigidez da sua rede, a contribuição dos fonões para a condução pode ser desprezada face à dos electrões. O presente trabalho destina-se a estudar a condução do calor no alumínio partindo inicialmente da lei de Fourier. Esta afirma que o gradiente de temperatura num material é proporcional à densidade de fluxo de calor que o atravessa:
+\begin{equation}
+\vec{J}_{Q}= -k \nabla T
+\end{equation}
+\footnotesize {$\vec{J}_{Q}$ - densidade fluxo de calor ($W/m^2$)\\
+T - temperatura (K)\\}
+
+\normalsize
+A constante de proporcionalidade $k$ denomina-se condutividade térmica, cuja unidade SI é o W/(mK), sendo característica de cada material \cite{LivroFisica}. As linhas de densidade de fluxo de calor partem ou entram no objecto, cosoante este esteja a perder ou a receber calor, ou seja, a diminuir ou aumentar a sua energia interna. Assim, pode-se estabelecer a equivalência entre a variação de energia interna $dU$ do objecto de volume $V$ e o fluxo de $\vec{J}_{Q}$ que atravessa a sua superfície por unidade de tempo
+\begin{equation}
+\int_{\partial V}{\vec{J}_{Q}} \cdot \vec{n} \, dS = mc\frac{dT}{dt}
+\end{equation}
+
+Por outro lado, o teorema da Divergência permite concluir que
+\begin{equation}
+\int_{V}{\nabla \cdot \vec{J}_{Q}} \, dV= mc\frac{dT}{dt}
+\end{equation}
+
+Substituindo a equação (1) na anterior e sabendo que $dm = \rho dV$, obtém-se
+\begin{equation}
+\int_{V}{\nabla^2 T} \, dV = \int_{V}{-\frac{\rho c}{k} \frac{dT}{dt}} \, dV
+\end{equation}
+
+Esta relacção terá que se verificar para qualquer volume de objecto, pelo que as integrandas terão que ser iguais, verificando-se
+\begin{equation}
+\nabla^2 T = -\frac{\rho c}{k} \frac{dT}{dt}
+\end{equation} 
+\footnotesize {$\rho$ - densidade do material $(kg/m^3)$\\
+$c$ - capacidade calorífica do material $(J/(kg\cdot K))$\\}
+
+\normalsize
+Esta é a equação do calor, descoberta por Fourier, que relaciona a variação espacial e temporal da temperatura num corpo. As soluções desta equação fornecem perfis de temperatura do objecto em regimes variavéis ou constantes no tempo. Nesse último caso, e estudando apenas uma dimensão do espaço, têm-se que
+\begin{equation}
+\frac{\partial^2 T}{\partial x^2}=0
+\end{equation}
+e portanto, resolvendo a equação diferencial, obtém-se o perfil de temperaturas num regime estacionário
+\begin{equation}
+T(x) = \frac{\partial T}{\partial x}x + x_1
+\end{equation}
+que será o perfil teórico para a barra de metal a ser utilizada neste trabalho. Este regime constante no tempo possibilita ainda uma forma directa de calcular $k$ já que
+\begin{equation}
+k = \frac{|\vec{J}_{Q}|}{|\nabla T|} = \frac{P/S}{\frac{\partial T}{\partial x}}
+\end{equation}
+\footnotesize{P - Potência transferida para a barra (W)\\
+S - superfície do objecto $(m^2)$}
+
+\normalsize
+Relativamente ao regime variável, a solução geral, ainda a 1 dimensão, obtem-se através das séries de Fourier. Sendo $T_1$ a temperatura da fonte quente, $T_2$ a temperatura da fonte fria e $L$ o comprimento da barra, obtém-se como solução 
+\begin{equation}
+T(x,t)= T_{2} + (T_{1}-T_{2}) \frac{8}{\pi^{2}} S 
+\end{equation}
+\begin{equation}
+S = \sum^{\infty}_{n=0}e^{-\chi \Big(\frac{\frac{\pi}{2}+n\pi}{L}\Big)^{2}t} \sin \Big(\frac{x}{L}\Big(\frac{\pi}{2}+n\pi\Big)\Big)  
+\end {equation}
+assumindo que $T_2$ se mantém constante ao longo do tempo. Como 
+\begin{equation}
+\chi = \frac{k}{\rho c}
+\end{equation}
+obtém-se directamente $k$ sabendo o valor de $\chi$, proveniente de um ajuste de dados experimentais. Pode-se ainda, com esses dados, aproximar a solução a um polinómio do 2º grau da forma
+\begin{equation}
+T(x)= ax^{2}+bx + c
+\end {equation} 
+o que simplifica a determinação de $k$, dado que este passa a ser dado por 
+\begin{equation}
+k = \rho c\frac{\frac{\partial T}{\partial t}}{\frac{\partial ^{2} T}{\partial x^{2}}}= \rho c\frac{\frac{\Delta T}{\Delta t}}{2a}
+\end{equation} 
+
+%%% Experiência realizada %%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Experiência realizada}
+
+\begin{figure}[h]
+\includegraphics[scale=0.4]{Imagens/fig1}
+\caption{Esquema do equipamento utilizado}
+\end{figure}
+
+A montagem utilizada encontra-se na fig.1. Esta permite o registo da temperatura da fonte quente e fria, da água à entrada e à saída da fonte fria e de cinco pontos fixos ao longo da barra.\\
+
+\textbf{Regime estacionário}
+
+Para o estudo do regime estacionário, foi usada uma corrente contínua primeiro a 15 e seguidamente a 20 V e medida a temperatura em cinco pontos, o primeiro a 1 cm do topo e os restantes a intervalos de 2,5 cm, após se ter atingido o equilíbrio térmico. Os dados obtidos foram ajustados à equação (7) em que o declive é o gradiente térmico e a ordenada na origem a temperatura no topo da barra.\\
+ 
+A potência fornecida à fonte quente foi calculada através da expressão:
+\begin {equation}
+ P1=VI
+\end {equation}
+e a potência que chegou à fonte fria foi calculada por:
+
+\begin {equation}
+ P2=\frac{\Delta m}{\Delta t}c\left ( T_{a}-T_{b}\right )
+\end {equation} 
+ 
+Para análisar as perdas sofridas ao longo do processo de transferencia, foi calculada a resistividade térmica da barra, do topo e da base da mesma:
+\begin{equation}
+	R_{Tbarra}=\frac{T_{topo}-T_{base}}{P1}
+\end{equation}
+\begin{equation}
+	R_{Ttopo}=\frac{T_{FQ}-T_{topo}}{P1}
+\end{equation}
+\begin{equation}
+	R_{Tbase}=\frac{T_{base}-T_{FF}}{P1}
+\end{equation}\\
+
+\textbf{Regime variável}\\
+Na segunda parte da experiência estudou-se  a condutividade térmica da barra em regime variável. O ponto de partida para este estudo foi o regime estacionário atingido anteriormente, iniciando-se a aquisição de dados no instante em que a fonte foi separada da barra, instante em que se interrompe o regime estacionário. A condutividade térmica foi obtida de duas maneiras: ajustando os dados a uma série de fourier (equações (9) e (10)), mas também recorrendo à aproximação a um polinómio de 2º grau, sendo a condutividade térmica dada, respectivamente, pela equação (11) e (13). O valor $\frac{\Delta T}{\Delta t}$ é obtido através do declive de uma recta que relaciona a variação no tempo da temperatura:
+\begin{equation}
+	T(t) = \frac{\Delta T}{\Delta t} t + c_2
+\end{equation}
+
+
+%%% Resultados %%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Resultados}
+
+Os dados da tabela I foram obtidos com o auxílio de uma proveta e um cronómetro.
+
+\begin{table}[h!]
+\caption{Dados para o cálculo do caudal (às 9h00, 9h30, 10h00 e 10h30, respectivamente)}
+\begin{ruledtabular}
+\begin{tabular}{cccc}
+\multicolumn{1}{c}{\textrm{$\Delta m$ (kg)}}&
+\textrm{$e_\Delta m$ (Kg)}&
+\textrm{$\Delta t$(s)}&
+\textrm{$e_{\Delta t}$ (s)}\\
+\colrule
+0,100	& 	    & 90,21	& \\
+0,100	& 0,001	& 90,66	& 0,02 \\
+0,100 &       & 90,33 &     \\
+0,100 &       & 91,33 &    \\
+\end{tabular}
+\end{ruledtabular}
+\end{table}
+
+\begin{table}[h!]
+\caption{Regime estacionário - Intensidades e tensões da fonte}
+\begin{ruledtabular}
+\begin{tabular}{ccccc}
+\multicolumn{1}{c}{\textrm{$I$ (A)}}&
+\textrm{$e_I$ (A)}&
+\textrm{V (V)}&
+\textrm{$e_{V}$ (V)}&\\
+\colrule
+1,25 & 0,01 & 14,40 & 0,01 \\
+1,73 & 0,01 &	20,06	& 0,05\\
+\end{tabular}
+\end{ruledtabular}
+\end{table}
+
+\begin{table}[h!]
+\caption{Regime estacionário- Temperaturas para 15 e 20V, respectivamente}
+\begin{ruledtabular}
+\begin{tabular}{ccccc}
+\multicolumn{1}{c}{\textrm{ }}&
+\textrm{$T_{15V}$ (K)}&
+\textrm{$e_{T_{15V}}$ (K)}&
+\textrm{$T_{20V}$ (K)}&
+\textrm{$e_{T_{20V}}$ (K)}\\
+\colrule
+T1	&	55,49944	&	0,04296	&	83,15	&	0,07	\\
+T2	&	51,16425	&	0,06148	&	75,53	&	0,11	\\
+T3	&	45,65648	&	0,06299	&	65,38	&	0,12	\\
+T4	&	40,30781	&	0,03718	&	53,96	&	0,08	\\
+T5	&	36,68047	&	0,08769	&	45,39	&	0,13	\\
+TF	&	27,81771	&	0,04877	&	32,74	&	0,06	\\
+Ta	&	25,19842	&	0,04041	&	27,18	&	0,07	\\
+Tb	&	22,36777	&	0,45836	&	21,95	&	0,86	\\
+TQ	&	67,55986	&	0,64152	&	105,95	&	1,03	\\
+\end{tabular}
+\end{ruledtabular}
+\end{table}
+
+Para o regime variável, os dados obtidos correspondem a medições sucessivas feitas ao longo de cerca de meia hora, adquiridas e guardadas pelos sistema informático.
+
+%%% Análise dos Resultados %%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Análise de Resultados}
+
+\textbf{Regime Estacionário}\\
+Usando os dados da tabela I foi obtido um caudal médio (1,10$\pm$0,01) g/s, usado para cálculos posteriores, já que a variação do mesmo foi muito pequena. Os valores calculados encontram-se na tabela IV. 
+
+\begin{table}[h!]
+\caption{Caudal obtido (às 9h00, 9h30, 10h00 e 10h30, respectivamente)}
+\begin{ruledtabular}
+\begin{tabular}{cccc}
+\multicolumn{1}{c}{\textrm{Caudal(g/s)}}&
+\textrm{$e_{caudal}$ (g/s)}\\
+\colrule
+1,11	&	0,01	\\
+1,10	&	0,01	\\
+1,11	&	0,01	\\
+1,09	&	0,01	\\
+\end{tabular}
+\end{ruledtabular}
+\end{table}
+
+\begin{table}[h!]
+\caption{Regime estacionário - $k$ obtidos}
+\begin{ruledtabular}
+\begin{tabular}{ccc}
+\textrm{V (V)}&
+\textrm{$k$ $(Wm^{-1}K^{-1}$)}&
+\multicolumn{1}{c}{\textrm{$e_{k} (Wm^{-1}K^{-1})$}}\\
+\colrule
+14,40 & 225,41 &	3,34\\
+20,06 & 241,91 &	2,77\\
+\end{tabular}
+\end{ruledtabular}
+\end{table}
+
+As potências P1 e P2, equações (14) e (15) respectivamente, foram calculadas a partir dos dados da tabela II e III. O fluxo foi também estimado, utilizando-se não a potência P2 que teoricamente daria uma melhor aproximação ao valor do fluxo, uma vez que não inclui o calor perdido ao longo da lateral e nas junções da barra, mas P1, já que este apresenta um erro consideravelmente menor. Os resultados encontram-se na tabela VI.
+
+\begin{table}[h!]
+\caption{Regime estacionário - Potências e fluxos obtidos (15 e 20 V, respectivamente)}
+\begin{ruledtabular}
+\begin{tabular}{cccccc}
+\textrm{P1(W)}&
+\textrm{$e_{P1}$ (W)}&
+\multicolumn{1}{c}{\textrm{P2 (W)}}&
+\textrm{$e_{P2}$ (W)}&
+\textrm{$|\vec{J}_{Q}|$\footnote{superfície da barra de alumínio - 0,0004m$^2$}(W/$m^2$)}&
+\textrm{$e_{|{J}_{Q}|}$ (W/$m^{2}$)}\\
+\colrule
+18,00	&	0,21	&	13,06	&	2,45	&	45000	&	516	\\
+34,70	&	0,29	&	24,12	&	4,54	&	86760	&	718	\\
+\end{tabular}
+\end{ruledtabular}
+\end{table}
+
+Foram calculadas as perdas de calor ao longo da barra, fazendo a diferença entre a potência de entrada e de saída, obtendo-se os valores de (4,94 $\pm$	2,65) W para 15 V e de (10,58 $\pm$	4,83) W para 20 V.
+
+As resistências térmicas foram calculadas através das equações (16), (17) e (18) estando os resultados obtidos na tabela VII. As temperaturas no topo e na base da barra usadas foram calculadas interpolando os valores da tabela III, cujas rectas interpoladoras foram:\\
+
+\hspace{-3.5mm}$y=(-199,64 \pm 0,67)x+(57,6 \pm 0,04)$, para 15 V \\
+$y=(-358,64 \pm 1,14)x+(87,48 \pm 0,7)$, para 20 V \\
+
+\begin{table}[h!]
+\caption{Regime estacionário - Resistências Térmicas }
+\begin{ruledtabular}
+\begin{tabular}{cccc}
+\textrm{ }&
+\textrm{ }&
+\multicolumn{1}{c}{\textrm{R (K/W)}}&
+\textrm{$e_{R}$ (K/W)}\\
+\colrule
+15V	&	Topo	&	0,55	&	0,04	\\
+	  &	Barra	&	1,33	&	0,02	\\
+	  &	Base	&	0,32	&	0,01	\\
+20V	&	Topo	&	0,53	&	0,10	\\
+	  &	Barra	&	1,24	&	0,10	\\
+	  &	Base	&	0,34	&	0,05	\\
+\end{tabular}
+\end{ruledtabular}
+\end{table}
+
+\textbf{Regime Variável}
+
+Ajustaram-se as temperaturas obtidas no sensor posicionado a 0,11 cm (1 cm do topo) em função dos primeiros 1000 segundos, utilizando como modelo a expressão (9) e os primeiros 4 termos da expressão (10), tendo-se obtido o gráfico da figura 2
+
+\begin{figure}[h!]
+\includegraphics[scale=0.25]{Imagens/fourier}
+\caption{Ajuste gráfico da variação da temperatura no sensor na posição x = 0,11 cm}
+\end{figure}
+
+Seguidamente, foram escolhidos conjuntos de cerca de 10 temperaturas consecutivas, medidas no sensor T1, para 5 instantes diferentes, tendo-se procedido ao ajuste destes pontos à equação (19) - figura 3.
+
+\begin{figure}[h!]
+\includegraphics[scale=0.25]{Imagens/T(t)}
+\caption{Ajustes gráficos à temperatura de T1 em 5 momentos diferentes}
+\end{figure}
+
+Para o ajuste da função (12) foram utilizadas as temperaturas registadas nos 5 sensores (T1 a T5) para 5 tempos diferentes - figura 4. 
+
+\begin{figure}[h!]
+\includegraphics[scale=0.25]{Imagens/T(x)}
+\caption{Ajustes gráficos das temperaturas T1 a T5 a 60, 120, 180, 220 e 300 segundos}
+\end{figure}
+
+Com base nos resultados dos ajustes gráficos, e fazendo uso da equação (13), foram obtidos vários valores de $k$, que se encontram registados na tabela VIII. Teve-se o cuidado de escolher para o ajuste temporal intervalos centrados no valor escolhido para o ajuste espacial.
+
+\begin{table}[h!]
+\caption{Regime variável - Declives e $k$}
+\begin{ruledtabular}
+\begin{tabular}{cccccc}
+\textrm{a}&
+\textrm{$e_a$}&
+\multicolumn{1}{c}{\textrm{$\frac{\Delta T}{\Delta t}$(K/s)}}&
+\textrm{$e_{\frac{\Delta T}{\Delta t}}$ (K/s)}&
+\textrm{k ($WK^{-1}m^{-1}$)}&
+\textrm{$e_k$}\\
+\colrule
+-941,56	&	273,2	&	-0,281207	&	0,03485	&	362,87	&	150,26\\
+-595,33	&	118,9	&	-0,162349	&	0,05049	&	331,34	&	169,22\\
+-597,84	&	33,42	&	-0,077492 &	0,03328	&	157,49	&	76,44\\
+-239	  &	16,63	&	-0,079101	&	0,10610	&	402,12	&	567,36\\
+-241,8	&	27,68	&	-0,154866	&	0,05312	&	778,17	&	356,00\\
+\end{tabular}
+\end{ruledtabular}
+\end{table}
+
+%%% Conclusão e críticas %%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Conclusão e críticas}
+
+No regime estacionário, para uma temperatura da fonte quente de 55ºC (15V) obteve-se $k=(225,41\pm3,34)$ W/(Km)
+e 83ºC (20V) chegou-se a $k=(241,91\pm2,77)$ W/(Km). Estes valores afastam-se do valor tabelado para o aluminio de 237 W/(Km), não sendo este coberto pelo erro. No entanto, esse valor foi tabelado para 27ºC, que não corresponde à temperatura a que a experiência foi realizada, podendo por isso este desvio ser, em parte, devido à variação do valor da condutividade térmica do alumínio para temperaturas superiores 37ªC (a menor temperatura registada ao longo desta parte da experiência).  Comparando os dois valores de $k$ obtidos neste regime, surgem indícios de que a maiores temperaturas corresponda uma maior condutividade térmica. Esta observação foi confirmada com valores tabelados para diferentes temperaturas \cite{site1} \cite{site2},  mas os valores em si não puderam ser confirmados uma vez que não estavam disponíveis para as temperaturas consideradas (com variações de 200 K). Pensando no modelo dos electrões como transportadores de calor, isto pode significar que a maiores temperaturas os electrões se movem mais facilmente nas bandas de condução ou que estas são mais largas (existem mais electrões promovidos a um nivel superior de energia).
+
+
+Deste modo é possivel justificar o aumento da condutividade térmica para o segundo ensaio (20 V) relativamente ao valor tabelado, embora isso não se verifique para o primeiro ensaio (15 V). Esta incoerência pode ser explicada se se atender ao facto de que para calcular o $k$ utilizou-se a potência fornecida à fonte quente, que não é exactamente a potência que flui através da barra, já que existem algumas perdas de energia inerentes à montagem. Assim o modelo considera que a resposta do sistema à potência teoricamente fornecida é menos eficaz, o que se traduz em condutividades térmicas mais baixas do que as reais. Talvez o uso da potência que chega à fonte fria teria sido mais correcto, mas como consequência o erro experimental inerente seria maior.
+
+
+As perdas de calor sofridas ao longo da barra são elevadas, mesmo tendo em conta o erro inerente ao cálculo de P2 devido à pequena diferença de temperatura entre Ta e Tb. As resistência térmicas obtidas, que coincidem entre si para as medições a 15 e 20 V tendo em conta o erro experimental, confirmam este facto.  No total o sistema apresenta uma resistência de cerca da 2 K/W  (2,2 K/W para 15 V e 2,11 K/W para 20 V).
+
+
+Relativamente ao ajuste dos dados à função (9), o modelo usado não corresponde à realidade, uma vez que este parte do pressuposto que a temperatura da base da barra não varia, o que não acontece. De facto, o ajuste afirma que a temperatura da fonte fria é constante e igual a $(298,0\pm0,1)$ K. Obteve-se ainda $k=93,45\pm0,08$ W/(Km) através do valor de $\chi$. Estes valores não são de todo verdadeiros, mas podem, contudo, ser explicados. Devido à resistência térmica entre a base e a barra, há como que um acumular de fluxo de calor na parte inferior da barra e que é interpretado como uma diminuição do fluxo (já que o gradiente de temperatura não é tão elevado). Assim, a temperatura da fonte fria real será sempre menor do que a medida, pelo que a diferença de temperaturas nas extremidades da barra será encarada menor no modelo, o que conduz a uma condutividade térmica menor.
+
+De modo a minorar este problema sugere-se que se repita a experiência iniciando-se com a barra à temperatura ambiente. Presume-se que neste caso os efeitos da resistência térmica seriam menores, uma vez que nos momentos iniciais a temperatura da base se manteria aproximadamente constante. Também se poderia optimizar a potência utilizada, de modo a que fosse suficientemente grande para criar um gradiente de temperatura mensurável, mas o mais pequeno possivel de modo à variação da temperatura na base ser o menor possível.
+
+
+Os valores obtidos através da aproximação por um polinómio de 2º grau afastam-se ainda mais do valor tabelado. Optou-se por não se fazer uma média de valores já que estes apresentam uma elevada discrepância. Do mesmo modo, não se fez uma média dos valores de $a$ e $\frac{\Delta T}{\Delta t}$ para o cálculo de $k$ na tentativa de evitar ao máximo a influência da temperatura a que as medidas foram feitas. Deste modo, os pares de valores usados para o cálculo de cada $k$ correspondem aproximadamente ao mesmo estado do sistema (já que são de momentos próximos), pelo que esperávamos tentar obter uma confirmação da variação de $k$ com a temperatura, o que não foi possível.  Embora alguma percentagem de erro derive de razões anteriormente mencionadas, as grandes variações de valores levam a crer que possivelmente poderá ter havido um erro sistemático no decorrer desta etapada da experiência. Pode ter sido também um erro de tratamento de dados, ou simplesmente a aproximação a um polinómio do 2º grau é demasiado sensível para descrever satisfatoriamente a realidade no intervalo de tempo considerado. Note-se também que os erros obtidos, derivados dos erros de ajuste gráfico, são muitíssimo elevados, o que invalida a sua veracidade.
+
+
+%%% Bibliografia %%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{thebibliography}{20}
+
+\bibitem{LivroAzul} \textit{Introdução à Física} by J. D. Deus, \textit{et al.}, McGraw-Hill, 2000
+\bibitem{LivroFisica}\textit {Física} by Frederick J. Bueche and Eugene Hecht, McGraw-Hill,Schaum's Outines 1997
+\bibitem{site1} http://en.wikipedia.org/wiki/List\_of\_thermal\_conductivities
+\bibitem{site2} http://www.engineeringtoolbox.com/thermal-conductivity-metals-d\_858.html
+
+\end{thebibliography}	
+
+	
+\end{document}
+
+
+
+
+
+
+
+%%% Modelo de tabela %%%
+
+%\begin{table}[h!]
+%\caption{Determinação da eficiência, da potência de arrefecimento e da eficiência de Carnot}
+%\begin{ruledtabular}
+%\begin{tabular}{ccccccc}
+%\textrm{$V2$ (V)}&
+%\textrm{$T_a$ (ºC)}&
+%\textrm{$\epsilon$}&
+%\textrm{$e_{\epsilon}$}&
+%\textrm{$\epsilon_{Carnot}$}&
+%\multicolumn{1}{c}{\textrm{$P1$ (W)}}&
+%\textrm{$e_{P1}$ (W)}\\
+%\colrule
+%2,344 & 17,11 & 2,47 & 0,06 & 29,01 & 1,996 & 0,068 \\
+%1,458 & 15,81 & 2,17 & 0,07 & 36,83 & 0,670 & 0,039 \\
+%2,320 & 20,90 & 3,75 & 0,08 & 36,09 & 2,842 & 0,081 \\
+%\end{tabular}
+%\end{ruledtabular}
+%\end{table}
+
+
+%\begin{figure}[h]
+%\includegraphics[scale=0.3]{Imagens/fig3}
+%\caption{Esquema de montagem para comparação de emissividades}
+%\end{figure}
+
+

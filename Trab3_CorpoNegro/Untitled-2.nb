@@ -1,0 +1,123 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 9.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       157,          7]
+NotebookDataLength[      3608,        113]
+NotebookOptionsPosition[      3201,         94]
+NotebookOutlinePosition[      3558,        110]
+CellTagsIndexPosition[      3515,        107]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"f", "[", "$G$13_", "]"}], ":=", 
+   RowBox[{"Sqrt", "[", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"Sin", "[", "$G$13", "]"}], "*", 
+      RowBox[{"Sin", "[", "$G$13", "]"}]}], "+", 
+     RowBox[{
+      RowBox[{"[", 
+       RowBox[{
+        RowBox[{"Sin", "[", 
+         RowBox[{"K19", "-", "$G$13", "+", "$B$2"}], "]"}], "+", 
+        RowBox[{
+         RowBox[{"Cos", "[", "$B$2", "]"}], "*", 
+         RowBox[{"Sin", "[", "$G$13", "]"}]}]}], "]"}], "*", 
+      RowBox[{
+       RowBox[{"[", 
+        RowBox[{
+         RowBox[{"Sin", "[", 
+          RowBox[{"K19", "-", "$G$13", "+", "$B$2"}], "]"}], "+", 
+         RowBox[{
+          RowBox[{"Cos", "[", "$B$2", "]"}], "*", 
+          RowBox[{"Sin", "[", "$G$13", "]"}]}]}], "]"}], "/", 
+       RowBox[{"[", 
+        RowBox[{
+         RowBox[{"Sin", "[", "$B$2", "]"}], "*", 
+         RowBox[{"Sin", "[", "$B$2", "]"}]}], "]"}]}]}]}], "]"}]}], 
+  "\[IndentingNewLine]"}]], "Input",
+ CellChangeTimes->{{3.6377668749946203`*^9, 3.6377669387697887`*^9}, {
+  3.6377669697543716`*^9, 3.637766981923648*^9}, {3.6377670632967243`*^9, 
+  3.637767242889188*^9}, {3.637767292737982*^9, 3.637767303225874*^9}},
+ EmphasizeSyntaxErrors->True],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"Syntax", "::", "sntxb"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Expression cannot begin with \
+\\\"\[NoBreak]\\!\\(\\(\\([\\(\\(\\(\\(Sin[\\(\\(K19 - $G$13 + $B$2\\)\\)]\\)\
+\\) + \\(\\(\\(\\(Cos[$B$2]\\)\\) * \\(\\(Sin[$G$13]\\)\\)\\)\\)\\)\\)]\\)\\) \
+*\\(\\(\\(\\([\\(\\(\\(\\(Sin[\\(\\(K19 - $G$13 + $B$2\\)\\)]\\)\\) + \
+\\(\\(\\(\\(Cos[$B$2]\\)\\) * \
+\\(\\(Sin[$G$13]\\)\\)\\)\\)\\)\\)]\\)\\)/\\(\\([\\(\\(\\(\\(Sin[$B$2]\\)\\) \
+* \\(\\(Sin[$B$2]\\)\\)\\)\\)]\\)\\)\\)\\)\\)\[NoBreak]\\\"\[NoBreak]\\!\\(\\\
+\"\\\"\\)\[NoBreak].\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.637767314051174*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"Syntax", "::", "tsntxi"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"\\\"\[NoBreak]\\!\\([\\(\\(\\(\\(Sin[\\(\\(K19 - $G$13 + \
+$B$2\\)\\)]\\)\\) + \\(\\(\\(\\(Cos[$B$2]\\)\\) * \
+\\(\\(Sin[$G$13]\\)\\)\\)\\)\\)\\)]\\)\[NoBreak]\\\" is incomplete; more \
+input is needed.\[NoBreak]\\!\\(\\\"\\\"\\)\[NoBreak]\"\>"}]], "Message", \
+"MSG",
+ CellChangeTimes->{3.6377673141279907`*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"Syntax", "::", "sntxi"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Incomplete expression; more input is needed \
+\[NoBreak]\\!\\(\\\"\\\"\\)\[NoBreak].\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.637767314203944*^9}]
+}, Open  ]]
+},
+WindowSize->{1369, 718},
+WindowMargins->{{12, Automatic}, {Automatic, 24}},
+FrontEndVersion->"9.0 for Mac OS X x86 (32-bit, 64-bit Kernel) (January 25, \
+2013)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[579, 22, 1227, 33, 46, "Input"],
+Cell[1809, 57, 662, 13, 24, "Message"],
+Cell[2474, 72, 434, 10, 21, "Message"],
+Cell[2911, 84, 274, 7, 21, "Message"]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
+

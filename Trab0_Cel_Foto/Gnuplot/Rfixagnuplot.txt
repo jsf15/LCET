@@ -1,0 +1,23 @@
+set title "Potência com resistência fixa" font ",15"
+set ylabel "Potência (mW)"
+set xlabel "Nível de iluminação (%)"
+set yrange [0.5:3.15]
+set xrange [40:105]
+
+
+#Fitting  (linear é melhor)
+#f1(x)=a1*x+b1
+#a1=1; b1=1.1;
+#fit f1(x) 'Rfixa.dat' using 1:2 via a1,b1
+
+#Fit Plot
+
+set key left top
+plot "< awk '{if($3 == \"red\") print}' Rfixa.dat" u 1:2:(0.001) w yerr lt rgb "red" notitle,\
+"< awk '{if($3 != \"red\") print}' Rfixa.dat" u 1:2:(0.001) w yerr lt rgb "blue" t "Resistência R=1250Ω" ,\
+# f1(x) notitle 
+
+
+
+#Resultados:
+# f= (0.0385692 +/- 0.001553 )*x +  (-0.843821 +/- 0.1281 )

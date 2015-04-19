@@ -1,0 +1,21 @@
+reset
+set term aqua
+set notable
+set isosamples 15,15
+set ylabel "Temperatura (K)" offset 0,-2,0
+set xlabel "t (s)"
+set key font ",15"
+set ticslevel 0
+#set xrange [0:0.12]
+
+a=1
+b=1
+f(x)=a*x+b
+fit f(x)'TRANS-xfixo.dat' using 2:3 via a,b
+
+plot "< awk '{if($4 != \"red\") print}' TRANS-xfixo.dat" using 2:3 lt rgb 'blue' lw 2 notitle ,\
+"< awk '{if($4 == \"red\") print}' TRANS-xfixo.dat" using 2:3 lt 4 notitle ,\
+f(x) title "x=0.6m"
+
+#a               = -0.122449        +/- 0.001032     (0.8429%)
+#b               = 59.8952          +/- 0.1035       (0.1728%)

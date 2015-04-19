@@ -1,0 +1,39 @@
+f(x) = a*x + b
+
+f1(x) = -0.39295*x + 86.1251
+plot "dados1.txt" title "dados 1", f1(x) title "f1(x) = -0.39295 * x + 86.1251"
+
+f2(x) = -0.373229 * x +84.9978 
+plot "dados2.txt" title "dados 2", f2(x) title "f2(x) = -0.373229 * x + 84.9978" 
+
+f3(x) = -0.454055*x + 86.0215 
+plot "dados3.txt" title "dados 3", f3(x) title "f3(x) = -0.454055 * x + 86.0215" 
+
+f4(x) = -0.332381 * x + 83.1041
+plot "dados4.txt" title "dados 4", f4(x) title "f4(x) = -0.332381 * x + 83.1041"
+
+f5(x) = -0.301976 * x + 81.7616 
+plot "dados5.txt" title "dados 5", f5(x) title "f5(x) = -0.301976 * x + 81.7616" 
+
+
+set label "(10.66 , 81.93)" at 10.96,	81.92
+set label "(16.64 , 79.05)" at 17.04063, 79.0510192217186
+set label "(20.70 , 76.67)" at 21.10313 , 76.6689913946554
+set label "(25.91 , 74.38)" at 26.30625, 74.3792040195934
+set label "(30.84 , 72.37)" at 31.24375	, 72.3713367615429
+
+set title "Ajuste T(t)"
+set xlabel "t (s)"
+set ylabel "T (K)"
+
+
+
+
+
+
+f1(x) = -0.39295*x + 86.1251
+f2(x) = -0.373229 * x +84.9978 
+f3(x) = -0.454055*x + 86.0215 
+f4(x) = -0.332381 * x + 83.1041
+f5(x) = -0.301976 * x + 81.7616 
+plot "dados1.txt" title "dados 1", f1(x) title "f1(x) = -0.39295 * x + 86.1251", "dados2.txt" title "dados 2", f2(x) title "f2(x) = -0.373229 * x + 84.9978" , "dados3.txt" title "dados 3", f3(x) title "f3(x) = -0.454055 * x + 86.0215" ,"dados4.txt" title "dados 4", f4(x) title "f4(x) = -0.332381 * x + 83.1041","dados5.txt" title "dados 5", f5(x) title "f5(x) = -0.301976 * x + 81.7616" 

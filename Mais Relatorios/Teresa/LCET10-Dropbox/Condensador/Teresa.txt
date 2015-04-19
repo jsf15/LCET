@@ -1,0 +1,13 @@
+2º paragrafo:
+
+Na análise dos resultados notou-se que o menor valor de resistência do condensador  correspondia ao valor de capacidade do condensador mais próximo do "valor teórico",esta medição foi efectuada para uma frequência de $200kHz$.
+
+
+Valor da resistência correspondia ao da capacidade? é mm assim?
+
+
+ultimo paragrafo
+
+ baseando-se na dependência verificada da resistência
+
+Não percebi bem

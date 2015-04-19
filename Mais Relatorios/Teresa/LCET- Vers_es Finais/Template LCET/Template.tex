@@ -1,0 +1,182 @@
+%%% Tipo de documento %%%
+\documentclass[
+ reprint,
+ amsmath,amssymb,
+ aps,
+]{revtex4-1}
+
+%%% Packages %%%
+\usepackage[ansinew]{inputenc}
+\usepackage[portuges]{babel}
+\usepackage{graphicx}
+\usepackage{dcolumn}
+\usepackage{bm}
+
+%%% Alterações na geometria da pagina %%%
+\setlength{\textheight}{725pt}
+
+\begin{document}
+
+%%% Título, autores e informações dos autores, data %%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\preprint{APS/123-QED}
+
+\title{Junção PN}
+
+\author{Gonçalo Quinta nº 65680, Fernando Rodrigues nº66326, Teresa Jorge nº65722 e Vera Patrício nº65726}
+\vspace{2mm}
+\affiliation{
+ \vspace{3mm}
+ \textbf{Laboratório de Complementos de Electromagnetismo e Termodinâmica}\\
+ Mestrado Integrado em Engenheria Física Tecnológica 2009/2010\\
+ Instituto Superior Técnico (IST)
+ \vspace{3mm}
+}
+
+\date{\today}
+
+
+%%% Abstract %%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{abstract}
+
+Abstract
+
+\vspace{2mm}
+\end{abstract}
+
+\maketitle
+
+
+%%% Introdução %%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Fundamentos teóricos e Experiência Realizada}
+
+Neste trabalho foi estudado o funcionamento de uma junção PN, mais precisamente foram testados dois modelos para a relação entre a tensão aos seus terminais e a corrente que a atravessa. FALAR DA CONSTITUIÇAÔ DA JUNCAO O primeiro modelo é descrito pela equação seguinte: 
+
+\begin{equation}\label{modelo1}
+	I=I_s(e^{\frac{qV_d}{KT\eta}}-1)
+\end{equation}
+\footnotesize q - carga do electrão; K - constante de Boltzman; T - temperatura (K); $\eta$ - ????????????
+\normalsize
+
+Linearizando esta equação obtemos:
+\begin{equation}\label{modelo1}
+	v_d = \ln(\frac{I}{I_s}+1)\frac{KT\eta}{q}
+\end{equation}
+
+O parâmetro $I_s$ é chamado de XXXXX e depende da temperatura do seguinte modo:
+\begin{equation}\label{Is}
+ I_s \propto T^3e^{\frac{-Eg}{KT}}
+\end{equation}
+
+Em que Eg é a energia que separa a banda de condução da banda de valência do material. Quanto maior for este valor, maior energia será necessária para promover os electrões de valência....................
+Uma vez que a razão $\frac{I}{I_s}$ é muito maior que 1, este será suprimido nas expressões seguintes, de modo a facilitar a sua análise.
+
+Já o segundo modelo, TEM EM CONTA.......... e é descrito pela espressão:
+\begin{equation}\label{modelo2}
+	I=I_s(e^{\frac{qV_d}{KT\eta}}-1)
+\end{equation}
+\footnotesize q - carga do electrão; K - constante de Boltzman; T - temperatura (K); $\eta$ - ????????????
+\normalsize
+
+O parâmetro $I_r$ tem também uma dependência da temperatura dada por:
+
+\begin{equation}\label{Ir}
+ I_r \propto T^\frac{5}{2}e^{\frac{-Eg}{2KT}}
+\end{equation}  
+
+Para testar estes modelos foi usado um díodo - que é constituido por uma junção PN de sílicio - cujo esquema equivalente é o seguinte.
+
+\begin{figure}[h]
+\includegraphics[scale=0.25]{Imagens/diodo}
+\caption{Modelo de díodo}
+\end{figure}
+
+A equação que relaciona as tensões no díodo é:
+
+\begin{equation}\label{circuito}
+ v = RI + v_d
+\end{equation}  
+
+Considerando o primeiro modelo a equação anterior tomará a forma:
+\begin{equation}
+ v = RI + \ln(I)\frac{KT\eta}{q} - \ln(I_s)\frac{KT\eta}{q}
+\end{equation}
+que será simplificada para
+\begin{equation}
+ v = RI + \ln(I)b(T) + c(T)
+\end{equation}
+\footnotesize $b(T) =\frac{KT\eta}{q}; c(T) = -\ln(I_s)\frac{KT\eta}{q}$
+\normalsize
+
+Já para o segundo modelo, obtem-se:
+
+\begin{equation}\label{circuito}
+ v = RI + 2\frac{KT}{q}\ln(\sqrt{(\frac{I_r}{2I_s})^2 + I/I_s +1} - \frac{I_r}{2I_s})
+\end{equation}
+
+Para testar a validade destas equações são aplicadas sucessivas tensões ao díodo, mantendo a temperatura constante e medidas a tensão e a corrente de resposta nos terminais do díodo, sendo estes valores ajustados às equações anteriores. Estes ensaios serão repetidos para 5 temperaturas diferentes e foi verificada a dependência da temperatura dos diferentes parâmetros de ajuste obtidos: R, b e c para o primeiro modelo e R, $I_s$ e $I_r$ para o segundo. 
+
+
+
+
+
+Para verificar a depen
+
+%%% Resultados %%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Resultados}
+
+
+%%% Análise dos Resultados %%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Análise dos resultados}
+
+
+%%% Conclusão e críticas %%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Conclusão e críticas}
+
+ 
+        
+%%% Bibliografia %%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{thebibliography}{20}
+
+\bibitem{LivroAzul} \textit{Introdução à Física} by J. D. Deus, \textit{et al.}, McGraw-Hill, 2000
+
+\end{thebibliography}	
+
+	
+\end{document}
+
+
+%%% Modelo de tabela %%%
+
+\begin{table}[h!]
+\caption{Dados para o cálculo do caudal (às 9h00, 9h30, 10h00 e 10h30, respectivamente)}
+\begin{ruledtabular}
+\begin{tabular}{cccc}
+\multicolumn{1}{c}{\textrm{$\Delta m$ (kg)}}&
+\textrm{$e_\Delta m$ (Kg)}&
+\textrm{$\Delta t$(s)}&
+\textrm{$e_{\Delta t}$ (s)}\\
+\colrule
+0,100	& 	    & 90,21	& \\
+0,100	& 0,001	& 90,66	& 0,02 \\
+0,100 &       & 90,33 &     \\
+0,100 &       & 91,33 &    \\
+\end{tabular}
+\end{ruledtabular}
+\end{table}
+
+
+%%MODELO FIGURA%%%%
+\begin{figure}[h]
+\includegraphics[scale=0.25]{Imagens/T(t)}
+\caption{Ajustes gráficos à temperatura de T1 em 5 momentos diferentes}
+\end{figure}

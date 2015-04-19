@@ -1,0 +1,24 @@
+set title "Resistência térmica função da tensão E1" font ",15"
+set ylabel "R_T (J/K)"
+set xlabel "E_1 (V)"
+set yrange [7:10]
+set xrange [6:17]
+
+#Fitting  (linear é melhor)
+f1(x)=b1
+b1=8;
+fit f1(x) 'Rt-T.dat' using 4:2 via b1
+
+#Fit Plot
+
+set key left top
+
+plot "< awk '{if($5 != \"red\") print}' Rt-T.dat" u 4:2:3 w yerr lt rgb "blue" t "Resistência Térmica"  ,\
+"< awk '{if($5 == \"red\") print}' Rt-T.dat" u 4:2:3 w yerr lt rgb "red" notitle ,\
+f1(x) lt rgb "#228B22" notitle 
+
+#Resultados
+#f= (0.0230571 +/- 0.0006784) * x + (-0.48128 +/- 0.05595)
+
+
+#  8.32889 +/- 0.1222

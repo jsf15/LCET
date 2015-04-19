@@ -1,0 +1,14 @@
+f(x)= a * x +b 
+fit h(x) "stefan.txt" via a,b          
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+
+a               = 4.8274           +/- 0.2491       (5.161%)
+b               = -18.0288         +/- 0.8282       (4.593%) 
+
+
+h(x) = 4.8274 * x -18.0288
+set title "Ajuste Lei de Stefan"  
+set xlabel "Log(Temperatura) (K)"    
+set ylabel "Log(Intensidade) (V)" 

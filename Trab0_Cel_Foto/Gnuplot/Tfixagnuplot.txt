@@ -1,0 +1,21 @@
+set title "Corrente com tensão fixa" font ",15"
+set ylabel "Corrente (mA)"
+set xlabel "Nível de iluminação (%)"
+set yrange [0.5:2.0]
+set xrange [40:105]
+
+#Fitting  (linear é melhor)
+#f1(x)=a1*x+b1
+#a1=1; b1=1.1;
+#fit f1(x) 'Tfixa.dat' using 1:2 via a1,b1
+
+#Fit Plot
+
+set key left top
+
+plot "< awk '{if($3 != \"red\") print}' Tfixa.dat" u 1:2:(0.001) w yerr lt rgb "blue" t "Tensão U=1.7V" ,\
+"< awk '{if($3 == \"red\") print}' Tfixa.dat" u 1:2:(0.001) w yerr lt rgb "red" notitle ,\
+#f1(x) lt rgb "#228B22" notitle 
+
+#Resultados
+#f= (0.0230571 +/- 0.0006784) * x + (-0.48128 +/- 0.05595)

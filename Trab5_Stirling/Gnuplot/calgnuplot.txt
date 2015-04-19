@@ -1,0 +1,20 @@
+reset
+set term aqua 0
+set notable
+set isosamples 15,15
+set xlabel "m (g)"
+set ylabel "m (g) Multímetro"
+set key font ",15"
+set ticslevel 0
+set style line 1 lc rgb '#0060ad' lt 1 lw 2 pt 7 ps 1.5   # --- blue
+
+f(x)=a*x+b
+
+fit f(x) 'cal.dat' using 1:2 via a,b
+
+plot "< awk '{if($3 != \"red\") print}' cal.dat" using 1:2 notitle ,\
+"< awk '{if($3 == \"red\") print}' cal.dat" using 1:2 lt 4 notitle ,\
+f(x) notitle
+
+
+

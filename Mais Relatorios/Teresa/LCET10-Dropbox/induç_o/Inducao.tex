@@ -1,0 +1,364 @@
+%%% Tipo de documento %%%
+\documentclass[
+ reprint,
+ amsmath,amssymb,
+ aps,
+]{revtex4-1}
+
+%%% Packages %%%
+\usepackage[ansinew]{inputenc}
+\usepackage[portuges]{babel}
+\usepackage{graphicx}
+\usepackage{dcolumn}
+\usepackage{bm}
+
+%%% Alterações na geometria da pagina %%%
+\setlength{\textheight}{745pt}
+\setlength{\voffset}{-10pt}
+
+\begin{document}
+
+%%% Título, autores e informações dos autores, data %%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\preprint{APS/123-QED}
+
+\title{Lei de indução de Faraday}
+
+\author{Gonçalo Quinta nº 65680, Fernando Rodrigues nº66326, Teresa Jorge nº65722 e Vera Patrício nº65726}
+\vspace{2mm}
+\affiliation{
+ \vspace{3mm}
+ \textbf{Laboratório de Complementos de Electromagnetismo e Termodinâmica}\\
+ Mestrado Integrado em Engenheria Física Tecnológica 2009/2010\\
+ Instituto Superior Técnico (IST)
+ \vspace{3mm}
+}
+
+\date{\today}
+
+
+%%% Abstract %%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{abstract}
+
+Realizaram-se 2 ensaios com o objectivo de medir a força electromotriz induzida numa pequena bobine no centro de 2 bobines de Helmhotz. No primeiro ensaio, aplicou-se uma corrente sinosoidal às bobines de Helmhotz, tendo-se obtendo um coeficiente de indução mútua de ($1,11\pm 0,01)\times 10^{-3}$ H. No segundo ensaio, com corrente fornecida constante e a bobine pequena em rotação, obteve-se um coeficiente de indução mútua máximo de $(1,14\pm0,06)\times 10^{-3}$ H. Estudou-se também o funcionamento do transformador, tendo-se concluído que a aproximação de um acoplamento perfeito é aceitável para o transformador usado, com um desvio ao resultado esperado de cerca de 17\% para frequências até 500 Hz.
+
+
+\vspace{2mm}
+\end{abstract}
+
+\maketitle
+
+
+%%% Introdução %%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Introdução}
+
+Um dos efeitos electromagnéticos com mais aplicações práticas e interessantes na física é conhecido pela lei de indução de Faraday. Esta afirma que na presença de um campo magnético variável é induzida uma corrente num circuito, consoante as características do campo e a forma como este varia. 
+
+Nesta experiência irão ser utilizadas duas bobines de Helmhotz, que criarão um campo magnético que actuará num circuito constituído por uma bobine pequena colocada simetricamente entre as duas primeiras bobines. Através do teorema de Ampère, é possível obter o campo magnético $\vec{B}$ no interior de uma bobine ideal com $n$ espiras, simétrica em relação ao eixo dos $ZZ$'s 
+\begin{equation}
+\vec{B}=\mu_0 n i \phantom{1} \vec{e}_z
+\end{equation}
+\footnotesize{$\mu_0$ - permeabilidade magnética do vácuo = $4\pi \times 10^{-7} N A^{-2}$\\
+$i$ - intensidade de corrente que percorre as bobines de Helmhotz $(A)$\\}
+
+\normalsize
+Aplicando este resultado a duas bobines (neste caso as de Helmhotz) afastadas a uma igual distância $d$ da origem, é possível concluir que o campo magnético no eixo das cotas, entre as bobines, para $z=0$, é constante e dado por\cite{1}\cite{1}
+\begin{equation}
+\vec{B}_z = \frac{32 \pi n}{5\sqrt{5}}\frac{i}{r}10^{-7} \phantom{1} \vec{e}_z
+\end{equation}  
+\footnotesize{$r$ - raio de uma bobine (m)\\}
+
+\normalsize
+Colocando a pequena bobine no ponto anterior, e imprimindo-lhe um movimento de rotação em torno do seu próprio eixo, surge uma variação do fluxo do campo magnético $\phi$ na bobine (ou, no seu ponto de vista, esta fica sujeita a um campo magnético variável). A lei de indução de Faraday afirma que esta variação de fluxo de $\vec{B}$ vai induzir uma corrente na bobine pequena, devido ao aparecimento de uma diferença de potencial $\epsilon_i$, que se denomina força electromotriz.
+Mais precisamente, a lei prevê que
+\begin{equation}
+\epsilon_i = - \frac{d \phi}{dt}
+\end{equation}
+
+Concretizando, começa-se por notar que o fluxo que atravessa a superfície $S$ que engloba as $n$ espiras da bobine pequena, é dada por
+\begin{equation}
+\phi = n \int_{S} \vec{B} \cdot \vec{n} \, dS = nB\cos(\alpha) S
+\end{equation}
+onde $\alpha$ é o ângulo formado entre o campo magnético e a normal à superfície $S$ da bobine pequena onde existe fluxo. Forçando uma frequência angular $\omega$ na bobine resulta que
+\begin{equation}
+\frac{d \phi}{dt} = -nBS \sin(\omega t) \omega
+\end{equation}
+e assim se obtém o resultado final
+\begin{equation}
+\epsilon_{i_n} = nBS\omega
+\end{equation}
+onde $\epsilon_{i_n}$ se trata da força electromotriz máxima, quando $\sin(\omega t)=1$. O caso oposto também irá ser estudado, onde o circuito se mantém estático e o campo magnético $\vec{B}$ criado pelas bobines de Helhomtz varia no tempo. Nessa situação, a bobine pequena encontra-se na mesma posição que anteriormente, mas paralela às restantes bobines, sendo que agora
+\begin{equation}
+\epsilon_i = - \frac{d}{dt}\Big( n \int_{S} \vec{B} \cdot \vec{n} \, dS \Big) = - \frac{d}{dt} (nBS)
+\end{equation} 
+
+Assumindo que $B$ varia proporcionalmente com $i=i_n \cos(\omega t)$, pode-se escrever
+\begin{equation}
+\epsilon_i = nSK i_n \sin(\omega t) \omega
+\end{equation}
+
+Tomando novamente a força electromotriz máxima, pode-se ainda obter a relação linear na forma de razão
+\begin{equation}
+\frac{\epsilon_{i_n}}{i_n} = nSK \omega
+\end{equation}
+
+Será também estudado brevemente o coeficente de indução mútua $L$ entre os dois circuitos, que surge directamente da proporcionalidade entre o fluxo $\phi$ e a intensidade de corrente $i$
+\begin{equation}
+\epsilon_i = - \frac{d \phi}{dt} = - L \frac{di}{dt}
+\end{equation}
+
+Este depende exclusivamente da geometria do sistema, e quantifica a "facilidade" com que é induzida uma força electromotriz num circuito ao variar a corrente nele percorrida.\\
+
+Será também estudado o funcionamento de um transformador que tem como objectivo transmitir energia eléctrica de um circuito a outro, transformando o valor de tensão e corrente, ou mesmo modificar os valores das impedância eléctrica de um circuito. A relação entre as tensões nos dois enrolamentos de um transformador, escrita na forma complexa, é a seguinte:
+
+\begin{equation}
+	\frac{\bar{U}_2}{\bar{U}_1} = \frac{L}{L_{11}}\frac{R}{R + j\omega L_{22}(1-k^2)}
+\end{equation}
+\footnotesize{U2 - tensão aplicada à bobine de 600 espiras (V)\\ 
+U1 - tensão aplicada à bobine de 72 espiras (V)\\ 
+$\omega$ - frequência da tensão aplicada (rad/s)\\ 
+$L_{11}$ - coeficiente de auto-indução do enrolamento 1 em presença do enrolamento 2 (H)\\ 
+$L_{22}$ - coeficiente de auto-indução do enrolamento 2 em presença do enrrolamento 1 (H)\\ 
+R - resistência $(\Omega)$\\}
+
+\normalsize
+\hspace{-3.5mm}onde a quantidade $k$ é denomidada por coeficiente de acoplamento. Quando há um acoplamento perfeito, $k$ toma o valor 1, significando que não há fugas das linhas de campo. Por outro lado, $k$ tende para zero com o afastamento dos dois enrolamentos. Neste caso, será considerada a aproximação $k=1$, de onde se tira a expressão:
+
+\begin{equation}
+\frac{U_2}{U_1} = \frac{n_2}{n_1}
+\end{equation}
+
+
+%%% Experiência realizada %%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Experiência realizada}
+
+\hspace{-3.5mm}\textbf{Bobines de Helmholtz - Corrente variável}
+
+\begin{figure}[h!]
+\includegraphics[scale=0.4]{Imagens/esquema1}
+\caption{Esquema de montagem. A - Osciloscópio; B - Gerador de sinais; C - Resistência; D - Bobines de Helmhotz; E - Bobine pequena}
+\end{figure}
+
+A figura 1 ilustra o esquema de montagem usado. Numa primeira abordagem, a indução magnética é gerada por variação da corrente aplicada às bobines de Helmholtz. É pois aplicada uma corrente sinosoidal e medida a força electromotriz gerada na bobine pequena através da medição da amplitude de tensão que a percorre. Este processo é repetido para várias frequências de corrente aplicadas, cujas amplitudes são igualmente registadas, assim como a diferença de fase entre as duas. Com esses dados será verificada a lei da indução, ajustando-os à equação (9).
+O valor de L poderá ser calculado admitindo que o campo varia linearmente com a intensidade da corrente
+\begin{equation}
+	\epsilon_i = - \frac{d}{dt} (nKiS) = - nKS\frac{di}{dt} = -L\frac{di}{dt}
+\end{equation}
+pelo que L será dado por
+\begin{equation}
+	L = nSK
+\end{equation}
+
+\hspace{-3.5mm}\textbf{Bobines de Helmholtz - Posição variável}
+\vspace{1mm}
+\begin{figure}[h!]
+\includegraphics[scale=0.4]{Imagens/esquema2}
+\caption{Esquema de montagem. A - Osciloscópio; B - Fonte de alimentação da bobine pequena; C - Gerador de corrente; D - Bobines de Helmotz; E - bobine pequena}
+\end{figure}
+
+Na etapa seguinte, o campo mágnético gerado é estático e a variação do fluxo que atravessa a bobina pequena é obtido através da variação da posição dessa bobina em relação à direcção do campo. Neste caso a corrente aplicada às bobines de Helmholtz é contínua e a bobine central estará em rotação. Como anteriormente, são medidas as amplitudes de tensão obtidas para diferentes frequências, desta vez frequências de rotação da bobine, que são iguais às frequências das tensões medidas nos seus terminais. Este procedimento é repetido para 10 frequências diferentes e os dados recolhidos são comparados com os previstos pela lei de indução, através do seu ajuste à equação (6).\\
+
+\hspace{-3.5mm}\textbf{Transformador}
+\vspace{1mm}
+
+\begin{figure}[h!]
+\includegraphics[scale=0.4]{Imagens/esquema3}
+\caption{Esquema de Montagem 3 - A - Osciloscópio; B - Gerador de Sinais; C - Resistência; D - Tranformador}
+\end{figure}
+
+Na terceira parte do trabalho é estudado o funcionamento de um transformador. Começa-se por aplicar uma diferença de potencial numa bobine de 600 espiras e mede-se a diferença de potencial aos terminais de uma resistência, diferença de potencial essa que aparece noutra bobine de 72 espiras. Estas medições são efectuadas para diferentes frequências da tensão aplicada e para diferentes amplitudes. A tensão lida na resistência é posta em função da tensão aplicada à bobine de 600 espiras, sendo utilizados dados para as frequências de 50, 100, 500, 1000 e 2000 Hz. É ainda medida a diferença de fase entre a tensão na bobine de 600 espiras e na de 72 espiras.
+
+
+
+%%% Resultados %%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Resultados}
+
+Obtiveram-se os dados que constam nas tabelas I e II e no gráfico da figura 4:
+
+\begin{table}[h!]
+\caption{Dados das bobines de Helmholtz - Corrente variável}
+\begin{ruledtabular}
+\begin{tabular}{ccccccc}
+\multicolumn{1}{c}{\textrm{F (Hz)}}&
+\textrm{$e_{F} $ (Hz)\footnote{Foi considerado um erro de aparelho de 5\%}}&
+\textrm{Vr\footnote{tensão na resistência R} (V)}&
+\textrm{$e_{Vr}$ (V)}&
+\textrm{Ea\footnote{tensão na bobine pequena} (V)}&
+\textrm{$e_{Ea} $ (V)}&
+\textrm{Fase (º)\footnote{Erro 0,4º}}\\
+\colrule
+1005	&	50	&	1,27	&	0,05	&	0,42	&	0,02	&	89,6	\\
+2033	&	102	&	0,64	&	0,01	&	0,42	&	0,01	&	91,4	\\
+3000	&	150	&	0,43	&	0,01	&	0,43	&	0,01	&	91,6	\\
+4004	&	200	&	0,32	&	0,01	&	0,42	&	0,01	&	99,7	\\
+5005	&	250	&	0,26	&	0,01	&	0,43	&	0,01	&	93,6	\\
+5957	&	298	&	0,22	&	0,01	&	0,44	&	0,01	&	94,8	\\
+6989	&	349	&	0,18	&	0,01	&	0,43	&	0,01	&	94,7	\\
+8051	&	403	&	0,16	&	0,01	&	0,43	&	0,01	&	94,6	\\
+8945	&	447	&	0,14	&	0,01	&	0,43	&	0,01	&	95,4	\\
+10028	&	501	&	0,13	&	0,01	&	0,43	&	0,01	&	95,0	\\
+11035	&	552	&	0,12	&	0,01	&	0,43	&	0,01	&	95,5	\\
+11973	&	599	&	0,11	&	0,01	&	0,43	&	0,01	&	95,6	\\
+13055	&	653	&	0,10	&	0,01	&	0,43	&	0,01	&	95,6	\\
+13997	&	700	&	0,09	&	0,01	&	0,44	&	0,01	&	95,0	\\
+14958	&	748	&	0,08	&	0,01	&	0,44	&	0,01	&	99,7	\\
+\end{tabular}
+\end{ruledtabular}
+\end{table}
+
+
+\begin{table}[h!]
+\caption{Dados Bobines de Helmholtz - Posição variável}
+\begin{ruledtabular}
+\begin{tabular}{ccccccc}
+\textrm{V (V)\footnote{Meramente indicativo}}&
+\multicolumn{1}{c}{\textrm{I (A)}}&
+\textrm{$e_{I}$ (A)}&
+\textrm{F (Hz)}&
+\textrm{$e_{F} $ (Hz)}&
+\textrm{Ea (V)}&
+\textrm{$e_{Ea} $ (V)} \\
+\colrule
+10& 0,97 &  & 28,5 & 0,81 & 0,404 & 0,01 \\
+9 &  0,97 &  & 25,0 & 0,63 & 0,370 & 0,01  \\
+8,5 & 0,95 &  & 23,8 & 0,57 & 0,328 & 0,01  \\
+8 &  0,96 &  & 22,2 & 0,49 & 0,316 & 0,01  \\
+7 &  0,96 &  & 18,8 & 0,35 & 0,274 & 0,01  \\
+6 &  0,96 & 0,05 & 15,4 & 0,25 & 0,228 & 0,01  \\
+5,5 & 0,95 &  & 13,9 & 0,19 & 0,198 & 0,01  \\
+5 &  0,96 &  & 12,4 & 0,15 & 0,178 & 0,01  \\
+4 &  0,96 &  & 9,12 & 0,08 & 0,132 & 0,01  \\
+3 &  0,96 &  & 5,98 & 0,04 & 0,090 & 0,01  \\
+\end{tabular}
+\end{ruledtabular}
+\end{table}
+
+
+\begin{figure}[h!]
+\includegraphics[scale=0.4]{Imagens/dados}
+\caption{Dados obtidos das medições no transformador}
+\end{figure}
+
+%%% Análise dos Resultados %%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Análise dos resultados}
+
+\hspace{-3.5mm}\textbf{Bobines de Helmholtz - Corrente variável}
+\vspace{1mm}
+
+O ajuste dos dados à equação (9) enconta-se na figura 5.\\
+O coeficiente de indução obtido, que corresponde ao declive da recta, foi de $(1,112\pm0,008)\times10^{-3}$ H.\\
+Foi igualmente calculado o factor $K$, através da relação (13), tendo-se obtido um valor de $(4,65\pm0,04)\times10^{-3}$, em vez do valor teórico $4,23\times10^{-3}$.
+
+\begin{figure}[h!]
+\includegraphics[scale=0.25]{Imagens/sinosoidal}
+\caption{Ajuste dos dados da tabela I à equação (9)}
+\end{figure}
+
+\hspace{-3.5mm}\textbf{Bobines de Helmholtz - Posição variável}
+\vspace{1mm}
+
+O ajuste feito à força electromotriz máxima gerada em função da frequência angular de rotação da bobine pequena encontram-se na figura 6.
+
+\begin{figure}[h!]
+\includegraphics[scale=0.25]{Imagens/rotacao}
+\caption{Ajuste dos dados da tabela II à equação (6)}
+\end{figure}
+
+O valor de B obtido através do declive do ajuste foi de $(4,58\pm0,19)\times10^{-4}$ T. Na tabela III encontam-se tabelados os valores teóricos de B para as correntes aplicadas. 
+
+\begin{table}[h!]
+\caption{B teóricos}
+\begin{ruledtabular}
+\begin{tabular}{cccc}
+\textrm{I (A)}&
+\multicolumn{1}{c}{\textrm{$e_I$ (A)}}&
+\textrm{$B_z$ (mT)}&
+\textrm{$e_{B_z} $ (mT)}\\
+\colrule
+0,97	&		&	4,10	&		\\
+0,96	&	0,01	&	4,06	& $4,2\times 10^{-2}$\\
+0,95	&		&	4,02	&		\\
+\end{tabular}
+\end{ruledtabular}
+\end{table}
+
+Considerando que a corrente aplicada se manteve aproximadamente constante a um valor de 0,96 A, e sabendo que, por definição, o coeficiente de auto-indução é dado por $\phi = L i$ foi possível obter para este um valor de $(1,14\pm0,06)\times10^{-3}$ H.\\
+
+\hspace{-3.5mm}\textbf{Transformador}
+\vspace{1mm}
+
+Aos dados da figura 4 foi feito um ajuste linear - figura 7. Declive esperado é$\frac{n_{2}}{n_{1}}=\frac{72}{600}=0.12$
+
+\begin{figure}[h!]
+\includegraphics[scale=0.5]{Imagens/ajustetransformador}
+\caption{Ajuste linear dos dados da figura 3}
+\end{figure}
+
+Usando os declives obtidos neste último ajuste, foi feito um ajuste destes valores com os respectivos valores de frequência ao módulo da equação(11) - figura 8.
+
+\begin{figure}[h!]
+\includegraphics[scale=0.5]{Imagens/coisafeia}
+\caption{Ajuste dos declives à equação presente na figura}
+\end{figure}
+
+
+%%% Conclusão e críticas %%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Conclusão e críticas}
+
+Era esperado que o  valor de L calculado no primeiro ensaio e o valor de L máximo calculado no segundo ensaio devem ser coincidentes, já que no segundo ensaio L é máximo para a mesma posição em que a bobine se encontrava no primeiro método. Esta observação confirma-se, uma vez que os valores são muito próximos um do outro, sendo mesmo cobertos pelo erro experimental.
+Quanto ao valor do módulo do campo magnético, verifica-se que este pouco se desvia do que teoricamente se esperava. O pequeno desvio poderá advir da consideração feita de que as linhas de campo que atravessavam a espira pequena eram todas paralelas. Na verdade, a partir de certa distância ao eixo das bobines isto não se verifica, e alguma da componente normal que foi considerada teoricamente não existirá, pelo que o fluxo que atravessa a bobine pequena será menor do que o esperado. 
+
+Relativamente à diferença de fase, embora o valor se aproxime muito dos esperados 90º para os três menores valores de frequência, aumenta progressivamente com o aumento da frequência, chegando a um máximo de 99,7º. Uma possível explicação seria a resistência inserida no circuito criar essa diferença de fase, já que a resistência é consituida por um fio condutor enrolado, comportando-se como uma bobine. Para confirmar esta hipotese mediu-se a sua inductância, obtendo-se 0,002mH para 120Hz. Assim com o aumento da frequência aplicada o contrafluxo criado na resistência torna-se mais relevante impondo uma diferença de fase cada vez maior entre a corrente nas bobines de Helmhotz e a tensão lida na resistência. Note-se que esta diferença de fase possibilita que a difernça de fase entre a corrente nas bobines de Helmhotz e a força electromotriz seja 90º como previsto teoricamente.
+
+A partir dos 5000 Hz da frequência da corrente, o sistema está claramente saturado porque um aumento da frequência não leva a um aumento na força electromotriz induzida. A saturação ocorre porque a impedância das bobines $(jL_{11}\omega)$  aumenta com o aumento da frequência, o que provoca uma maior queda de tensão e a consequente diminuição da corrente que as percorre. No entanto, o aumento da frequência compensa o aumento da corrente, mantendo-se um B praticamente constante, obtendo-se uma força electromotriz também constante.
+
+Em relação a este tranformador verifica-se que o aclopamento perfeito pode ser considerado para frequências até aos 100Hz, para as quais se verifica um desvio ao resultado esperado de cerca de 5\%. Para frequências de tensão da ordem dos 500Hz já se verifica um desvio de 17\%. Para estas frequências o ganho de tensão é menor uma vez que a força electromotriz criada na segunda bobine traduz-se numa corrente quando esta está ligada a uma resistência. Esta corrente ao percorrer a segunda bobine vai gerar um fluxo contrário ao gerado pela bobine de 600 espiras, o que vai diminuir o fluxo total a atravessar a segunda bobine; assim a força electromotriz criada nesta também diminui, até se encontrar uma situação de equilíbrio, como o gráfico da figura 8 sugere. Este mesmo ajuste também permitiu confirmar que o k era muito próximo de 1, assumindo-se que $L_{22}$ estaria na ordem de grandeza dos 20mH.
+
+Como o contra fluxo criado pela corrente induzida tem uma diferença de fase de 90º do fluxo original, o fluxo total resultante vai ter um desvio de fase que é tanto maior quanto maior for a contribuição do contra fluxo, já que se trata de uma soma dos dois fluxos.Todos estes desvios ao aclopamento perfeito podem ser explicados pela corrente induzida, já que quando se retira a resistência ao circuito, ficando a bobine em circuito aberto, sem ser percorrida pela corrente, verifica-se que o ganho é igual à razão entre o número de espiras para qualquer frequência da tensão.
+
+
+
+        
+%%% Bibliografia %%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{thebibliography}{20}
+
+\bibitem{1} \textit {Contribuição para o desenvolvimento da física experimental no IST} ANTÓNIO, C. Ribeiro, SEBASTIÃO, Pedro e TOMÉ, Francisco, Secção de Folhas da aeist, 1998
+
+\end{thebibliography}	
+
+	
+\end{document}
+
+
+%%% Modelo de tabela %%%
+
+%\begin{table}[h!]
+%\caption{Determinação da eficiência, da potência de arrefecimento e da eficiência de Carnot}
+%\begin{ruledtabular}
+%\begin{tabular}{ccccccc}
+%\textrm{$V2$ (V)}&
+%\textrm{$T_a$ (ºC)}&
+%\textrm{$\epsilon$}&
+%\textrm{$e_{\epsilon}$}&
+%\textrm{$\epsilon_{Carnot}$}&
+%\multicolumn{1}{c}{\textrm{$P1$ (W)}}&
+%\textrm{$e_{P1}$ (W)}\\
+%\colrule
+%2,344 & 17,11 & 2,47 & 0,06 & 29,01 & 1,996 & 0,068 \\
+%1,458 & 15,81 & 2,17 & 0,07 & 36,83 & 0,670 & 0,039 \\
+%2,320 & 20,90 & 3,75 & 0,08 & 36,09 & 2,842 & 0,081 \\
+%\end{tabular}
+%\end{ruledtabular}
+%\end{table}
+
+

@@ -1,0 +1,30 @@
+set notable
+set zlabel "Temperatura (K)"
+set ylabel "t (s)"
+set xlabel "Distância (m)"
+#set yrange [0:1]
+set key font ",15"
+set xrange[0:0.1]
+set ticslevel 0
+set view 120,30
+
+############# - Plot1
+
+f1(x,y,n)=(((-1)**n)/((1+2n)*(1+2n)))*(exp(-q*y*(pi/(L*(2+n*pi)))*(pi/(L*(2+n*pi)))))*sin((x*pi+x*n*pi*2)/(2*L))
+
+sum1(x,y)=sum [n=1:3]   fourier(x,y,n)
+
+fit sum1(x,y) 'Trans1.dat' using 1:2 via q,L
+
+
+#############
+#set key left top
+
+
+splot sum1(x,y) t "algo" lw 1.5 lt rgb 'black' ,\
+splot "Trans.dat" using (0.01):1:2 with lines lt rgb 'green' notitle ,\
+"Trans.dat" using (0.035):1:3 with lines lt rgb 'blue' notitle ,\
+"Trans.dat" using (0.06):1:4 with lines lt rgb 'orange' notitle ,\
+"Trans.dat" using (0.075):1:5 with lines lt rgb 'purple' notitle ,\
+"Trans.dat" using (0.09):1:6 with lines lt rgb 'red' notitle 
+

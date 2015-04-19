@@ -1,0 +1,2 @@
+abstract
+Neste trabalho estudou-se a compressão adiabática e a compressão isotérmica de um gás. Para o primeiro caso encontrou-se uma dependência da pressão de $(-1,380\pm0,006)$ do volume e para o segundo caso uma dependência da pressão de $(-1,050\pm0,004)$ do volume. As compressões não foram perfeitas, existiu troca de calor na compressão adiabática e variação de temperatura na compressão isotérmica.

@@ -1,0 +1,216 @@
+%%% Tipo de documento %%%
+\documentclass[a4paper,8pt]{article}
+
+%%% Packages %%%
+\usepackage[ansinew]{inputenc}
+\usepackage[portuges]{babel}
+\usepackage{amsfonts}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage[official]{eurosym}
+\usepackage[a4paper]{geometry}       
+\usepackage{amsmath} 
+\usepackage{amssymb}                
+\usepackage{fancyhdr} 
+\usepackage{subfig}
+\usepackage{multicol}
+
+%%% Modificações da geometria da página %%%
+\setlength{\voffset}{-.50in}
+\setlength{\hoffset}{-.50in}
+\setlength{\headheight}{0pt}
+\setlength{\topmargin}{0pt}
+\setlength{\headsep}{0pt}
+\setlength{\textheight}{750pt}
+\setlength{\textwidth}{500pt}
+
+
+%%% Header e Título %%%
+\title{\rule[3pt]{\textwidth}{0.1pt} \footnotesize{\textbf{Laboratório de Complementos de Electromagnetismo e Termodinâmica - MEFT - 2009/10 \\ 2º Semestre}} \\
+\rule[3pt]{\textwidth}{0.1pt} \\ \vspace{10pt} \huge{Corpo Negro}} 
+
+%%% Sem data %%%
+\date{}
+
+%%% Autores %%%
+\author{Gonçalo Quinta nº65680, Fernando Rodrigues nº66326, Teresa Jorge nº65722 e Vera Patrício nº65726}
+
+%%% Início do documento %%%
+\begin{document}
+
+\maketitle
+
+
+%%% Abstract %%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\abstract{
+Resumo fofo
+}
+
+\setlength{\columnsep}{10pt}
+
+\begin{multicols}{2}
+
+%%% Introdução %%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\section*{Introdução}
+
+Um corpo negro é definido como um objecto que absorve toda a radiação que sobre ele inside, emitindo apenas em função da sua temperatura. O modelo usado para o descrever é o de uma cavidade com uma pequena abertura, estando as suas paredes revestidas de osciladores electromagnéticos. A radiação que entra pela abertura é reflectida sucessivamente nas suas paredes, até ser totalmente absorvida, até se atingir o equilíbrio térmico. Nesse caso, a radiação emitida pela cavidade depende apenas da temperatura das suas paredes, já que que é originada apenas pelos osciladores, sendo contínua em todo o espectro.\cite{Livro Azul}  O presente trabalho destina-se a estudar algumas das propriedades dessa radiação. 
+
+Para o estudo da energia absorvida, define-se a grandeza aborvância como:
+\begin{align}
+	Q=\frac{E_{abs}}{E_{inc}}
+\end{align}
+\footnotesize $E_{abs}$: Energia absorvida (J) \\ $E_{inc}$: Energia incidente (J)
+
+Pela definição de corpo negro acima exposta se tem que a sua absorvância será igual a um.
+Já para o estudo da energia emitida se tem a emissividade definida como:
+\begin{align}
+	$\epsilon$ = \frac{I}{$I_n$}
+\end{align}
+\footnotesize{I- Energia emitida}\footnotesize{$I_n$- Energia emitida por um corpo negro à mesma temperatura}
+Em que $I_n$ corresponde ao máximo que é possivel irradiar, pelo que o valor $\epsilon$ nunca será maior que um (correspondendo esse caso limite, mais uma vez, ao corpo negro). Na verdade, esta grandeza depende da temperatura do corpo, do ângulo de emissão e do comprimento de onda analisado, mas irá assumir-se que é constante. 
+O teorema de Kirchoff  relaciona estas duas quantidades, afirmando que, em equilibrio térmico,  a emissividade e absorvância de um corpo são iguais.\cite{kirchoff} Pode-se assim afirmar que materiais que são bons reflectores emitirão pouco e vice-versa, o que se irá verificar experimentalmente na terceira parte deste trabalho.
+
+Pelas razões atrás expostas, a energia irradiada  por um corpo negro vai apenas depender sua temperatura, pela relação seguinte, conhecida como Lei de Stefen:\cite{stefen}
+\begin{align}
+	$I_n=\sigma$ T^4 (J)
+\end{align}
+\footnotesize {$\sigma$ - constante de Stefen = 5,670400\times10^{-8} Js^{-1}m^{-2}K^{-4}}
+
+Esta energia não é equitativamente distribuida por todos os comprimentos de onda seguindo uma curva caracteristica:
+BONECO
+
+Corpos que não são bem aproximados pelo modelo do corpo negro emitem radiação com a mesma distribuição de energia por comprimento de onda, apenas a intensidade é menor. A emissividade é medida dessa atenuação, pelo que a energia irradiada por estes corpos será dada pela equação:
+\begin{align}
+	I=$\epsilon \sigma$ T^4
+\end{align}
+
+Embora a  forma da curva seja essencialmente a mesma para diferentes temperaturas, o seu máximo varia com essa grandeza seguindo a expressão seguinte, conhecida como Lei de Wien:\cite{wien}
+\begin{align}
+	$\lambda_{max}$T=b=2.8977685\times10^{-3}
+\end{align}
+\footnotesize{T- Temperatura (K)\\ b - constante de Wien???? (mK) }
+Ou seja, o comprimento de onda no qual a maior parte da energia é radiada depende da temperatura do corpo radiante, razão pela qual objectos (que podem ser aproximados ao modelo descrito) tais como estrelas ou metais, exibem cores diferentes consoante a temperatura a que se encontram aquecidos.
+
+A descrição da curva é feita assumindo que os osciladores das suas paredes são electões e que sua potência irradiada terá que ser igual à potência absorvida, de onde se obtém a seguinte relação para a densidade de energia radiada (\textbf{por frequência e por angulo sólido????????}):
+\begin{align}
+	$U_\gamma=\frac{8\pi\gamma^2}{c^3}\bar{E}=\frac{8pi}{c\lambda}\bar{E}$ (\textbf{unidades?????????)}
+\end{align}
+\footnotesize{$\gamma$ - frequência (Hz)\\ \bar{E} - energia média do electrão}
+
+Uma aproximação para o valor desta energia média foi feita por Reileigh e Jonas usando o modelo clássico, em que a energia seria dada por kT (k - constante de Boltzman), pelo que a densidade de energia radiada seria dado por:
+\begin{align}
+	$U_\gamma=\frac{8\pi}{c\lambda}$kT
+\end{align}
+Esta descrição não é compativel com os dados experimentais, já que para comprimentos de onda muito pequenos a potência irradiada tenderia a ser cada vez maior, o que não se verifica.\cite{Livro Azul}
+
+Foi Planck que ultrapassou esta dificuldade, conhecida como catástrofe dos ultravioleta, propondo o o que viria a constituir a base do modelo quântico, em que a densidade segue a chamada distribuição de Planck, e é dada por:
+\begin{align}
+	$U_\gamma=\frac{8pi}{c\lambda} \frac{h\gamma}{e^{\frac{h\gamma}{kT}}$ - 1}
+\end{align}
+
+A partir desta expressão é possivel reencontrar as Leis de Wien (dado pelo ponto nulo da primeira derivada) e Stefen que corresponde à sua integração em todos os comprimentos de onda. Deste modo é possivel encontrar os valores das constantes, dados por\cite{Livro Azul}:
+\begin{align}
+	b= \frac{hc}{4,96k}
+	$\sigma$ = \frac{2$\pi$^5k^4}{15c^5h^5} 
+\end{align}
+
+
+%%% Experiência realizada %%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{Experiência realizada}
+
+\subsection{Aspectos Gerais}
+
+O equipamento a ser utilizado encontra-se esquematizado na figura 1.
+
+BONECO DO GONIOMETRO E PRISMA E COISINHAS LINDAS
+ASSINALAR ANGULO ALPHA DELTA E TETHA
+
+Será usada uma lâmpada de filamento de tugsténio como modelo de corpo negro. A sua temperatura de funcionamento será determinada admitindo-se que a resistência e a temperatura da lâmpada são directamente proporcionais. Usando o valor da resistência da lâmpada previamente calculado a 300K a temperatura de funcionamento será cálculada através da expressãoNUMERO, sendo a resistência determinada aplicando-se a Lei de Ohm.
+
+\begin{align}
+	\frac{R}{0,278}=\frac{T}{300}
+\end{align}
+\footnotesize{R - resistência à temperatura T ($\Omega$) \\T - temperatura (K)}
+
+O comprimento de onda da radiação a ser medida será calculado através da equação NUMERO que faz uso da Lei de Sneel.
+
+\begin{align}
+	n=\sqrt{sin(\theta)^2+(\frac{sin(\alpha+\theta+\delta)+cos(\alpha)sin(\theta))}{sin(\alpha)})^2}
+\end{align}
+
+\subsection{Verificação da Lei de Wien e de Planck}
+
+Usando o equipamento acima descrito, será determinado o ângulo para o qual a intensidade de radiação é máxima, fazendo-se de seguida sucessivas medições da intensidade para ângulos compreendidos entre a radiação verde e esse máximo.
+A constante de Wien será determinada gráficamente através da relação LEI DE WIEN DA INTRO, convertendo-se os ângulos em comprimento de onda através da expressão XXX.
+Os resultados serão também comparados com a curva teórica esperada para a intensidade de radiação de um corpo negro - lei de Planck. Essa comparação será feita graficamente, plotando a intensidade medida em função do comprimento de onda e normalizadando o máximo ao máximo teórico, e comparando essa curva com a curva teórica, dada pela equação XXX.
+
+\begin{align}
+	I_\lambda \delta\lambda = \frac{2\pi h c^2}{\lambda^5} \frac{1}{e^\frac{hc}{KT\lambda}-1}\delta\labda}
+\end{align}
+
+\subsection{Verificação da Lei de Stefen}
+
+Para uma distância fixa será medida a intensidade total da luz radiada para diferentes tensões (que corresponderão a diferentes temperaturas da lâmpada) aplicadas. A lei de Stefen será verificada graficamente, ajustando-se as intensidades e temperaturas obtidas não à equação XXXDAINTRO, mas à sua forma logaritmica NUMERO, obtendo-se a constante de stefen através da ordenada na origem e a dependencia da quarta potência da temperatura a partir do seu declive.
+
+\begin{{align}
+	log(I)= log(\sigma) + 4log(T)
+\end{align}
+
+\subsection{Verificação da Lei de Kirchoff}
+
+A verificação da Lei de Kirchoff será feita recorrendo a um cubo de Leslie: um cubo com as 4 faces laterais revestidas com diferentes materiais, a que corresponderão diferentes poderes de absorção de emissão. Para uma dada temperatura, será registada a intensidade luminosa radiada por cada face.
+
+
+
+%%% Resultados %%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{Resultados}
+
+Resultados alucinantes
+
+
+%%% Conclusão e críticas %%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{Conclusão e críticas}
+
+Conclusões espantosas e críticas maravilhosas
+
+%%% Bibliografia %%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{thebibliography}{20}
+
+\bibitem{Livro Azul} DEUS, Jorge Dias de, PIMENTA, Mário, e toutro, \textit{Introduçâo à Física}, McGraw-Hill, Fevereiro  de 2000, Lisboa.
+\bibitem{kirchoff} http://en.wikipedia.org/wiki/Kirchhoff's_law_of_thermal_radiation
+\bibitem{wien} http://en.wikipedia.org/wiki/Wien's_displacement_law
+\bibitem{stefen} http://en.wikipedia.org/wiki/Stefan-Boltzmann_law
+\end{thebibliography}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end{multicols}
+
+\end{document}
+
+
+%\begin{table}[ht]
+%\centering                                          
+%\begin{tabular}{c c c c}                        
+%\hline\hline                                      
+%nós & 1 & 2 & 3\\ [0.5ex]            
+                                                 
+%\hline                                            
+%4 & 0.439024 &  257.25 &      42.875\\
+%6 & 0.230248 &  1958.42 &     275.825\\
+%8 & 0.204177 & 16093.8 &      2038\\
+%16 & 1.97003 & - &       -\\
+%32 & 96.7969 &   - & -\\[1ex]        
+%\hline                                          
+%\end{tabular}
+%\caption{Variação do erro máximo e suas estimativas consoante o nº de nós}    
+%\label{table:nonlin}                              
+%\end{table}

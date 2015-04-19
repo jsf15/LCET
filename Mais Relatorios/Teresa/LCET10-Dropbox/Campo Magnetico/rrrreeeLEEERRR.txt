@@ -1,0 +1,7 @@
+Tá pronto pra espetar as conclusões... se título dessa secção ficar fora do sitio digam-me k eu meto no lugar, vou ver se inda tenho tempo pra rever o condensador todo
+
+Pronto as conclusões já tão praticamente todas. Falta dizer porque é que raio o campo na figura 11 diminui quando nos aproximamos da espira (como calculaste os valores teoricos e aquilo batia certo suponho que saibas). Na parte do transformador tinhamo-nos esquecido da parte do declive de B/H que devia dar a permeabilidade. Mesmo já tendo adrabado um bocado (assumi que o B eram 304mV mas provavelmente eram 3,04 V - sao as coisas a verde na tabela dos resultados) aquilo dá um valor disparatado. Ha que ter em conta que aquele factor não é linear, e que podemos ter medido numa região má. Mas já tou a atirar ao ar.
+
+Relê, acrescenta a parte da figura 11, imprime e não penses mais no assunto...
+
+ 

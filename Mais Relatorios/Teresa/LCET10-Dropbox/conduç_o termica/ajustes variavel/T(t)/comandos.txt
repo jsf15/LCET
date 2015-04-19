@@ -1,0 +1,13 @@
+f1(x) = -0.0665349 *x + 54.1114
+f2(x) = -0.0121857 *x + 34.8002 
+f3(x) = 0.00543388 *x + 24.7891 
+f4(x) = -0.0196867 *x + 37.8319 
+
+set label "(290.19, 35.77)" at 295.1875, 36.0682134727817
+set label "(390.17, 29.024)" at 395.1719 ,	29.523527969372
+
+set title "Ajuste T(t)"
+set xlabel "Tempo (s)"
+set ylabel "Temperatura (K)"
+
+plot "t1.txt" title "pontos 1", f1(x) title "f1(x) = -0.0665349 *x + 54.1114","t2.txt" title "pontos 2", f2(x) title "f2(x) = -0.0121857 *x + 34.8002","t3.txt" title "pontos 3", f3(x) title "f3(x) = 0.00543388 *x + 24.7891","t4.txt" title "pontos 4", f4(x) title "f4(x) = -0.0196867 *x + 37.8319"

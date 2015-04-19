@@ -1,0 +1,23 @@
+f1(x) = -0.281207 *x + 80.2239 
+f2(x) = -0.162349 *x + 70.1221
+f3(x) = -0.0774922 *x + 57.0378  
+f4(x) = -0.079101 *x + 57.0352
+f5(x) = -0.154866 *x + 80.7598 
+
+
+set title "Ajuste T(t) usando T1"
+set xlabel "Tempo (s)"
+set ylabel "Temperatura (K)"
+
+
+
+set label "(58.45, 63.83)" at 59.45313, 65.8337838304366
+set label "(118.03, 51.27)" at 119.0313, 53.2663586827056
+set label "(177.86, 42.94)" at 178.8594, 45.9365122403248
+set label "(237.47, 38.34)" at 238.4688,	41.3377121120134
+set label "(297.25, 34.38)" at 298.25,	39.378906851107
+
+
+plot f1(x) title "f1(x) = -0.281207 *x + 80.2239",f2(x) title "f2(x) = -0.162349 *x + 70.1221",f3(x) title "f3(x) = -0.0774922 *x + 57.0378",  f4(x) title "f4(x) = -0.079101 *x + 57.0352",f4(x) title "f5(x) = -0.154866 *x + 80.7598", "x1.txt" title " ","x2.txt" title "  ","x3.txt" title " ","x4.txt" title " ","x5.txt" title " " 
+
+plot f1(x) title "f1(x) = -0.281207 *x + 80.2239",f2(x) title "f2(x) = -0.162349 *x + 70.1221",f3(x) title "f3(x) = -0.162349 *x + 57.0378",  f4(x) title "f4(x) = -0.079101 *x + 57.0352",f4(x) title "f5(x) = -0.154866 *x + 80.7598", "x1.txt" title "pontos 1","x2.txt" title "pontos 2","x3.txt" title "pontos 3","x4.txt" title "pontos 4","x5.txt" title "pontos 5" 

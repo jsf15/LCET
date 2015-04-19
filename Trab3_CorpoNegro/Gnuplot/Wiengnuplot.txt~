@@ -1,0 +1,12 @@
+set title "Lei de Wien" font ",15"
+set ylabel "λ (nm)"
+set xlabel "1/T (K^{-1})"
+#set yrange [0:1.1]
+#set xrange[500:6000]
+
+f(x)=(a*x+b)*10**9
+fit f(x) 'Wien.dat' using 1:2 via a,b
+
+#set key left top
+
+plot f(x) notitle lt rgb 'blue' ,"Wien.dat" u 1:2:3 w yerr lt rgb 'black' notitle

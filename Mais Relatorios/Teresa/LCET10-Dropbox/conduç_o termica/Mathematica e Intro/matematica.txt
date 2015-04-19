@@ -1,0 +1,1 @@
+y=f\+(q-f)*(8/(pi*pi))*(exp(-chi*(pi/(2*l))*(pi/(2*l))*x)*sin(x1*pi/(2*l))-(1/9)*exp(-chi*(3*pi/(2*l))*(3*pi/(2*l))*x)*sin(x1*3*pi/(2*l))\+(1/25)*exp(-chi*(5*pi/(2*l))*(5*pi/(2*l))*x)*sin(x1*5*pi/(2*l))-(1/49)*exp(-chi*(7*pi/(2*l))*(7*pi/(2*l))*x1)*sin(x1*7*pi/(2*l)))

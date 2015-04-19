@@ -1,0 +1,233 @@
+ABSTRACT:
+
+Neste trabalho foi efectuada a análise de um conversor termoeléctrico e o estudo do efeito de Peltier numa célula de Peltier que lhe estava associada. Conseguiu-se para este sistema actuando enquanto máquina térmica determinar o valor da resistência de carga óptima, diversos rendimentos do processo com diversos graus de aproximações ideiais, isto é, tendo em conta as diversas fontes de perda de potência do sistema, bem como a determinação da resistência térmica do sistema. Por fim, considerando o conversor actuando enquanto bomba térmica, calculou-se a sua eficiência para diversos valores de intensidade de corrente.
+
+\documentclass[9pt]{extarticle}
+
+\usepackage[utf8]{inputenc}              % Tipos de caracteres
+\usepackage[portuguese]{babel}           % Português
+\usepackage[a4paper,portrait]{geometry}  % Tipo de papel
+\usepackage{color}                       % Para tratamento da cor
+\usepackage{graphicx}                    % Para a imagem
+\DeclareGraphicsExtensions{.jpg,.png}
+\usepackage{amsmath}                     % Para as matematiquices
+\usepackage{amssymb}
+\usepackage{array}
+\usepackage{gensymb}                     % Grau
+\usepackage{multicol}
+\setlength{\columnsep}{1cm}
+\usepackage{geometry}					% Margens
+%\usepackage{xfrac}
+\usepackage{colortbl}
+
+\usepackage{multirow}
+
+\addtolength{\topmargin}{-25mm}
+\addtolength{\textheight}{60mm}
+\addtolength{\oddsidemargin}{-15mm}
+\addtolength{\textwidth}{32mm}
+
+\renewenvironment{abstract}
+ {\small
+  \begin{center}
+  \bfseries \abstractname\vspace{-.5em}\vspace{0pt}
+  \end{center}
+  \list{}{
+    \setlength{\leftmargin}{0cm}%
+    \setlength{\rightmargin}{\leftmargin}%
+  }%
+  \item\relax}
+ {\endlist}
+ 
+\renewcommand{\abstractname}{Resumo}
+
+\delimitershortfall-1sp
+\newcommand\abs[1]{\left|#1\right|}
+\newcommand{\PR}[1]{\ensuremath{\left[#1\right]}}
+\newcommand{\PC}[1]{\ensuremath{\left(#1\right)}}
+\newcommand{\chav}[1]{\ensuremath{\left\{#1\right\}}}
+
+\newcolumntype{x}[1]{>{\centering\hspace{0pt}}p{#1}}
+
+\begin{document}
+
+\title {\bf \huge T1 - Conversor Termoelétrico}
+\author
+{{\small Grupo III - João Ferreira (78179) Henrique Rodrigues (78632) Rodrigo C. Carvalho (78646) Cristina Melício (78947)} \\
+{\small MEFT - 2ºAno, 2º Semestre - Laboratório de Complementos de Eletromagnetismo e Termodinâmica}}
+\date{{\small Sexta-Feira, 13 de Março de 2015}}
+\maketitle
+
+\begin{abstract}
+\par \textbf{CRISTINA ou HENRIQUE}
+\end{abstract}
+
+\begin{multicols}{2}
+
+\section{Introdução}
+
+\par O conversor termoelétrico é um dispositivo que permite criar uma diferença de potencial a partir de uma diferença de temperaturas, e vice-versa. 
+
+\par Os fenómenos que estão na explicação desta experiência são o efeito de \textit{Seeback}, de \textit{Peltier} e de \textit{Thomson}. O efeito de \textit{Seeback}, consiste em impor uma diferença de temperaturas  $\Delta T$ entre as placas condutoras nas extremidades da célula de modo a obter uma diferença de potencial, $V$, estando estas relacionadas pelo coeficiente de \textit{Seeback}:
+
+\begin{equation}
+S_{A,B} = \frac{V}{\Delta T}
+\end{equation}
+
+\par onde A e B correspondem aos materiais das extremidades. Já o efeito de \textit{Peltier} consiste em impor uma diferença de potencial à célula de modo a produzir um gradiente de temperatura entre as placas, estando a densidade de fluxo de calor resultante da existência deste gradiente de temperaturas, $J_Q$, relacionada com a corrente por unidade de área, J, pelo coeficiente de \textit{Peltier}:
+
+\begin{equation}
+\Pi_{A,B} = \frac{J_{Q_{A}}-J_{Q_{B}}}{J}
+\end{equation}
+
+\par A relação que se estabelece entre estes dois efeitos é conhecida pela Segunda Relação de Kelvin e é dada por:
+
+\begin{equation}
+\Pi_{A,B} = T S_{A,B}
+\end{equation}
+
+\par Revela-se necessário considerar ainda o efeito de \textit{Thomson} se existir grandiente do coeficiente de Seeback, ou seja, se este não depender linearmente com a temperatura. Sendo assim, o coeficiente de \textit{Thomson} é dado por:
+
+\begin{equation}
+\tau = \frac{\dot{q}_{Thomson}}{\vec{J} \cdot \vec{\nabla} T}
+\end{equation}
+
+\par A relação dada pelos três efeitos, denominada Primeira Relação de Kelvin, corresponde a:
+
+\begin{equation}
+\frac{d \Pi_{A,B}}{dT} + \tau_A - \tau_B = S_{A,B}
+\end{equation}
+
+\par Nesta experiência o conversor termoelétrico tem por base uma célula de \textit{Peltier} em contacto com duas placas condutoras de metais diferentes.
+
+\par Na primeira parte, o mecanismo cujo esquema está representado na figura 1 é usado como máquina térmica, pelo que o seu rendimento é dado por:
+
+\begin{equation} \label{n1}
+\eta_1=\frac{P_2}{P_1}}
+\end{equation}
+
+\par onde $P_2$ e $P_1$ são, respetivamente, a potência dissipada na resistência $R_2$ (ligada à célula) e a potência fornecida pela fonte quente $E_1$, dadas pelas seguintes expressões:
+\begin{gather}
+P_1 = V_1 I_1 \\
+P_2 = \frac{{V_2^2}}{R_{2_{0}}}
+\end{gather}
+
+\hspace{-0.8cm}
+\begin{center}
+\includegraphics[width=220pt]{figura1.png}
+\begin{center}
+\par\noindent {\scriptsize ({\bf Figura 1}: Esquema da montagem da parte 1)}
+\end{center}
+\end{center}
+
+Para maximizar o rendimento determina-se a resistência de carga ótima $R_{2{_0}}$, para a qual a potência $P_2$ é máxima, dada pela fórmula:
+
+\begin{equation} \label{Ro}
+R_{2{_0}} = \frac{5I_{2{_5}}-2I_{2{_2}}}{I_{2_2}-I_{2_5}} - 2 R_a
+\end{equation}
+
+onde $R_a$ é a resistência interna do amperímetro obtida pela fórmula:
+\begin{equation}
+R_a = \frac{V_a}{I_2} 
+\end{equation}
+
+\par Uma vez que existem perdas de energia, nem toda a potência fornecida pela fonte quente chega à fonte fria ou é transformada pela célula em corrente, sendo necessário considerar também a potência retirada da fonte fria pelo fluido de arrefecimento, ou seja, $ P_3$, que se obtém com seguinte equação:
+\begin{equation} \label{P3}
+P_3 = \dot{m} C (T_c-T_d)
+\end{equation}
+
+\begin{center}
+\par\noindent {\scriptsize (Onde $C=4186Jkg^{-1}K^{-1}$ é a capacidade térmica mássica da água e $\dot{m}$ é o caudal do fluido de arrefecimento dado por
+\begin{equation} \label{caudal}
+\dot{m} = \frac{\rho V}{\Delta t}
+\end{equation}
+\par\noindent sendo $\rho$ a densidade da água)
+}
+\end{center}
+
+\par Considerando uma potência dissipada dada por:
+\begin{equation} \label{Pdiss}
+P_{diss}=P_1-P_2-P_3
+\end{equation}
+
+\par\noindent tem-se a primeira correção ao rendimentos:
+\begin{equation} \label{n2}
+\eta_2=\frac{P_2}{P_1-P_{diss}}=\frac{P_2}{P_2+P_3}
+\end{equation}
+
+\par Para a última correção ao rendimento considera-se ainda que uma parte da potência passa da fonte quente para a fonte fria por condução através da célula fotovoltaica, obtendo a fórmula:
+\begin{equation} \label{n3}
+\eta_3=\frac{P_2}{P_2+P_3-P_{3_{cond}}}
+\end{equation}
+De forma a calcular a potência dissipada por condução considera-se uma resistência térmica entre a fonte fria $T_A$ e a quente $T_B$, cuja formula é:
+\begin{equation} \label{Rt}
+R_T = \frac{T_A - T_B}{P_{3_{cond}}}
+\end{equation}
+Para avaliar o desempenho da máquina tem-se como referência o rendimento do motor reversível operando entre as temperaturas das fontes.
+\begin{equation} \label{Nc}
+\eta_{Carnot} = 1 - \frac{T_B}{T_A}
+\end{equation}
+
+Na segunda parte da experiência, com base no efeito de \textit{Peltier}, o conversor, representado na figura 2, é utilizado como bomba de calor, sendo a eficiência determinada pela expressão:
+\begin{equation} \label{e}
+\varepsilon=\frac{P_3}{P_2}
+\end{equation}
+em que $P_2$ é a potência cedida pela fonte de tensão $E_2$ e é dada pela expressão:
+\begin{equation}
+P_2= V_2 I_2
+\end{equation}
+
+\hspace{-0.8cm}
+\begin{center}
+\includegraphics[width=220pt]{figura2.png}
+\begin{center}
+\par\noindent {\scriptsize ({\bf Figura 2}: Esquema da montagem da parte 2)}
+\end{center}
+\end{center}
+
+A eficiência de referência é a da máquina de Carnot, cuja temperatura da fonte quente é $T_A$, e da fonte fria $T_B$, dada pela expressão:
+\begin{equation} \label{ec}
+\varepsilon_c = \frac{T_B}{T_B - T_A}
+\end{equation}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\section{Discussão dos Resultados}
+
+\par Em primeiro lugar procedeu-se à verificação das temperaturas medidas para os diversos sensores a serem utilizados posteriormente ao longo da experiência. Uma vez que estes se encontravam em equilíbrio térmico, esperava-se que as temperaturas que indicavam fossem idênticas. Contudo, tal não se verificou - por conseguinte, procedeu-se à determinação da média dos valores obtidos e calculou-se o desvio em relação a esse valor para as temperaturas medidas por cada um dos sensores, tendo o valor obtido para cada um dos sensores sido adicionado ao valor medido por esse mesmo sensor no decurso da experiência por forma a garantir a fiabilidade dos resultados obtidos.
+
+\par Relativamente à utilização do conversor termoeléctrico enquanto máquina térmica, procedeu-se primeiramente à determinação da resistência de carga óptima, para a qual se obteve um valor $R_{20}=(11.1\pm1.2)\ohm$. Uma vez que o valor máximo de resistência que podia ser atingido era $10\ohm$, o resto da experiência foi realizado tento tal em conta. Procedeu-se então à determinação do valor do rendimento da máquina térmica para diferentes valores de tensão aplicada na célula de Peltier.
+
+\par A primeira constatação obtida mediante a análise dos resultados obtidos consiste no facto de se ter verificado que um aumento de tensão implicaria um aumento da diferença de temperaturas entre a fonte quente e a fonte fria. Além disto, modelando o funcionamento do conversor termoeléctrico como sendo ideal, constata-se que o rendimento de Carnot aumenta consequentemente em função do aumento da tensão. Todavia, visto este sistema possuir um funcionamento real e, por conseguinte, serem-lhe inerentes perdas energéticas que deveremos considerar, foi efectuada a análise do rendimento $\eta_1$ considerando como potência fornecida $P_1$, isto é, a potência da fonte quente, e como potência útil $P_2$, isto é, a potência fornecida ao circuito pela célula de Peltier. O valor deste rendimento foi inferior ao de qualquer outro considerado ao longo do trabalho, indiciando a validade da análise efectuada, tendo sido ainda bastante inferior ao de Carnot, sendo que contudo o seu quociente diminui com o progressivo aumento da temperatura (para $U=3V$ e U=$16V$, o valor $\frac{\eta_C}{\eta_1}$ é de 14.5 e 12.9 respectivamente). Todavia, considerou-se ainda o caso de um rendimento para o qual seriam desprezadas perdas energéticas para o exterior, o que corresponderia a isolar o sistema (exequível, embora tais não fossem as condições proporcionadas no laboratório ao longo do decorrer da experiência). O rendimento $\eta_2$ resultante verifica ser simultaneamente superior a $\eta_1$ e inferior a $\eta_C$ para quaisquer valores de tensão, como seria de esperar.
+
+\par É de notar que ao realizar a experiência o fluxo de água que actuava enquanto fonte fria se manteve constante para um valor todavia baixo. Tal resultou de material residual biológico que revestia o interior do tubo e que levava a uma diminuição do caudal, por um lado, e potenciava a formação de bolhas de ar por outro. Para evitar isto foi necessário ir continuamente modificando a posição do tubo, e manipular uma vez a própria célula, induzindo erros difíceis de controlar, visto as variações do caudal modificarem o contexto de execução da experiência. Para minimizar estes erros, mediu-se o fluxo durante um intervalo de tempo para o qual se mediram simultaneamente as temperaturas no início e no fim, permitindo fazer a média e ter em conta quaisquer flutuaçõesinerentes, reduzindo por conseguinte o erro associado. De facto, este procedimento foi efectuado para todas as medições de temperatura efectuadas ao longo da experiência.
+
+\par Subsequentemente, procedeu-se à determinação de um novo rendimento denominado $\eta_3$ e que consistia em ignorar, além das perdas de energia para o exterior, as perdas de energia por condução. Tal conseguiu-se anulando-se no circuito a componente correspondente à célula de Peltier, calculando por conseguinte a resistência térmica inerente ao circuito e posteriormente a potência por condução. Assim, para os valores de tensão $7V$ e $13V$ obtiveram-se, respectivamente, os valores para a resistência térmica de $R_T=(8.1\pm0.3)KJ^{-1}$ e $R_T=8.6\pm0.5KJ^{-1}$. Embora esta teoricamente seja constante, notamos um desvio experimental. Todavia, caso consideremos um ajuste para o valor $R_T=8.3KJ^{-1}$ mediante o método dos mínimos quadrados facilmente se verifica que ambos os valores se encontram englobados dentro do intervalo de incerteza experimental. De facto, após efectuar uma interpolação linear para os restantes valores, verifica-se que o declive da recta $R_T(\Delta T)$ será $0$, encontrando-se todos os valores experimentais e resultantes do ajuste dentro da margem de erro em relação ao valor teórico expectável. Efectuando o procedimento descrito obtiveram-se os novos valores deste rendimento, tendo estes sido superiores aos anteriores mas inferiores ao de Carnot, corroborando a análise efectuada.
+
+\par Por fim, utilizou-se a máquina analisada desta vez enquanto bomba de calor por oposição à máquina térmica até agora estudada. De facto, para esta montagem, foi possível determinar o valor do COP (coefficient of performance) para duas intensidades distintas de corrente através das diferenças de temperatura que lhes estavam associadas, tento o cuidado de no caso ideal considerar a temperatura em Kelvin visto não se tratar da sua diferença. Foi deste modo possível constatar que o valor do COP ideal era, tal como seria de esperar, demarcadamente superior em relação ao valor real, e que ambos aumentavam com a diminuição da diferença das temperaturas. De facto, verificou-se ainda que um aumento da intensidade de corrente leva a uma diminuição do valor do COP, o que é facilmente compreensível: um aumento da intensidade de corrente leva a uma aumento da tensão, o que por sua vez leva a um aumento da diferença de temperaturas, o que pelo previamente enunciado leva a uma diminuição do COP. Notamos no entanto uma menor disparidade, ainda que não sobremodo acentuada, entre os valores do COP ideais e teóricos e os valores dos rendimentos de Carnot e os experimentais previamente obtidos, sendo os ideiais sempre superiores aos experimentais. Tal é lógico, porquanto no caso real existem sempre perdas de energia, nomeadamente por condução para o exterior. De facto, foram calculadas as perdas energéticas e verficou-se que estas diminuiam acentuadamente para uma menor intensidade de corrente. De facto, as perdas por condução para o ar, por exemplo, são menores quando existe um menor gradiente de temperaturas, acentuadas pela aproximação entre as temperaturas medidas e a temperatura ambiente para o caso particular de $I=0.2A$ estudado.
+
+\section{Conclusões}
+
+\par Nesta experiência foi possível determinar o valor da resistência de carga óptima do circuito considerado, tendo-se obtido $R_{20}=(11.1\pm1.2)\ohm$. Obtiveram-se ainda valores para o rendimento do sistema em estudo enquanto máquina térmica para diferentes valores de tensão, tendo-se constatado que a um aumento de tensão correspondia um aumento do rendimento. Estes rendimentos foram quer ideiais quer reais, tendo em conta as várias possíveis formas de perdas e ganhos de energia pelo sistema, desde efeitos de condução ao de Peltier. Para este fim determinou-se um valor para a resistência térmica do sistema anulando o circuito pertinente à célula de Peltier, tendo este sido $R_T=8.4KJ^{-1}$. Por fim, estudou-se o conversor termoeléctrico enquanto bomba de calor, tendo-se concluido que a menores intensidades de corrente correspondiam maiores valores do COP, porquanto a tal estão associados menores valores da diferença de temperaturas consideradas.
+
+\par É de notar que a esta experiência se encontram associados diversos erros, alguns dos quais quase inevitáveis: erros de sensores, resistências internas desprezadas dos fios e diversos componentes eléctricos, um caudal inconstante e cuja inconstância é exacerbada por material biológico preenchendo o interior dos tubos de circulação da água. Para reduzir estes problemas foram tomadas várias medidas: medir a temperatura que os sensores assinalavam antes de efectuar a experiência e introduzir um factor correctivo, medir o caudal novamente para cada parte da experiência, e calcular a temperatura como a média dos valores registados no início e no fim da medição do caudal. Todavia, e embora isto tenha diminuido significativamente os erros verificados, esta experiência revela-se de difícil execução no tocante a obtenção rigorosa de resultados, sendo que poderia ser melhorada através da melhoria do equipamento apresentado e, evidentemente, de um maior intervalo de tempo ao longo do qual efectuar as medições por forma a obter valores mais estáveis no equilíbrio - particularmente porque é precisamente na análise de situações de equilíbrio que reside o âmago de toda esta experiência.
+

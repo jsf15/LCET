@@ -1,0 +1,319 @@
+%%% Tipo de documento %%%
+\documentclass[
+ reprint,
+ amsmath,amssymb,
+ aps,
+]{revtex4-1}
+
+%%% Packages %%%
+\usepackage[ansinew]{inputenc}
+\usepackage[portuges]{babel}
+\usepackage{graphicx}
+\usepackage{dcolumn}
+\usepackage{bm}
+
+%%% Alterações na geometria da pagina %%%
+\setlength{\textheight}{770pt}
+\setlength{\voffset}{-15pt}
+
+\begin{document}
+
+%%% Título, autores e informações dos autores, data %%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\preprint{APS/123-QED}
+
+\title{Indução de campos magnéticos}
+
+\author{Gonçalo Quinta nº 65680, Fernando Rodrigues nº66326, Teresa Jorge nº65722 e Vera Patrício nº65726}
+\vspace{2mm}
+\affiliation{
+ \vspace{3mm}
+ \textbf{Laboratório de Complementos de Electromagnetismo e Termodinâmica}\\
+ Mestrado Integrado em Engenheria Física Tecnológica 2009/2010\\
+ Instituto Superior Técnico (IST)
+ \vspace{3mm}
+}
+
+\date{\today}
+
+
+%%% Abstract %%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{abstract}
+
+Foram medidas as componentes tangenciais e normais de campos magnéticos diversos, criado por uma bobine de 320 espiras, bobines de Helmhotz, um solenóide simples e por um solenóide com um núcleo de ferro, onde os dados experimentais se ajustaram satisfatoriamente aos teóricos. Para o solenóide com núcleo de ferro foi calculado um valor de M de (3476,44$\pm$172,4)A/m. Foi analisada a curva de histerese originada por um transformador, obtendo-se um valor de $B_s$ de $(1,14\pm0,54)$ T, $B_r$ de $(0,54\pm0,12)$ T e $(40,9\pm5,2)$ A/m para $H_c$, concluindo-se que o seu núcleo era constituído por uma liga de ferro e níquel.
+
+\vspace{2mm}
+\end{abstract}
+
+\maketitle
+
+
+%%% Introdução %%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Introdução}
+
+Em 1820, o físico dinamarquês Hans Oersted observou que uma corrente eléctrica num fio condutor perturbava uma bússola colocada na vizinhança do fio. Esta foi a primeira evidência experimental da existência de uma relação entre electricidade e magnetismo. Neste trabalho laboratorial irão ser analisadas algumas das características de campos magnéticos induzidos por correntes em circuito de geometrias diferentes.
+
+Uma dessas geometrias, a mais básica das que serão tratadas, é uma espira circular. A lei de Biot-Savart afirma que uma corrente $i$ que percorre um troço $d\vec{s}$ origina uma campo magnético $d\vec{B}$, num ponto genérico $p$ a uma distância $r$, dado por 
+\begin{equation} 
+d\vec{B}(p)=\frac{\mu_0}{4 \pi} \frac{i}{r^2}[d\vec{s}\times \nabla_p r]
+\end{equation}
+
+Integrando a expressão anterior ao longo de um círculo de raio $r$ no plano $xOy$, para um ponto situado no eixo dos ZZ's, obtém-se
+\begin{equation}
+|\vec{B}(z)|=\frac{\mu_0 i}{2}\frac{r^2}{(z^2+r^2)^{3/2}}
+\end{equation}
+\footnotesize{Ao longo de todo o trabalho o eixo de simetria das bobines ou solenóides será referido como eixos dos ZZ's e o eixo dos XX's é um eixo radial}
+\normalsize
+Em particular, para $z=0$ tem-se
+\begin{equation}
+|\vec{B}(0)|=\frac{\mu_0 i}{2r}
+\end{equation}
+Tomando $n$ espiras juntas, é possível, em certas condições, aproximar os cálculos como se se tratasse da geometria de uma só espira, pelo que os resultados anteriores se mantêm nesse caso, mas vêm multiplicados por $n$, ou seja
+\begin{equation}
+|\vec{B}(z)|=\frac{\mu_0 ni}{2}\frac{r^2}{(z^2+r^2)^{3/2}}
+\end{equation}
+
+Irá também ser usado um conjunto de espiras em forma de tubo, que se denomina solenóide.  Partindo do resultado anterior, considerando $\alpha_1$ e $\alpha_2$ como o ângulo entre um ponto $p$ no eixo das cotas e a primeira e última espira, respectivamente, é possível chegar à conclusão que o campo magnético nesse eixo é dado por
+\begin{equation}
+|\vec{B}(z)|=\frac{\mu_0 N i}{2}[\sin\alpha_1 + \sin \alpha_2] 
+\end{equation}
+sendo N o número de espiras por unidade de comprimento. Outra estrutura particular de circuito que será estudada são as bobines de Helmhotz. Estas consistem num par de bobines simétricas em relação a um eixo, dos ZZ's por exemplo, afastadas de uma distância igual $d$ da origem. Tendo em conta esta configuração, podem-se efectuar os cálculos assumindo a geometria de duas espiras em lugar das bobines. De acordo com essa aproximação, e sabendo que $d=r/2$, é possível concluir que 
+\begin{equation}
+|\vec{B}(0)| = \frac{32 \pi n}{5\sqrt{5}}\frac{i}{r}10^{-7}
+\end{equation}  
+Este resultado aproxima inclusivé muito bem o campo em redor do centro das bobines. 
+
+A intensidade dos campos magnéticos será medida utilizando uma sonda de efeito Hall, que se baseia no efeito baptizado com o nome do físico americano. A sonda utilizada tem a forma de um paralelepípedo - figura 1 - e é constituída por material condutor.
+
+\begin{figure}[h!]
+\includegraphics[scale=0.3]{Imagens/Hall_effect}
+\caption{\textbf{Efeito de Hall \cite{hall}} - \footnotesize{    V - velocidade dos electões; $F_L$ - Força de Lorentz; $F_E$ - Força electrica; B - Campo magnético    }\normalsize}
+\end{figure}
+
+Os electrões que atravessam a sonda, animados de uma velocidade $v$ e ao estaram em presença de um campo B, sofrem uma força de Lorentz, o que originará uma acumulação de cargas num dos lados do paralelepípedo, gerando-se assim um campo eléctrico entre as duas faces paralelas à direcção dos electrões e que tem sentido oposto à força magnética que origina a acumulação de cargas. Quando é atingido o equilibrio, os electrões que atravessam a sonda fazem-no sem se desviar, já que a resultante das forças é nula. O campo magnético aplicado será assim proporcional à diferença de potêncial observada entre as faces da sonda \cite{aulas}.
+
+Será também brevemente estudada uma característica dos materiais ferromagnéticos, chamada de característica B-H. Ao aplicar-se um campo magnético B a um material ferromagnético, os seus domínios de Weiss alinham-se uns com os outros, induzindo-se uma força de magnetização \cite{histerese}. Quando todos os domínios se encontram alinhados atinge-se a magnetização de saturação do material, onde o campo magnético induzido deixa de aumentar significativamente a sua intensidade. No entanto, mesmo após se parar de aplicar o campo, estes materiais retêm alguma da magnetização (chamada magnetização residual), sendo necessário aplicar um campo coercivo Hc para contrariar este efeito e anular toda a magnetização criada originalmente. Este comportamento pode ser descrito por uma curva de histerese - figura 2.
+
+\begin{figure}[h!]
+\includegraphics[scale=0.3]{Imagens/histerese}
+\caption{\textbf{Curva de Histerese \cite{his}} - \footnotesize{Bs - campo de magnetização de saturação; Br - campo de magnetização residual; Hc - campo coercivo}\normalsize}
+\end{figure}
+
+
+%%% Experiência realizada %%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Experiência realizada}
+
+\subsection{Medição do Campo Magnético}
+
+Começou-se por calibrar a sonda de Hall, aplicando-se corrente contínua a uma bobine com 320 espiras, medindo-se a componente tangencial ao eixo dos $ZZ$'s do campo magnético no centro das espiras. Este procedimento foi repetido para diferentes intensidades de corrente de modo a verificar-se a relação (3) para 320 espiras. Após esta fase, todas as medições foram feitas com um valor de corrente fixo de 1 A. 
+Seguiu-se a medição da componente tangencial e normal do campo magnético gerado por uma bobine de 320 espiras ao longo do eixo dos $ZZ$'s e num eixo paralelo a esse, desde a cota 0 até a intensidade do campo decair até 1/20 do original. Procedeu-se igualmente à medição da componente tangencial ao raio das espiras, desde o  centro à sua periferia.
+Com as duas bobines em funcionamento, repetiram-se os ensaios anteriores, com a diferença que a última medição é feita no meio das duas bobines.
+Foram feitas medições equivalentes ao longo do eixo dos $ZZ$'s e num eixo paralelo a este, num solenóide simples e num solenóide com núcleo de ferro. Recorrendo a uma análise trignométrica, a expressão (5) pode ser escrita em função de $z$ como:
+
+\begin{equation}
+	|\vec{B}(z)|=\frac{\mu_0 N i}{2}(\frac{d+z}{\sqrt{(d+z)^2 + \rho^2}} - \frac{z}{\sqrt{z^2+\rho^2}}) 
+\end{equation}
+\footnotesize{d - tamanho do solenóide; $\rho$ - raio do solenóide\\}
+
+\normalsize
+O campo gerado pelo solenóide com núcleo de ferro será semelhante ao do solenóide simples, mas mais intenso devido às correntes superficiais do nucleo, criadas pela sua magnetização. Os dados serão assim ajustados à expressão seguinte, de modo a obter-se a magnetização do material:
+\begin{equation}
+	|\vec{B}(z)|=\frac{\mu_0 X}{2}(\frac{d+z}{\sqrt{(d+z)^2 + \rho^2}} - \frac{z}{\sqrt{z^2+\rho^2}}) 
+\end{equation}
+
+O factor X contempla o campo criado pela corrente real e pela corrente de magnetização.
+
+\begin{equation}
+	X = Ni + M 
+\end{equation}
+\footnotesize M - Magnetização
+\normalsize
+
+\subsection{Transformador}
+
+No osciloscópio será observada a curva de histerese, obtida através da combinação do sinal aplicado (eixo dos $YY$'s assinalado como B na figura 2) com o sinal de resposta do transformador (eixo dos $XX$'s assinalado como H na figura 2). São medidos os valores de Hc, Br, Bc e o declive aproximado da curva, sendo que estes valores serão comparados com os valores típicos esperados para vários materiais, para se identificar o material constituinte do núcleo.
+
+\begin{figure}[h!]
+\includegraphics[scale=0.3]{Imagens/transformador}
+\caption{Esquema da montagem do transformador. A - Resistência 100K $\Omega$; B - Resistência 20K$\Omega$; C - Condensador; D - Canal 1 do Osciloscópio; E - Canal 2; F - Fonte; G - Núcleo}
+\end{figure}
+
+Para o cálculo de B e H é necessário relacionar as tensões e correntes medidas nessas grandezas. O esquema de montagem encontra-se na figura 3 e através da sua análise podem-se escrever as seguintes relações:
+\begin {equation}
+	U1=Uc+Ri=Uc+RC\frac{dUc}{dt} 
+\end{equation}
+\footnotesize U1 - tensão nos terminais do enrolamento da direita do transformador ($U1=n_2S\frac{dB}{dt}$ - da lei da indução); Uc - tensão aos terminais do condensador.\\
+\normalsize
+Integrando-se esta equação é possível obter uma expressão que permite o cálculo de B
+\begin {equation}
+	B\approx Uc\frac{RC}{n_2S}
+\end{equation}
+Já para o cálculo de H recorre-se ao teorema de Ampère, ao longo da linha média $l$ é possível concluir que
+\begin{equation}
+	H = \frac{n_1 i}{l}
+\end{equation}
+
+O número de espiras será calculado tendo em conta que para regimes em que o transformador não se encontra saturado, a razão entre o número de espiras e as tensões aos seus terminais é proporcional.
+
+%%% Resultados %%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Resultados}
+
+Todos os resultados obtidos que foram confrontados com resultados calculados teoricamente se encontram na secção seguinte de modo a facilitar as comparações. Na figura 4 encontram-se os valores de B medidos para o solenóide simples e com núcleo de ferro ao longo do eixo dos $ZZ$'s (que tem a sua origem no extremo dos solenóides e direcção para fora dos mesmos) para $x = 1.5$ cm.\\
+
+\begin{table}[h!]
+\caption{Dados do transformador (tensões pico-a-pico)}
+\begin{ruledtabular}
+\begin{tabular}{ccc}
+\multicolumn{1}{c}{\textrm{}}&
+\textrm{V (mV)}&
+\textrm{$e_V$ (mV)}\\
+\colrule
+$B_s$	&	2,98	&	0,05	\\
+$B_ r$	&	1,41	&	0,05	\\
+$H_c$	&	0,320	&	0,02	\\
+$\Delta B$ & 0,304 &	0,05	\\
+$\Delta H$ & 35 &	0,02	\\
+\end{tabular}
+\end{ruledtabular}
+\end{table}
+
+%\hspace{-3.5mm}\textbf{Transformador}
+%\vspace{1mm}
+
+\pagebreak
+
+A tensão lida aos terminais das $n_1$ espiras do transformador foi de (10,44$\pm$0,01)mV, (1,24$\pm$0,01)mV aos terminais das $n_2$ espiras e de (0,07$\pm$0,01)mV para uma bobine de referência de 7 espiras. O erro associado a estas medidas é de 0,01mV. Os restantes dados encontram-se na tabela I.
+
+\begin{figure}[h!]
+\includegraphics[scale=0.20]{Imagens/solenoidedesviado}
+\caption{Valor de B (na direcção do eixo dos $ZZ$'s) dos solenóides num eixo paralelo ao eixo dos $ZZ$'s, com $x=1,5$ cm}
+\end{figure}
+
+
+%%% Análise dos Resultados %%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Análise dos resultados}
+
+\hspace{-3.5mm}\textbf{Uma bobine}
+\vspace{1mm}
+
+Foi verificada a calibração da sonda de Hall através do ajuste à função (4) para $z=0$ - figura 5 - e foi obtido um valor do factor $\frac{\mu_0 n}{2r}$ de $(2.9814\pm 0,0041)\times 10^{-3}$ (T/A) sendo o esperado de $2,9568\times 10^{-3}$ (T/A).
+
+\begin{figure}[h!]
+\includegraphics[scale=0.20]{Imagens/k}
+\caption{Ajuste do valor de B para diferentes intensidades de corrente}
+\end{figure}
+
+Os valores do campo medidos e calculados encontram-se nas figuras 6, 7 e 8. O valor esperado para a componente normal a $z$ em $x=0$ é 0.
+
+\hspace{-3.5mm}\textbf{Bobines de Helmhotz}
+\vspace{1mm}
+
+Os valores do campo (normais e tangenciais) medidos e calculados encontram-se nas figuras 9, 10 e 11. O valor esperado para a componente normal a $z$ em $x=0$ é 0.
+
+\hspace{-3.5mm}\textbf{Solenóide simples e com núcleo de ferro}
+\vspace{1mm}
+
+Os dados relativos à componente tagencial ao eixo das cotas para $x=0$ cm para o solenóide simples e com núcleo de ferro encontram-se representados na figura 12. A partir dos dados de ajuste - figura 13 - obtém-se que a corrente total de magnetização é igual a $(1,78\pm0,07)$ A, sendo por isso a magnetização total $(11,9\pm0,1)$ A/m.
+
+\hspace{-3.5mm}\textbf{Transformador}
+\vspace{1mm}
+
+Utilizando os dados da tabela I obteve-se $B_s=(1,14\pm0,54)$ T, $B_r=(0,54\pm0,12)$ T e $H_c=(40,9\pm5,2)$ A/m. Conclui-se também que $n_1=1513$ espiras e $n_2=180$ espiras, ambos com um majorante de erro de 1 espira. A razão $\Delta B / \Delta H$ é de 0.03, donde se obtem um valor de $\mu_r$ do material de  cerca de 20638. O ajuste para obter a magnetização (equação (8)) encontra-se na figura 13, tendo-se obtido um valor de M de 3476,44 $\pm$172,4 A/m. 
+
+\begin{figure}[h!]
+\includegraphics[scale=0.20]{Imagens/1bobine_x=0}
+\caption{Bobine de 320 espiras - Componente normal e tangencial do campo magnético ao longo do eixo $ZZ$'s, para $x=0$ cm}
+\end{figure}
+
+\begin{figure}[h!]
+\includegraphics[scale=0.20]{Imagens/1bobineX25}
+\caption{Bobine de 320 espiras - Componente normal e tangencial do campo magnético ao longo do eixo $ZZ$'s, para $x=2,5$ cm}
+\end{figure}
+
+\begin{figure}[h!]
+\includegraphics[scale=0.20]{Imagens/1bobineX}
+\caption{Bobine de 320 espiras - Componente tangencial ao eixo dos $ZZ$'s do campo magnético medidas ao longo do eixo dos $XX$'s, $z=0$ cm}
+\end{figure}
+
+\begin{figure}[h!]
+\includegraphics[scale=0.20]{Imagens/2bobines_x=0}
+\caption{Bobines de Helmhotz - Componente normal e tangencial do campo magnético ao longo do eixo $ZZ$'s, para $x=0$ cm}
+\end{figure}
+
+\begin{figure}[h!]
+\includegraphics[scale=0.20]{Imagens/2bobinesX25}
+\caption{Bobines de Helmhotz - Componente normal e tangencial do campo magnético ao longo do eixo $ZZ$'s, para $x=2,5$ cm}
+\end{figure}
+
+\begin{figure}[h!]
+\includegraphics[scale=0.20]{Imagens/2bobinesX}
+\caption{Bobines de Helmhotz - Componente tangencial ao eixo dos $XX$'s do campo magnético medidas ao longo desse eixo, $z=0$ cm}
+\end{figure}
+
+\begin{figure}[h!]
+\includegraphics[scale=0.20]{Imagens/solenoide}
+\caption{Solenóide Simples - Componente tangencial ao eixo dos $ZZ$'s do campo magnético ao longo desse eixo, para $x=0$ cm}
+\end{figure}
+
+\begin{figure}[h!]
+\includegraphics[scale=0.20]{Imagens/ferro}
+\caption{Ajuste para determinação da magnetização}
+\end{figure}
+
+%%% Conclusão e críticas %%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Conclusão e críticas}
+
+A calibração da sonda de Hall foi verificada, confirmando-se que a tensão gerada por efeito de Hall depende linearmente do campo medido, uma vez que os resultados obtidos estão de acordo com os teóricos.
+A partir das medições para a bobine de 320 espiras, confirmou-se que a sua aproximação à soma de campos gerados por apenas uma espira descreve convenientemente a realidade. Tal como o previsto, o valor absoluto do campo diminui com o afastamento à espira e aumenta com a aproximação à mesma (figuras 6 e 8). Foi também confirmado que a componente segundo o eixo dos XX's é praticamente nula no eixo de simetria. Fora desse eixo, esta componente aumenta com o afastamento da espira, o que indica que as linhas de campo deixam de ser completamente paralelas, mas este aumento rapidamente é suplantado pela diminuição provocada pelo afastamento à espira (figura 7). 
+Quanto ao campo das bobines de Helmhotz, confirmaram-se as propriedades acima referidas (figura 9), pelo que podemos concluir que a aproximação da soma linear de dois campos de duas espiras é válida bastante razoavelmente. Um efeito interessante confirmado é que a componente segundo o eixo dos XX's é praticamente nula entre as espiras (até cerca de 0,03m na figura 10) mesmo para posições afastadas do eixo central de simetria, pelo que as linhas de campo serão praticamente paralelas nesse espaço. No entanto esta aproximação tem limites (figura 11) escapando-se as linhas de campo entre as bobines em regiões afastadas do centro. 
+As propriedades dos campos dos solenóides esperadas foram também confirmadas. É visível que o campo do solenóide simples é praticamente constante para pontos interiores (figuras 4 e 12) decaindo rapidamente com o afastamento ao enrolamento. Tal como esperado o valor do campo criado por um solenóide com um núcleo de ferro será mais elevado, devido às correntes de superfície induzidas pela magnetização do núcleo.
+Relativamente ao transformador, embora os valores dos campos magnéticos se adequassem mais a uma liga Ferro-niquelosa, tendo em conta o valor elevado de $H_c$ o mais provável é o núcleo do transformador seja constituído por uma liga de Ferro e Silício. Alguns dos desvios aos valores esperados podem ser justificados se a liga de que é feito o material não contiver as mesmas proporções de ferro e silício que o material tabelado. O valor de $\mu_r$ obtido é típico de ligas de ferro com uma composição muito elevada em níquel\cite{erro}, o que indica que este método não é muito preciso para o cálculo desta grandeza, o que seria de esperar, já que se tratou linearmente uma grandeza que não o é.
+
+
+%%% Bibliografia %%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{thebibliography}{20}
+
+\bibitem{LivroAzul} \textit{Introdução à Física} by J. D. Deus, \textit{et al.}, McGraw-Hill
+\bibitem{histerese}http://en.wikipedia.org/wiki/Hysteresis
+\bibitem{aulas} Notas teóricas do Professor João Figueirinhas
+\bibitem{hall} http://commons.wikimedia.org/
+\bibitem{his} http://www.mspc.eng.br
+\bibitem{erro} http://hyperphysics.phy-astr.gsu.edu
+\end{thebibliography}	
+
+	
+\end{document}
+
+
+%%% Modelo de tabela %%%
+
+%\begin{table}[h!]
+%\caption{Determinação da eficiência, da potência de arrefecimento e da eficiência de Carnot}
+%\begin{ruledtabular}
+%\begin{tabular}{ccccccc}
+%\textrm{$V2$ (V)}&
+%\textrm{$T_a$ (ºC)}&
+%\textrm{$\epsilon$}&
+%\textrm{$e_{\epsilon}$}&
+%\textrm{$\epsilon_{Carnot}$}&
+%\multicolumn{1}{c}{\textrm{$P1$ (W)}}&
+%\textrm{$e_{P1}$ (W)}\\
+%\colrule
+%2,344 & 17,11 & 2,47 & 0,06 & 29,01 & 1,996 & 0,068 \\
+%1,458 & 15,81 & 2,17 & 0,07 & 36,83 & 0,670 & 0,039 \\
+%2,320 & 20,90 & 3,75 & 0,08 & 36,09 & 2,842 & 0,081 \\
+%\end{tabular}
+%\end{ruledtabular}
+%\end{table}
+
+

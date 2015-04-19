@@ -1,0 +1,54 @@
+set notable
+set ylabel "Temperatura (K)"
+set xlabel "Distância (m)"
+#set yrange [0:1.1]
+set key font ",15"
+#set xrange[400:6000]
+
+
+############# - Plot1
+f5(x)=a5*x+b5
+
+fit f5(x) 'T-D5.dat' using 1:2 via a5,b5
+
+############# - Plot2
+f10(x)=a10*x+b10
+
+fit f10(x) 'T-D10.dat' using 1:2 via a10,b10
+
+############# - Plot3
+f15(x)=a15*x+b15
+
+fit f15(x) 'T-D15.dat' using 1:2 via a15,b15
+
+############# - Plot3
+f20(x)=a20*x+b20
+
+fit f20(x) 'T-D20.dat' using 1:2 via a20,b20
+
+############# 
+g15(x)=c15*x+d15
+
+fit g15(x) 'T-D15dir.dat' using 1:2 via c15,d15
+
+g20(x)=c20*x+d20
+
+fit g20(x) 'T-D20dir.dat' using 1:2 via c20,d20
+
+
+#############
+#set key left top
+
+plot f5(x) t "V=(5.02±0.01)V" lw 1.5 lt rgb 'green' ,\
+"< awk '{if($4 != \"red\") print}' T-D5.dat" using 1:2:3 with yerrorbars lt 2 notitle ,\
+"< awk '{if($4 == \"red\") print}' T-D5.dat" using 1:2:3 with yerrorbars lt rgb "red" notitle ,\
+f10(x) t "V=(10.06±0.01)V" lw 1.5 lt rgb 'blue' ,\
+"< awk '{if($4 != \"red\") print}' T-D10.dat" using 1:2:3 with yerrorbars lt 2 notitle ,\
+"< awk '{if($4 == \"red\") print}' T-D10.dat" using 1:2:3 with yerrorbars lt rgb "red" notitle ,\
+f15(x) t "V=(15.07±0.01)V" lw 1.5 lt rgb 'orange' ,\
+"< awk '{if($4 != \"red\") print}' T-D15.dat" using 1:2:3 with yerrorbars lt 2 notitle ,\
+"< awk '{if($4 == \"red\") print}' T-D15.dat" using 1:2:3 with yerrorbars lt rgb "red" notitle ,\
+f20(x) t "V=(19.99±0.01)V" lw 1.5 lt rgb 'purple' ,\
+"< awk '{if($4 != \"red\") print}' T-D20.dat" using 1:2:3 with yerrorbars lt 2 notitle ,\
+"< awk '{if($4 == \"red\") print}' T-D20.dat" using 1:2:3 with yerrorbars lt rgb "red" notitle
+

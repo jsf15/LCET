@@ -1,0 +1,17 @@
+
+f1(x) = -241.801 *x*x -31.0784 *x  +34.5416
+f2(x) = -126.148 *x*x -18.8702 *x +29.926  
+f3(x) =  132.312 *x*x -43.1275 *x +28.3188
+f4(x) = -8.0974 *x*x -20.3341 *x +26.3623
+
+set title "Ajuste T(x)"
+set xlabel "Distância ao sensor (m)"
+set y label "Temperatura (K)"
+
+set label "(0.01, 26.24)" at 0.012,	26.536323290955
+set label "(0.01, 29.69)" at 0.012,	29.9957453345519
+set label "(0.01, 28.04)" at 0.012,	28.3419393551609
+set label "(0.01, 34.21)" at 0.012,	34.5113339196722
+
+
+plot "x1.txt" title "300 s", f1(x) title "f1(x) = -241.801*x*x -31.0784 *x  +34.5416","x2.txt" title "400 s", f2(x) title "f2(x) = -126.148 *x*x -18.8702 *x +29.926", "x3.txt" title "500 s", f3(x) title "f3(x) =  132.312 *x*x -43.1275 *x +28.3188","x4.txt" title "600 s", f4(x) title "f4(x) = -8.0974 *x*x -20.3341 *x +26.3623"

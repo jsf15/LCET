@@ -1,0 +1,1533 @@
+
+
+*******************************************************************************
+Thu Mar 19 16:02:17 2015
+
+
+FIT:    data read from 'Rt-V.dat' using 1:2
+        format = x:z
+        x range restricted to [5.00000 : 16.0000]
+        #datapoints = 2
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f1(x)
+	f1(x)=a1*x+b1
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   a1            b1           
+   0 2.2807169349e+02   0.00e+00  2.59e+00   -2.000000e-01  -2.800000e+00
+   6 1.5777218104e-30   0.00e+00  2.59e-06   -2.550606e-01   8.480770e+00
+
+After 6 iterations the fit converged.
+final sum of squares of residuals : 1.57772e-30
+rel. change during last iteration : 0
+
+
+Exactly as many data points as there are parameters.
+In this degenerate case, all errors are zero by definition.
+
+Final set of parameters 
+======================= 
+
+a1              = -0.255061      
+b1              = 8.48077        
+
+
+*******************************************************************************
+Thu Mar 19 16:02:26 2015
+
+
+FIT:    data read from 'Rt-V.dat' using 1:2
+        format = x:z
+        x range restricted to [5.00000 : 16.0000]
+        #datapoints = 2
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f1(x)
+	f1(x)=a1*x+b1
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   a1            b1           
+   0 2.2807169349e+02   0.00e+00  2.59e+00   -2.000000e-01  -2.800000e+00
+   6 1.5777218104e-30   0.00e+00  2.59e-06   -2.550606e-01   8.480770e+00
+
+After 6 iterations the fit converged.
+final sum of squares of residuals : 1.57772e-30
+rel. change during last iteration : 0
+
+
+Exactly as many data points as there are parameters.
+In this degenerate case, all errors are zero by definition.
+
+Final set of parameters 
+======================= 
+
+a1              = -0.255061      
+b1              = 8.48077        
+
+
+*******************************************************************************
+Thu Mar 19 16:02:34 2015
+
+
+FIT:    data read from 'Rt-V.dat' using 1:2
+        format = x:z
+        x range restricted to [6.00000 : 16.0000]
+        #datapoints = 2
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f1(x)
+	f1(x)=a1*x+b1
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   a1            b1           
+   0 2.2807169349e+02   0.00e+00  2.59e+00   -2.000000e-01  -2.800000e+00
+   6 1.5777218104e-30   0.00e+00  2.59e-06   -2.550606e-01   8.480770e+00
+
+After 6 iterations the fit converged.
+final sum of squares of residuals : 1.57772e-30
+rel. change during last iteration : 0
+
+
+Exactly as many data points as there are parameters.
+In this degenerate case, all errors are zero by definition.
+
+Final set of parameters 
+======================= 
+
+a1              = -0.255061      
+b1              = 8.48077        
+
+
+*******************************************************************************
+Thu Mar 19 16:28:56 2015
+
+
+FIT:    data read from 'Rt-V.dat' using 1:2
+        format = x:z
+        x range restricted to [6.00000 : 16.0000]
+        #datapoints = 2
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f1(x)
+	f1(x)=a1*x+b1
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   a1            b1           
+   0 3.1731013044e+02   0.00e+00  2.59e+00   -2.000000e-01  -2.800000e+00
+   6 6.3108872418e-30   0.00e+00  2.59e-06   -7.898667e-01   1.602177e+01
+
+After 6 iterations the fit converged.
+final sum of squares of residuals : 6.31089e-30
+rel. change during last iteration : 0
+
+
+Exactly as many data points as there are parameters.
+In this degenerate case, all errors are zero by definition.
+
+Final set of parameters 
+======================= 
+
+a1              = -0.789867      
+b1              = 16.0218        
+
+
+*******************************************************************************
+Thu Mar 19 16:29:08 2015
+
+
+FIT:    data read from 'Rt-V.dat' using 1:2
+        format = x:z
+        x range restricted to [6.00000 : 16.0000]
+        #datapoints = 2
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f1(x)
+	f1(x)=a1*x+b1
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   a1            b1           
+   0 3.1731013044e+02   0.00e+00  2.59e+00   -2.000000e-01  -2.800000e+00
+   6 6.3108872418e-30   0.00e+00  2.59e-06   -7.898667e-01   1.602177e+01
+
+After 6 iterations the fit converged.
+final sum of squares of residuals : 6.31089e-30
+rel. change during last iteration : 0
+
+
+Exactly as many data points as there are parameters.
+In this degenerate case, all errors are zero by definition.
+
+Final set of parameters 
+======================= 
+
+a1              = -0.789867      
+b1              = 16.0218        
+
+
+*******************************************************************************
+Thu Mar 19 16:29:17 2015
+
+
+FIT:    data read from 'Rt-V.dat' using 1:2
+        format = x:z
+        x range restricted to [6.00000 : 16.0000]
+        #datapoints = 2
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f1(x)
+	f1(x)=a1*x+b1
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   a1            b1           
+   0 3.1731013044e+02   0.00e+00  2.59e+00   -2.000000e-01  -2.800000e+00
+   6 6.3108872418e-30   0.00e+00  2.59e-06   -7.898667e-01   1.602177e+01
+
+After 6 iterations the fit converged.
+final sum of squares of residuals : 6.31089e-30
+rel. change during last iteration : 0
+
+
+Exactly as many data points as there are parameters.
+In this degenerate case, all errors are zero by definition.
+
+Final set of parameters 
+======================= 
+
+a1              = -0.789867      
+b1              = 16.0218        
+
+
+*******************************************************************************
+Thu Mar 19 16:29:28 2015
+
+
+FIT:    data read from 'Rt-V.dat' using 1:2
+        format = x:z
+        x range restricted to [6.00000 : 16.0000]
+        #datapoints = 2
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f1(x)
+	f1(x)=a1*x+b1
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   a1            b1           
+   0 3.1731013044e+02   0.00e+00  2.59e+00   -2.000000e-01  -2.800000e+00
+   6 6.3108872418e-30   0.00e+00  2.59e-06   -7.898667e-01   1.602177e+01
+
+After 6 iterations the fit converged.
+final sum of squares of residuals : 6.31089e-30
+rel. change during last iteration : 0
+
+
+Exactly as many data points as there are parameters.
+In this degenerate case, all errors are zero by definition.
+
+Final set of parameters 
+======================= 
+
+a1              = -0.789867      
+b1              = 16.0218        
+
+
+*******************************************************************************
+Thu Mar 19 16:29:47 2015
+
+
+FIT:    data read from 'Rt-V.dat' using 1:2
+        format = x:z
+        x range restricted to [6.00000 : 16.0000]
+        #datapoints = 2
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f1(x)
+	f1(x)=a1*x+b1
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   a1            b1           
+   0 3.1731013044e+02   0.00e+00  2.59e+00   -2.000000e-01  -2.800000e+00
+   6 6.3108872418e-30   0.00e+00  2.59e-06   -7.898667e-01   1.602177e+01
+
+After 6 iterations the fit converged.
+final sum of squares of residuals : 6.31089e-30
+rel. change during last iteration : 0
+
+
+Exactly as many data points as there are parameters.
+In this degenerate case, all errors are zero by definition.
+
+Final set of parameters 
+======================= 
+
+a1              = -0.789867      
+b1              = 16.0218        
+
+
+*******************************************************************************
+Thu Mar 19 16:30:23 2015
+
+
+FIT:    data read from 'Rt-V.dat' using 1:2
+        format = x:z
+        x range restricted to [6.00000 : 16.0000]
+        #datapoints = 2
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f1(x)
+	f1(x)=a1*x+b1
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   a1            b1           
+   0 3.1731013044e+02   0.00e+00  2.59e+00   -2.000000e-01  -2.800000e+00
+   6 6.3108872418e-30   0.00e+00  2.59e-06   -7.898667e-01   1.602177e+01
+
+After 6 iterations the fit converged.
+final sum of squares of residuals : 6.31089e-30
+rel. change during last iteration : 0
+
+
+Exactly as many data points as there are parameters.
+In this degenerate case, all errors are zero by definition.
+
+Final set of parameters 
+======================= 
+
+a1              = -0.789867      
+b1              = 16.0218        
+
+
+*******************************************************************************
+Thu Mar 19 16:30:37 2015
+
+
+FIT:    data read from 'Rt-V.dat' using 1:2
+        format = x:z
+        x range restricted to [6.00000 : 16.0000]
+        #datapoints = 2
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f1(x)
+	f1(x)=a1*x+b1
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   a1            b1           
+   0 3.2940904122e+02   0.00e+00  2.59e+00   -2.000000e-01  -2.800000e+00
+   6 3.9443045261e-30   0.00e+00  2.59e-06   -7.195292e-01   1.554770e+01
+
+After 6 iterations the fit converged.
+final sum of squares of residuals : 3.9443e-30
+rel. change during last iteration : 0
+
+
+Exactly as many data points as there are parameters.
+In this degenerate case, all errors are zero by definition.
+
+Final set of parameters 
+======================= 
+
+a1              = -0.719529      
+b1              = 15.5477        
+
+
+*******************************************************************************
+Thu Mar 19 16:30:51 2015
+
+
+FIT:    data read from 'Rt-V.dat' using 1:2
+        format = x:z
+        x range restricted to [6.00000 : 16.0000]
+        #datapoints = 2
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f1(x)
+	f1(x)=a1*x+b1
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   a1            b1           
+   0 3.2940904122e+02   0.00e+00  2.59e+00   -2.000000e-01  -2.800000e+00
+   6 3.9443045261e-30   0.00e+00  2.59e-06   -7.195292e-01   1.554770e+01
+
+After 6 iterations the fit converged.
+final sum of squares of residuals : 3.9443e-30
+rel. change during last iteration : 0
+
+
+Exactly as many data points as there are parameters.
+In this degenerate case, all errors are zero by definition.
+
+Final set of parameters 
+======================= 
+
+a1              = -0.719529      
+b1              = 15.5477        
+
+
+*******************************************************************************
+Thu Mar 19 16:31:12 2015
+
+
+FIT:    data read from 'Rt-V.dat' using 1:2
+        format = x:z
+        x range restricted to [6.00000 : 16.0000]
+        #datapoints = 2
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f1(x)
+	f1(x)=a1*x+b1
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   a1            b1           
+   0 3.2940904122e+02   0.00e+00  2.59e+00   -2.000000e-01  -2.800000e+00
+   6 3.9443045261e-30   0.00e+00  2.59e-06   -7.195292e-01   1.554770e+01
+
+After 6 iterations the fit converged.
+final sum of squares of residuals : 3.9443e-30
+rel. change during last iteration : 0
+
+
+Exactly as many data points as there are parameters.
+In this degenerate case, all errors are zero by definition.
+
+Final set of parameters 
+======================= 
+
+a1              = -0.719529      
+b1              = 15.5477        
+
+
+*******************************************************************************
+Thu Mar 19 16:31:19 2015
+
+
+FIT:    data read from 'Rt-V.dat' using 1:2
+        format = x:z
+        x range restricted to [6.00000 : 16.0000]
+        #datapoints = 2
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f1(x)
+	f1(x)=a1*x+b1
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   a1            b1           
+   0 3.2940904122e+02   0.00e+00  2.59e+00   -2.000000e-01  -2.800000e+00
+   6 3.9443045261e-30   0.00e+00  2.59e-06   -7.195292e-01   1.554770e+01
+
+After 6 iterations the fit converged.
+final sum of squares of residuals : 3.9443e-30
+rel. change during last iteration : 0
+
+
+Exactly as many data points as there are parameters.
+In this degenerate case, all errors are zero by definition.
+
+Final set of parameters 
+======================= 
+
+a1              = -0.719529      
+b1              = 15.5477        
+
+
+*******************************************************************************
+Thu Mar 19 16:31:24 2015
+
+
+FIT:    data read from 'Rt-V.dat' using 1:2
+        format = x:z
+        x range restricted to [6.00000 : 16.0000]
+        #datapoints = 2
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f1(x)
+	f1(x)=a1*x+b1
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   a1            b1           
+   0 3.2940904122e+02   0.00e+00  2.59e+00   -2.000000e-01  -2.800000e+00
+   6 3.9443045261e-30   0.00e+00  2.59e-06   -7.195292e-01   1.554770e+01
+
+After 6 iterations the fit converged.
+final sum of squares of residuals : 3.9443e-30
+rel. change during last iteration : 0
+
+
+Exactly as many data points as there are parameters.
+In this degenerate case, all errors are zero by definition.
+
+Final set of parameters 
+======================= 
+
+a1              = -0.719529      
+b1              = 15.5477        
+
+
+*******************************************************************************
+Thu Mar 19 16:31:46 2015
+
+
+FIT:    data read from 'Rt-V.dat' using 1:2
+        format = x:z
+        x range restricted to [6.00000 : 16.0000]
+        #datapoints = 2
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f1(x)
+	f1(x)=a1*x+b1
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   a1            b1           
+   0 3.2940904122e+02   0.00e+00  2.59e+00   -2.000000e-01  -2.800000e+00
+   6 3.9443045261e-30   0.00e+00  2.59e-06   -7.195292e-01   1.554770e+01
+
+After 6 iterations the fit converged.
+final sum of squares of residuals : 3.9443e-30
+rel. change during last iteration : 0
+
+
+Exactly as many data points as there are parameters.
+In this degenerate case, all errors are zero by definition.
+
+Final set of parameters 
+======================= 
+
+a1              = -0.719529      
+b1              = 15.5477        
+
+
+*******************************************************************************
+Thu Mar 19 16:32:16 2015
+
+
+FIT:    data read from 'Rt-V.dat' using 1:2
+        format = x:z
+        x range restricted to [6.00000 : 16.0000]
+        #datapoints = 2
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f1(x)
+	f1(x)=a1*x+b1
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   a1            b1           
+   0 3.2940904122e+02   0.00e+00  2.59e+00   -2.000000e-01  -2.800000e+00
+   6 3.9443045261e-30   0.00e+00  2.59e-06   -7.195292e-01   1.554770e+01
+
+After 6 iterations the fit converged.
+final sum of squares of residuals : 3.9443e-30
+rel. change during last iteration : 0
+
+
+Exactly as many data points as there are parameters.
+In this degenerate case, all errors are zero by definition.
+
+Final set of parameters 
+======================= 
+
+a1              = -0.719529      
+b1              = 15.5477        
+
+
+*******************************************************************************
+Thu Mar 19 16:32:44 2015
+
+
+FIT:    data read from 'Rt-V.dat' using 1:2
+        format = x:z
+        x range restricted to [6.00000 : 16.0000]
+        #datapoints = 2
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f1(x)
+	f1(x)=a1*x+b1
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   a1            b1           
+   0 3.2940904122e+02   0.00e+00  2.59e+00   -2.000000e-01  -2.800000e+00
+   6 3.9443045261e-30   0.00e+00  2.59e-06   -7.195292e-01   1.554770e+01
+
+After 6 iterations the fit converged.
+final sum of squares of residuals : 3.9443e-30
+rel. change during last iteration : 0
+
+
+Exactly as many data points as there are parameters.
+In this degenerate case, all errors are zero by definition.
+
+Final set of parameters 
+======================= 
+
+a1              = -0.719529      
+b1              = 15.5477        
+
+
+*******************************************************************************
+Thu Mar 19 16:33:02 2015
+
+
+FIT:    data read from 'Rt-V.dat' using 1:2
+        format = x:z
+        x range restricted to [6.00000 : 16.0000]
+        #datapoints = 2
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f1(x)
+	f1(x)=a1*x+b1
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   a1            b1           
+   0 3.2940904122e+02   0.00e+00  2.59e+00   -2.000000e-01  -2.800000e+00
+   6 3.9443045261e-30   0.00e+00  2.59e-06   -7.195292e-01   1.554770e+01
+
+After 6 iterations the fit converged.
+final sum of squares of residuals : 3.9443e-30
+rel. change during last iteration : 0
+
+
+Exactly as many data points as there are parameters.
+In this degenerate case, all errors are zero by definition.
+
+Final set of parameters 
+======================= 
+
+a1              = -0.719529      
+b1              = 15.5477        
+
+
+*******************************************************************************
+Thu Mar 19 16:33:21 2015
+
+
+FIT:    data read from 'Rt-V.dat' using 1:2
+        format = x:z
+        x range restricted to [6.00000 : 16.0000]
+        #datapoints = 2
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f1(x)
+	f1(x)=a1*x+b1
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   a1            b1           
+   0 3.2940904122e+02   0.00e+00  2.59e+00   -2.000000e-01  -2.800000e+00
+   6 3.9443045261e-30   0.00e+00  2.59e-06   -7.195292e-01   1.554770e+01
+
+After 6 iterations the fit converged.
+final sum of squares of residuals : 3.9443e-30
+rel. change during last iteration : 0
+
+
+Exactly as many data points as there are parameters.
+In this degenerate case, all errors are zero by definition.
+
+Final set of parameters 
+======================= 
+
+a1              = -0.719529      
+b1              = 15.5477        
+
+
+*******************************************************************************
+Thu Mar 19 16:33:37 2015
+
+
+FIT:    data read from 'Rt-V.dat' using 1:2
+        format = x:z
+        x range restricted to [6.00000 : 16.0000]
+        #datapoints = 2
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f1(x)
+	f1(x)=a1*x+b1
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   a1            b1           
+   0 3.2940904122e+02   0.00e+00  2.59e+00   -2.000000e-01  -2.800000e+00
+   6 3.9443045261e-30   0.00e+00  2.59e-06   -7.195292e-01   1.554770e+01
+
+After 6 iterations the fit converged.
+final sum of squares of residuals : 3.9443e-30
+rel. change during last iteration : 0
+
+
+Exactly as many data points as there are parameters.
+In this degenerate case, all errors are zero by definition.
+
+Final set of parameters 
+======================= 
+
+a1              = -0.719529      
+b1              = 15.5477        
+
+
+*******************************************************************************
+Thu Mar 19 16:35:59 2015
+
+
+FIT:    data read from 'Rt-V.dat' using 1:2
+        format = x:z
+        x range restricted to [6.00000 : 16.0000]
+        #datapoints = 2
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f1(x)
+	f1(x)=a1*x+b1
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   a1            b1           
+   0 3.2940904122e+02   0.00e+00  2.59e+00   -2.000000e-01  -2.800000e+00
+   6 3.9443045261e-30   0.00e+00  2.59e-06   -7.195292e-01   1.554770e+01
+
+After 6 iterations the fit converged.
+final sum of squares of residuals : 3.9443e-30
+rel. change during last iteration : 0
+
+
+Exactly as many data points as there are parameters.
+In this degenerate case, all errors are zero by definition.
+
+Final set of parameters 
+======================= 
+
+a1              = -0.719529      
+b1              = 15.5477        
+
+
+*******************************************************************************
+Thu Mar 19 16:36:08 2015
+
+
+FIT:    data read from 'Rt-V.dat' using 1:2
+        format = x:z
+        x range restricted to [6.00000 : 16.0000]
+        #datapoints = 2
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f1(x)
+	f1(x)=a1*x+b1
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   a1            b1           
+   0 3.2940904122e+02   0.00e+00  2.59e+00   -2.000000e-01  -2.800000e+00
+   6 3.9443045261e-30   0.00e+00  2.59e-06   -7.195292e-01   1.554770e+01
+
+After 6 iterations the fit converged.
+final sum of squares of residuals : 3.9443e-30
+rel. change during last iteration : 0
+
+
+Exactly as many data points as there are parameters.
+In this degenerate case, all errors are zero by definition.
+
+Final set of parameters 
+======================= 
+
+a1              = -0.719529      
+b1              = 15.5477        
+
+
+*******************************************************************************
+Thu Mar 19 16:36:19 2015
+
+
+FIT:    data read from 'Rt-V.dat' using 1:2
+        format = x:z
+        x range restricted to [6.00000 : 16.0000]
+        #datapoints = 2
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f1(x)
+	f1(x)=a1*x+b1
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   a1            b1           
+   0 3.2940904122e+02   0.00e+00  2.59e+00   -2.000000e-01  -2.800000e+00
+   6 3.9443045261e-30   0.00e+00  2.59e-06   -7.195292e-01   1.554770e+01
+
+After 6 iterations the fit converged.
+final sum of squares of residuals : 3.9443e-30
+rel. change during last iteration : 0
+
+
+Exactly as many data points as there are parameters.
+In this degenerate case, all errors are zero by definition.
+
+Final set of parameters 
+======================= 
+
+a1              = -0.719529      
+b1              = 15.5477        
+
+
+*******************************************************************************
+Thu Mar 19 16:36:31 2015
+
+
+FIT:    data read from 'Rt-V.dat' using 1:2
+        format = x:z
+        x range restricted to [6.00000 : 16.0000]
+        #datapoints = 2
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f1(x)
+	f1(x)=a1*x+b1
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   a1            b1           
+   0 3.2940904122e+02   0.00e+00  2.59e+00   -2.000000e-01  -2.800000e+00
+   6 3.9443045261e-30   0.00e+00  2.59e-06   -7.195292e-01   1.554770e+01
+
+After 6 iterations the fit converged.
+final sum of squares of residuals : 3.9443e-30
+rel. change during last iteration : 0
+
+
+Exactly as many data points as there are parameters.
+In this degenerate case, all errors are zero by definition.
+
+Final set of parameters 
+======================= 
+
+a1              = -0.719529      
+b1              = 15.5477        
+
+
+*******************************************************************************
+Thu Mar 19 16:37:09 2015
+
+
+FIT:    data read from 'Rt-V.dat' using 1:2
+        format = x:z
+        x range restricted to [6.00000 : 16.0000]
+        #datapoints = 2
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f1(x)
+	f1(x)=a1*x+b1
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   a1            b1           
+   0 3.2940904122e+02   0.00e+00  2.59e+00   -2.000000e-01  -2.800000e+00
+   6 3.9443045261e-30   0.00e+00  2.59e-06   -7.195292e-01   1.554770e+01
+
+After 6 iterations the fit converged.
+final sum of squares of residuals : 3.9443e-30
+rel. change during last iteration : 0
+
+
+Exactly as many data points as there are parameters.
+In this degenerate case, all errors are zero by definition.
+
+Final set of parameters 
+======================= 
+
+a1              = -0.719529      
+b1              = 15.5477        
+
+
+*******************************************************************************
+Thu Mar 19 16:37:18 2015
+
+
+FIT:    data read from 'Rt-V.dat' using 1:2
+        format = x:z
+        x range restricted to [6.00000 : 16.0000]
+        #datapoints = 2
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f1(x)
+	f1(x)=a1*x+b1
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   a1            b1           
+   0 3.2940904122e+02   0.00e+00  2.59e+00   -2.000000e-01  -2.800000e+00
+   6 3.9443045261e-30   0.00e+00  2.59e-06   -7.195292e-01   1.554770e+01
+
+After 6 iterations the fit converged.
+final sum of squares of residuals : 3.9443e-30
+rel. change during last iteration : 0
+
+
+Exactly as many data points as there are parameters.
+In this degenerate case, all errors are zero by definition.
+
+Final set of parameters 
+======================= 
+
+a1              = -0.719529      
+b1              = 15.5477        
+
+
+*******************************************************************************
+Thu Mar 19 16:37:24 2015
+
+
+FIT:    data read from 'Rt-V.dat' using 1:2
+        format = x:z
+        x range restricted to [6.00000 : 16.0000]
+        #datapoints = 2
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f1(x)
+	f1(x)=a1*x+b1
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   a1            b1           
+   0 3.2940904122e+02   0.00e+00  2.59e+00   -2.000000e-01  -2.800000e+00
+   6 3.9443045261e-30   0.00e+00  2.59e-06   -7.195292e-01   1.554770e+01
+
+After 6 iterations the fit converged.
+final sum of squares of residuals : 3.9443e-30
+rel. change during last iteration : 0
+
+
+Exactly as many data points as there are parameters.
+In this degenerate case, all errors are zero by definition.
+
+Final set of parameters 
+======================= 
+
+a1              = -0.719529      
+b1              = 15.5477        
+
+
+*******************************************************************************
+Thu Mar 19 16:38:59 2015
+
+
+FIT:    data read from 'Rt-V.dat' using 1:2
+        format = x:z
+        x range restricted to [6.00000 : 16.0000]
+        #datapoints = 2
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f1(x)
+	f1(x)=a1*x+b1
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   a1            b1           
+   0 3.2940904122e+02   0.00e+00  2.59e+00   -2.000000e-01  -2.800000e+00
+   6 3.9443045261e-30   0.00e+00  2.59e-06   -7.195292e-01   1.554770e+01
+
+After 6 iterations the fit converged.
+final sum of squares of residuals : 3.9443e-30
+rel. change during last iteration : 0
+
+
+Exactly as many data points as there are parameters.
+In this degenerate case, all errors are zero by definition.
+
+Final set of parameters 
+======================= 
+
+a1              = -0.719529      
+b1              = 15.5477        
+
+
+*******************************************************************************
+Thu Mar 19 16:39:06 2015
+
+
+FIT:    data read from 'Rt-V.dat' using 1:2
+        format = x:z
+        x range restricted to [6.00000 : 16.0000]
+        #datapoints = 2
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f1(x)
+	f1(x)=a1*x+b1
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   a1            b1           
+   0 3.2940904122e+02   0.00e+00  2.59e+00   -2.000000e-01  -2.800000e+00
+   6 3.9443045261e-30   0.00e+00  2.59e-06   -7.195292e-01   1.554770e+01
+
+After 6 iterations the fit converged.
+final sum of squares of residuals : 3.9443e-30
+rel. change during last iteration : 0
+
+
+Exactly as many data points as there are parameters.
+In this degenerate case, all errors are zero by definition.
+
+Final set of parameters 
+======================= 
+
+a1              = -0.719529      
+b1              = 15.5477        
+
+
+*******************************************************************************
+Thu Mar 19 16:39:19 2015
+
+
+FIT:    data read from 'Rt-V.dat' using 1:2
+        format = x:z
+        x range restricted to [6.00000 : 16.0000]
+        #datapoints = 2
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f1(x)
+	f1(x)=a1*x+b1
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   a1            b1           
+   0 3.2940904122e+02   0.00e+00  2.59e+00   -2.000000e-01  -2.800000e+00
+   6 3.9443045261e-30   0.00e+00  2.59e-06   -7.195292e-01   1.554770e+01
+
+After 6 iterations the fit converged.
+final sum of squares of residuals : 3.9443e-30
+rel. change during last iteration : 0
+
+
+Exactly as many data points as there are parameters.
+In this degenerate case, all errors are zero by definition.
+
+Final set of parameters 
+======================= 
+
+a1              = -0.719529      
+b1              = 15.5477        
+
+
+*******************************************************************************
+Thu Mar 19 16:40:24 2015
+
+
+FIT:    data read from 'Rt-V.dat' using 1:2
+        format = x:z
+        x range restricted to [6.00000 : 16.0000]
+        #datapoints = 2
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f1(x)
+	f1(x)=a1*x+b1
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   a1            b1           
+   0 3.2940904122e+02   0.00e+00  2.59e+00   -2.000000e-01  -2.800000e+00
+   6 3.9443045261e-30   0.00e+00  2.59e-06   -7.195292e-01   1.554770e+01
+
+After 6 iterations the fit converged.
+final sum of squares of residuals : 3.9443e-30
+rel. change during last iteration : 0
+
+
+Exactly as many data points as there are parameters.
+In this degenerate case, all errors are zero by definition.
+
+Final set of parameters 
+======================= 
+
+a1              = -0.719529      
+b1              = 15.5477        
+
+
+*******************************************************************************
+Thu Mar 19 16:40:30 2015
+
+
+FIT:    data read from 'Rt-V.dat' using 1:2
+        format = x:z
+        x range restricted to [6.00000 : 16.0000]
+        #datapoints = 2
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f1(x)
+	f1(x)=a1*x+b1
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   a1            b1           
+   0 3.2940904122e+02   0.00e+00  2.59e+00   -2.000000e-01  -2.800000e+00
+   6 3.9443045261e-30   0.00e+00  2.59e-06   -7.195292e-01   1.554770e+01
+
+After 6 iterations the fit converged.
+final sum of squares of residuals : 3.9443e-30
+rel. change during last iteration : 0
+
+
+Exactly as many data points as there are parameters.
+In this degenerate case, all errors are zero by definition.
+
+Final set of parameters 
+======================= 
+
+a1              = -0.719529      
+b1              = 15.5477        
+
+
+*******************************************************************************
+Thu Mar 19 16:40:31 2015
+
+
+FIT:    data read from 'Rt-V.dat' using 1:2
+        format = x:z
+        x range restricted to [6.00000 : 16.0000]
+        #datapoints = 2
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f1(x)
+	f1(x)=a1*x+b1
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   a1            b1           
+   0 3.2940904122e+02   0.00e+00  2.59e+00   -2.000000e-01  -2.800000e+00
+   6 3.9443045261e-30   0.00e+00  2.59e-06   -7.195292e-01   1.554770e+01
+
+After 6 iterations the fit converged.
+final sum of squares of residuals : 3.9443e-30
+rel. change during last iteration : 0
+
+
+Exactly as many data points as there are parameters.
+In this degenerate case, all errors are zero by definition.
+
+Final set of parameters 
+======================= 
+
+a1              = -0.719529      
+b1              = 15.5477        
+
+
+*******************************************************************************
+Thu Mar 19 16:49:47 2015
+
+
+FIT:    data read from 'Rt-V.dat' using 1:2
+        format = x:z
+        x range restricted to [6.00000 : 16.0000]
+        #datapoints = 2
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f1(x)
+	f1(x)=a1*x+b1
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   a1            b1           
+   0 3.2940904122e+02   0.00e+00  2.59e+00   -2.000000e-01  -2.800000e+00
+   6 3.9443045261e-30   0.00e+00  2.59e-06   -7.195292e-01   1.554770e+01
+
+After 6 iterations the fit converged.
+final sum of squares of residuals : 3.9443e-30
+rel. change during last iteration : 0
+
+
+Exactly as many data points as there are parameters.
+In this degenerate case, all errors are zero by definition.
+
+Final set of parameters 
+======================= 
+
+a1              = -0.719529      
+b1              = 15.5477        
+
+
+*******************************************************************************
+Thu Mar 19 16:49:51 2015
+
+
+FIT:    data read from 'Rt-V.dat' using 1:2
+        format = x:z
+        x range restricted to [6.00000 : 16.0000]
+        #datapoints = 2
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f1(x)
+	f1(x)=a1*x+b1
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   a1            b1           
+   0 3.2940904122e+02   0.00e+00  2.59e+00   -2.000000e-01  -2.800000e+00
+   6 3.9443045261e-30   0.00e+00  2.59e-06   -7.195292e-01   1.554770e+01
+
+After 6 iterations the fit converged.
+final sum of squares of residuals : 3.9443e-30
+rel. change during last iteration : 0
+
+
+Exactly as many data points as there are parameters.
+In this degenerate case, all errors are zero by definition.
+
+Final set of parameters 
+======================= 
+
+a1              = -0.719529      
+b1              = 15.5477        
+
+
+*******************************************************************************
+Fri Mar 20 00:32:13 2015
+
+
+FIT:    data read from 'Rt-T.dat' using 1:2
+        format = x:z
+        x range restricted to [5.00000 : 40.0000]
+        #datapoints = 4
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f1(x)
+	f1(x)=a1*x+b1
+fitted parameters initialized with current variable values
+
+Warning: Initial value of parameter 'a1' is zero.
+iter      chisq       delta/lim  lambda   a1            b1           
+   0 6.1187447591e-01   0.00e+00  5.66e+00    1.000000e-30   8.000000e+00
+BREAK: Singular matrix in Invert_RtR
+
+*******************************************************************************
+Fri Mar 20 00:32:21 2015
+
+
+FIT:    data read from 'Rt-T.dat' using 1:2
+        format = x:z
+        x range restricted to [5.00000 : 40.0000]
+        #datapoints = 4
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f1(x)
+	f1(x)=a1*x+b1
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   a1            b1           
+   0 1.5433127932e+01   0.00e+00  5.90e+00    1.000000e-01   8.000000e+00
+   7 6.8419170381e-22   0.00e+00  5.90e-07    1.966767e-02   7.917313e+00
+
+After 7 iterations the fit converged.
+final sum of squares of residuals : 6.84192e-22
+rel. change during last iteration : 0
+
+degrees of freedom    (FIT_NDF)                        : 2
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 1.84958e-11
+variance of residuals (reduced chisquare) = WSSR/ndf   : 3.42096e-22
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+a1              = 0.0196677        +/- 8.593e-13    (4.369e-09%)
+b1              = 7.91731          +/- 2.022e-11    (2.554e-10%)
+
+correlation matrix of the fit parameters:
+                a1     b1     
+a1              1.000 
+b1             -0.889  1.000 
+
+
+*******************************************************************************
+Fri Mar 20 00:32:51 2015
+
+
+FIT:    data read from 'Rt-T.dat' using 1:2
+        format = x:z
+        x range restricted to [5.00000 : 40.0000]
+        #datapoints = 4
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f1(x)
+	f1(x)=a1*x+b1
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   a1            b1           
+   0 1.5433127932e+01   0.00e+00  5.90e+00    1.000000e-01   8.000000e+00
+   7 6.8419170381e-22   0.00e+00  5.90e-07    1.966767e-02   7.917313e+00
+
+After 7 iterations the fit converged.
+final sum of squares of residuals : 6.84192e-22
+rel. change during last iteration : 0
+
+degrees of freedom    (FIT_NDF)                        : 2
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 1.84958e-11
+variance of residuals (reduced chisquare) = WSSR/ndf   : 3.42096e-22
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+a1              = 0.0196677        +/- 8.593e-13    (4.369e-09%)
+b1              = 7.91731          +/- 2.022e-11    (2.554e-10%)
+
+correlation matrix of the fit parameters:
+                a1     b1     
+a1              1.000 
+b1             -0.889  1.000 
+
+
+*******************************************************************************
+Fri Mar 20 00:34:39 2015
+
+
+FIT:    data read from 'Rt-T.dat' using 1:2
+        format = x:z
+        x range restricted to [5.00000 : 40.0000]
+        #datapoints = 4
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f1(x)
+	f1(x)=a1*x+b1
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   a1            b1           
+   0 1.5433127932e+01   0.00e+00  5.90e+00    1.000000e-01   8.000000e+00
+   7 6.8419170381e-22   0.00e+00  5.90e-07    1.966767e-02   7.917313e+00
+
+After 7 iterations the fit converged.
+final sum of squares of residuals : 6.84192e-22
+rel. change during last iteration : 0
+
+degrees of freedom    (FIT_NDF)                        : 2
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 1.84958e-11
+variance of residuals (reduced chisquare) = WSSR/ndf   : 3.42096e-22
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+a1              = 0.0196677        +/- 8.593e-13    (4.369e-09%)
+b1              = 7.91731          +/- 2.022e-11    (2.554e-10%)
+
+correlation matrix of the fit parameters:
+                a1     b1     
+a1              1.000 
+b1             -0.889  1.000 
+
+
+*******************************************************************************
+Fri Mar 20 00:36:28 2015
+
+
+FIT:    data read from 'Rt-T.dat' using 1:2
+        format = x:z
+        x range restricted to [5.00000 : 40.0000]
+        #datapoints = 4
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f1(x)
+	f1(x)=a1*x+b1
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   a1            b1           
+   0 1.5433127932e+01   0.00e+00  5.90e+00    1.000000e-01   8.000000e+00
+   7 6.8419170381e-22   0.00e+00  5.90e-07    1.966767e-02   7.917313e+00
+
+After 7 iterations the fit converged.
+final sum of squares of residuals : 6.84192e-22
+rel. change during last iteration : 0
+
+degrees of freedom    (FIT_NDF)                        : 2
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 1.84958e-11
+variance of residuals (reduced chisquare) = WSSR/ndf   : 3.42096e-22
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+a1              = 0.0196677        +/- 8.593e-13    (4.369e-09%)
+b1              = 7.91731          +/- 2.022e-11    (2.554e-10%)
+
+correlation matrix of the fit parameters:
+                a1     b1     
+a1              1.000 
+b1             -0.889  1.000 
+
+
+*******************************************************************************
+Fri Mar 20 00:44:44 2015
+
+
+FIT:    data read from 'Rt-T.dat' using 1:2
+        format = x:z
+        x range restricted to [6.00000 : 17.0000]
+        #datapoints = 2
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f1(x)
+	f1(x)=b1
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   a1            b1           
+   0 5.0646778102e-02   0.00e+00  5.66e+00    1.966767e-02   8.000000e+00
+BREAK: Singular matrix in Invert_RtR
+
+*******************************************************************************
+Fri Mar 20 00:45:05 2015
+
+
+FIT:    data read from 'Rt-T.dat' using 1:2
+        format = x:z
+        x range restricted to [6.00000 : 17.0000]
+        #datapoints = 2
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f1(x)
+	f1(x)=b1
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   a1            b1           
+   0 5.0646778102e-02   0.00e+00  5.66e+00    1.966767e-02   8.000000e+00
+BREAK: Singular matrix in Invert_RtR
+
+*******************************************************************************
+Fri Mar 20 00:45:15 2015
+
+
+FIT:    data read from 'Rt-T.dat' using 1:2
+        format = x:z
+        x range restricted to [6.00000 : 17.0000]
+        #datapoints = 2
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f1(x)
+	f1(x)=b1
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   a1            b1           
+   0 5.0646778102e-02   0.00e+00  5.66e+00    1.000000e+00   8.000000e+00
+BREAK: Singular matrix in Invert_RtR
+
+*******************************************************************************
+Fri Mar 20 00:45:27 2015
+
+
+FIT:    data read from 'Rt-T.dat' using 1:2
+        format = x:z
+        x range restricted to [6.00000 : 17.0000]
+        #datapoints = 2
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f1(x)
+	f1(x)=b1
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   b1           
+   0 5.0646778102e-02   0.00e+00  8.00e+00    8.000000e+00
+   4 1.0535310043e-02  -2.63e-09  8.00e-04    8.141618e+00
+
+After 4 iterations the fit converged.
+final sum of squares of residuals : 0.0105353
+rel. change during last iteration : -2.63453e-14
+
+degrees of freedom    (FIT_NDF)                        : 1
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.102642
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.0105353
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+b1              = 8.14162          +/- 0.07258      (0.8915%)
+
+
+*******************************************************************************
+Fri Mar 20 00:46:41 2015
+
+
+FIT:    data read from 'Rt-T.dat' using 1:2
+        format = x:z
+        x range restricted to [6.00000 : 17.0000]
+        #datapoints = 2
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f1(x)
+	f1(x)=b1
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   b1           
+   0 5.0646778102e-02   0.00e+00  8.00e+00    8.000000e+00
+   4 1.0535310043e-02  -2.63e-09  8.00e-04    8.141618e+00
+
+After 4 iterations the fit converged.
+final sum of squares of residuals : 0.0105353
+rel. change during last iteration : -2.63453e-14
+
+degrees of freedom    (FIT_NDF)                        : 1
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.102642
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.0105353
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+b1              = 8.14162          +/- 0.07258      (0.8915%)
+
+
+*******************************************************************************
+Fri Mar 20 00:47:01 2015
+
+
+FIT:    data read from 'Rt-T.dat' using 4:2
+        format = x:z
+        x range restricted to [6.00000 : 17.0000]
+        #datapoints = 4
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f1(x)
+	f1(x)=b1
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   b1           
+   0 6.1187447591e-01   0.00e+00  8.00e+00    8.000000e+00
+   3 1.7918993453e-01  -6.01e-02  8.00e-03    8.328894e+00
+
+After 3 iterations the fit converged.
+final sum of squares of residuals : 0.17919
+rel. change during last iteration : -6.0066e-07
+
+degrees of freedom    (FIT_NDF)                        : 3
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.244397
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.05973
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+b1              = 8.32889          +/- 0.1222       (1.467%)
+
+
+*******************************************************************************
+Fri Mar 20 00:47:52 2015
+
+
+FIT:    data read from 'Rt-T.dat' using 4:2
+        format = x:z
+        x range restricted to [6.00000 : 17.0000]
+        #datapoints = 4
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f1(x)
+	f1(x)=b1
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   b1           
+   0 6.1187447591e-01   0.00e+00  8.00e+00    8.000000e+00
+   3 1.7918993453e-01  -6.01e-02  8.00e-03    8.328894e+00
+
+After 3 iterations the fit converged.
+final sum of squares of residuals : 0.17919
+rel. change during last iteration : -6.0066e-07
+
+degrees of freedom    (FIT_NDF)                        : 3
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.244397
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.05973
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+b1              = 8.32889          +/- 0.1222       (1.467%)
+
+
+*******************************************************************************
+Sun Mar 22 14:41:45 2015
+
+
+FIT:    data read from 'Rt-V.dat' using 1:2
+        format = x:z
+        x range restricted to [6.00000 : 16.0000]
+        #datapoints = 2
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f1(x)
+	f1(x)=a1*x+b1
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   a1            b1           
+   0 3.2940904122e+02   0.00e+00  2.59e+00   -2.000000e-01  -2.800000e+00
+   6 3.9443045261e-30   0.00e+00  2.59e-06   -7.195292e-01   1.554770e+01
+
+After 6 iterations the fit converged.
+final sum of squares of residuals : 3.9443e-30
+rel. change during last iteration : 0
+
+
+Exactly as many data points as there are parameters.
+In this degenerate case, all errors are zero by definition.
+
+Final set of parameters 
+======================= 
+
+a1              = -0.719529      
+b1              = 15.5477        

@@ -1,0 +1,14 @@
+ h(x)=8*pi*h*c/(x*x*x*x*x*(exp(h*c/(x*K*t))-1))
+ f(x)=8*pi*h*c/(x*x*x*x*x*(exp(h*c/(K*T*x))-1)); 
+ pi = 3.14159265; 
+ set xrange [0:5e-6] 
+ K=1.3806503e-23
+ c=3e8
+ h=6.626e-34
+ T=1900
+ t=1665
+ set title "Distribuicao de Planck para 6V"
+ set xlabel "comprimentos de onda (metros)" 
+ set ylabel "intensidade (normalizada)" 
+ set label "[1.07038E-06, 5.00E-01]" at 1.1E-06,5.00E-01 
+ plot "pontosV6.dat" title 'pontos', f(x)/4235 title 'distribuicao de planck para T=1900K', h(x)/2188 title 'distribuicao de planck para T=1665K'      

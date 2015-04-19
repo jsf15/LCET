@@ -1,0 +1,305 @@
+%%% Tipo de documento %%%
+\documentclass[
+ reprint,
+ amsmath,amssymb,
+ aps,
+]{revtex4-1}
+
+%%% Packages %%%
+\usepackage[ansinew]{inputenc}
+\usepackage[portuges]{babel}
+\usepackage{graphicx}
+\usepackage{dcolumn}
+\usepackage{bm}
+
+%%% Alterações na geometria da pagina %%%
+\setlength{\textheight}{725pt}
+
+\begin{document}
+
+%%% Título, autores e informações dos autores, data %%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\preprint{APS/123-QED}
+
+\title{Junção PN}
+
+\author{Gonçalo Quinta nº 65680, Fernando Rodrigues nº66326, Teresa Jorge nº65722 e Vera Patrício nº65726}
+\vspace{2mm}
+\affiliation{
+ \vspace{3mm}
+ \textbf{Laboratório de Complementos de Electromagnetismo e Termodinâmica}\\
+ Mestrado Integrado em Engenheria Física Tecnológica 2009/2010\\
+ Instituto Superior Técnico (IST)
+ \vspace{3mm}
+}
+
+\date{\today}
+
+
+%%% Abstract %%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{abstract}
+
+Foram estudados dois modelos que prevêm a relação entre a tensão e a corrente aos terminais de um díodo. Concluíu-se que apenas o segundo modelo estudado, que tem em consideração a recombinação dos electrões na junção PN, é aplicável. Para esse modelo foi obtido um valor de Eg de cerca de 1.2 (eV), como esperado. 
+
+\vspace{2mm}
+\end{abstract}
+
+\maketitle
+
+
+%%% Introdução %%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Fundamentos Teóricos e Experiência Realizada}
+
+Neste trabalho foi estudado o funcionamento de uma junção PN, mais precisamente foram testados dois modelos para a relação entre a tensão aos seus terminais $V_d$ e a corrente que a atravessa. O primeiro modelo é descrito pela equação seguinte
+\begin{equation}\label{modelo1}
+	I=I_s(e^{\frac{q V_d}{KT\eta}}-1)
+\end{equation}
+\footnotesize $q$ - carga do electrão; $K$ - constante de Boltzman; $T$ - temperatura (K); $\eta$ - parâmetro de ajuste ao tipo de material (silicio: 2; germânio: 1)\\
+
+\normalsize
+Tomando lagaritmos, obtém-se a expressão linearizada
+\begin{equation}\label{modelo1}
+	V_d = \ln(\frac{I}{I_s}+1)\frac{KT\eta}{q}
+\end{equation}
+
+O parâmetro $I_s$ é chamado de corrente inversa de saturação \cite{TCFE} e é proporcional à temperatura pela relação
+\begin{equation}\label{Is}
+ I_s \propto T^3 e^{-\frac{E_g}{KT}}
+\end{equation}
+em que $E_g$ é a energia que separa a banda de condução da banda de valência do material. Quanto maior for este valor, maior energia será necessária para promover os electrões de valência a electrões de condução.
+
+Uma vez que $\frac{I}{I_s} >> 1$, será feita a aproximação
+\begin{equation}
+\ln(\frac{I}{I_s}+1) \approx \ln(\frac{I}{I_s})
+\end{equation}
+de modo a facilitar o estudo deste modelo.\\
+
+O segundo modelo tem em consideração as perdas electrónicas ocorridas por recombinação de electrões na separação do material p e n, sendo que a corrente neste modelo é descrita pela equação
+\begin{equation}\label{modelo2}
+	I=I_s(e^{\frac{qV_d}{KT}}-1) + I_r (e^{\frac{qV_d}{2 KT}}-1)
+\end{equation}
+\footnotesize $q$ - carga do electrão; $K$ - constante de Boltzman; $T$ - temperatura (K)\\
+
+\normalsize
+O parâmetro $I_r$ depende também da temperatura,
+\begin{equation}\label{Ir}
+ I_r \propto T^\frac{5}{2} e^{-\frac{Eg}{2KT}}
+\end{equation}  
+
+Para testar estes modelos foi utilizado um díodo - que é constituído por uma junção PN de silício - cujo esquema equivalente está representado na Figura 1:
+
+\begin{figure}[h]
+\includegraphics[scale=0.25]{Imagens/diodo}
+\caption{Modelo de díodo}
+\end{figure}
+
+A equação que relaciona as tensões no díodo é:
+
+\begin{equation}\label{circuito}
+ v = RI + v_D
+\end{equation}  
+
+À luz do primeiro modelo, a equação anterior tomará a forma
+\begin{equation}
+ v = RI + \ln(I)\frac{KT\eta}{q} - \ln(I_s)\frac{KT\eta}{q}
+\end{equation}
+que será simplificada para
+\begin{equation}
+ v = RI + \ln(I)b(T) + c(T)
+\end{equation}
+onde
+\begin{equation}
+b(T) =\frac{KT\eta}{q}  \quad \textrm{e} \quad c(T) = -\ln(I_s)\frac{KT\eta}{q}
+\end{equation}
+
+Quanto ao segundo modelo, seguindo a mesma linha de raciocínio que anteriormente, é possível chegar à conclusão que a tensão aos terminais do díodo é dada por
+
+\begin{equation}\label{circuito}
+ v = RI + 2\frac{KT}{q}\ln\Big(\sqrt{\Big(\frac{I_r}{I_s}\Big)^2 + \frac{4(I+I_s+I_r)}{I_s} - \frac{I_r}{2I_s}}\Big)
+\end{equation}
+
+Para testar a validade destas equações faz-se percorrer o díodo por sucessivas correntes(desde 10 $\mu A$ a 0.1 A), mantendo a temperatura deste constante, e medidos os vários pares de valores de tensão e corrente de resposta nos terminais do mesmo, sendo estes valores ajustados às equações anteriores. Estes ensaios serão repetidos para 5 temperaturas diferentes, sendo também verificada a dependência da temperatura dos diferentes parâmetros de ajuste obtidos: R, b e c para o primeiro modelo e R, $I_s$ e $I_r$ para o segundo. 
+
+
+%%% Resultados %%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Resultados}
+
+Devido ao grande número de dados obtidos, estes são apenas apresentados nas figuras 2 a 7 da secção seguinte.
+%%% Análise dos Resultados %%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Análise dos Resultados}
+
+Os dados obtidos, assim como o ajuste desses dados às equações (9) e (11) (à esquerda e à direita, respectivamente), encontram-se nas figuras 2 a 7. Alguns dos parâmetros não têm explicitamente um erro associado porque foram fixos durante o processo de ajuste, para se obter um melhor ajuste aos outros parâmetros.
+
+\begin{figure}[h!]
+\includegraphics[scale=0.22]{Imagens/298}
+\caption{T = 298 K}
+\end{figure}
+
+\begin{figure}[h!]
+\includegraphics[scale=0.22]{Imagens/318}
+\caption{Esquerda: T = 318 K}
+\end{figure}
+
+\begin{figure}[h!]
+\includegraphics[scale=0.22]{Imagens/333}
+\caption{Esquerda: T = 333K}
+\end{figure}
+
+\begin{figure}[h!]
+\includegraphics[scale=0.22]{Imagens/350}
+\caption{Esquerda: T = 350K}
+\end{figure}
+
+\begin{figure}[h!]
+\includegraphics[scale=0.22]{Imagens/365}
+\caption{Esquerda: T = 365K}
+\end{figure}
+
+\begin{figure}[h!]
+\includegraphics[scale=0.22]{Imagens/379}
+\caption{Esquerda: T = 379K}
+\end{figure}
+
+Os parâmetros obtidos em cada modelo foram ajustados em função da temperatura. Os valores de resistências encontrados estão na figura 8. Para o primeiro modelo, o parâmetro b(T) encontra-se na figura 9 e o c(T) na figura 10(ver equação (10)). Já os parâmetros do segundo modelo, Is e Ir, encontram-se na figura 11 e 12, respectivamente. Estes primeiros ajustes foram feitos com valores de Eg independentes. Foi feito também um ajuste conjunto, já que o valor de Eg tem que ser único, estando esse ajuste na figura 13. 
+
+\begin{figure}[h!]
+\includegraphics[scale=0.35]{Imagens/Resistencias}
+\caption{Resistências para ambos os modelos}
+\end{figure}
+
+\begin{figure}[h!]
+\includegraphics[scale=0.35]{Imagens/modelo1-b}
+\caption{b(T)}
+\end{figure}
+
+\begin{figure}[h!]
+\includegraphics[scale=0.35]{Imagens/modelo1-c}
+\caption{c(T) (Eg em [J])}
+\end{figure}
+
+Convertendo o valor de Eg obtido com o parâmetro c para electrões-Volt têm-se Eg = (0.795$\pm$0.092) eV.
+
+\begin{figure}[h!]
+\includegraphics[scale=0.35]{Imagens/Is}
+\caption{Is(T)}
+\end{figure}
+
+\begin{figure}[h!]
+\includegraphics[scale=0.35]{Imagens/Ir}
+\caption{Ir(T)}
+\end{figure}
+
+\begin{figure}[h!]
+\includegraphics[scale=0.35]{Imagens/ajustebom}
+\caption{Ajuste conjunto de Is e Ir com o mesmo valor de Eg}
+\end{figure}
+
+
+%%% Conclusão e críticas %%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Conclusão e críticas}
+
+
+Para o ajuste ao primeiro modelo considerado, equação (9), foi necessário converter as correntes em logaritmos de corrente, para facilitar a identificação do melhor ajuste para o maior número de pontos. Concluíu-se que esta aproximação não descreve adequadamente o modelo utilizado, já que os valores de b resultantes do ajuste pouco têm a ver com os esperados (figura 9), seguindo mesmo uma tendência oposta à teórica, já que diminiu com a temperatura. No entanto, a partir do parâmetro c do mesmo modelo foi possível obter uma Energia de hiato de (0.795$\pm$0.092) eV, muito próxima do valor a que se chegou através da outra abordagem.
+Já para o ajuste da expressão 11 optou-se pela representação logarítmica do eixo das correntes. Realizaram-se vários ajuste, pois com três parâmetros livres existem muitos pontos de estabilidade. Curiosamente, a combinação de parâmetros que apresentava o melhor ajuste aos pontos apresentava um $I_{r}$ negativo, algo sem significado físico.  Assumiu-se que o factor $I_r$ teria necessariamente que ser positivo. Durante o ajuste forçou-se um valor para o $I_s$ , valor esse calculado com base na energia de gap esperada, deixando apenas os outros parâmetros livres. 
+
+Foram feitos ajustes separados para ambos os parâmetros, de onde se obtêm energias de gap com valores bastante diferentes. Para o $I_s$ obtem-se o esperado 1.2eV (parametro fixado) e para o $I_r$ obtem-se um melhor ajuste para Eg=0,79 eV. 
+
+No entanto a energia de gap é única para a mesma junção, por isso foi feito um ajuste simultâneo para ambos os parâmetros. Verificou-se que o valor 1.2 eV origina um bom ajuste simultâneo para ambas as rectas.
+
+Analisando os mesmo resultados da experiência com os diferentes modelos, foi possível confirmar que o segundo modelo, o que sugere a recombinação dos pares de electrões na superfície de separação dos materiais p e n, descreve melhor a realidade que o primeiro pois os valores de $I_s$ e $I_r$ sofrem variações consistentes com as previstas teoricamente. Mas devido aos muitos limites impostos no ajuste do modelo, não é possível dizer se é absolutamente uma boa descrição da realidade. 
+
+O valor máximo das resistências foi limitado durante ambos os ajustes uma vez que se previa que este fosse pequeno. Para os dois modelos, em cada conjunto de dados, embora a resistência encontrada não seja a mesma, está na mesma ordem de grandeza, e tem um valor pequeno, tal como o esperado. Nos dois casos, existe uma certa tendência para o aumento da resistência com o aumento da temperatura mas, devido aos poucos dados obtidos e à sua possível inexactidão, não foi proposta nenhuma função que explicasse a dependência de R com a temperatura. É de notar que, a menos de um ponto, para ambas as aproximações a variação da resistência com a temperatura parece seguir aproximadamente a mesma curva. 
+
+
+
+ 
+        
+%%% Bibliografia %%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{thebibliography}{20}
+
+\bibitem{LivroAzul} \textit{Introdução à Física} by J. D. Deus, \textit{et al.}, McGraw-Hill, 2000
+\bibitem{TCFE} \textit{Introdução aos Circuitos Eléctricos e Electrónicos} by M. de Medeiros Silva, Fundação Calouste Gulbenkian, 4ºedição, 2009
+
+\end{thebibliography}	
+
+	
+\end{document}
+
+\begin{table}[h!]
+\caption{Parâmetros de ajuste obtidos - modelo 2}
+\begin{ruledtabular}
+\begin{tabular}{cccccc}
+\multicolumn{1}{c}{\textrm{T (K)}}&
+\textrm{R $(\Omega)$}&
+\textrm{$e_R (\Omega)$}&
+\textrm{Ir (UNI)}&
+\textrm{$e_{Ir}$ ()}&
+\textrm{Is (UNI)}\\
+\colrule
+297,65	&	5,0458E-7	&	0,0066519	&	2,9498E-10	&	5,0458E-7	&	8,4700E-12	\\
+317,65	&	2,0267E-6	&	0,0066519	&	1,0789E-9	&	2,0267E-6	&	1,7100E-10	\\
+333,65	&	4,7869E-6	&	0,0062861	&	2,7500E-8	&	4,7869E-6	&	4,7590E-9	\\
+351,66	&	8,2390E-6	&	0,0062861	&	2,7500E-8	&	8,2390E-6	&	4,2088E-8	\\
+367,66	&	1,7569E-5	&	0,0062861	&	2,7500E-8	&	1,7569E-5	&	2,4420E-7	\\
+380,66	&	2,9497E-5	&	0,0062861	&	2,7500E-8	&	2,9497E-5	&	1,1100E-6	\\
+\end{tabular}
+\end{ruledtabular}
+\end{table}
+
+
+\begin{table}[h!]
+\caption{Parâmetros de ajuste obtidos}
+\begin{ruledtabular}
+\begin{tabular}{ccccccc}
+\multicolumn{1}{c}{\textrm{T (K)}}&
+\textrm{c (UNI)}&
+\textrm{$e_c$ ()}&
+\textrm{b (UNI)}&
+\textrm{$e_b$ ()}\\
+\colrule
+297,65	&	1,134	&	0,007	&	0,0638	&	0,0002	&	0,03931	&	2,E-05	\\
+317,65	&	1,099	&	0,007	&	0,6031	&	0,0002	&	0,04117	&	2,E-05	\\
+333,65	&	1,339	&	0,007	&	0,5683	&	0,0002	&	0,04121	&	2,E-05	\\
+351,66	&	1,313	&	0,007	&	0,5318	&	0,0002	&	0,04091	&	2,E-05	\\
+367,66	&	1,129	&	0,007	&	0,5251	&	0,0001	&	0,04428	&	2,E-05	\\
+380,66	&	1,422	&	0,007	&	0,4598	&	0,0002	&	0,03943	&	2,E-05	\\
+\end{tabular}
+\end{ruledtabular}
+\end{table}
+
+
+
+%%% Modelo de tabela %%%
+
+\begin{table}[h!]
+\caption{Dados para o cálculo do caudal (às 9h00, 9h30, 10h00 e 10h30, respectivamente)}
+\begin{ruledtabular}
+\begin{tabular}{cccc}
+\multicolumn{1}{c}{\textrm{$\Delta m$ (kg)}}&
+\textrm{$e_\Delta m$ (Kg)}&
+\textrm{$\Delta t$(s)}&
+\textrm{$e_{\Delta t}$ (s)}\\
+\colrule
+0,100	& 	    & 90,21	& \\
+0,100	& 0,001	& 90,66	& 0,02 \\
+0,100 &       & 90,33 &     \\
+0,100 &       & 91,33 &    \\
+\end{tabular}
+\end{ruledtabular}
+\end{table}
+
+
+%%MODELO FIGURA%%%%
+\begin{figure}[h]
+\includegraphics[scale=0.25]{Imagens/T(t)}
+\caption{Ajustes gráficos à temperatura de T1 em 5 momentos diferentes}
+\end{figure}

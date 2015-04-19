@@ -1,0 +1,30 @@
+plot "wien.txt"
+w(x)=B/x
+fit w(x) "wien.txt" via B 
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+
+B               = 0.00421761       +/- 0.0006387    (15.14%)
+                                              
+
+s(x)=0.00421761 /x
+
+set title "Ajuste Lei de Wien"  
+set xlabel "Temperatura (K)"    
+set ylabel "Comprimentode onda (m)" 
+ 
+ plot "wien.txt" title "pontos", s(x) title "comp_onda = B*Temperatura" 
+
+
+
+g(x) = b*x +a 
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+
+b               = 8.66092e-010     +/- 5.857e-010   (67.63%)
+a               = 1.27132e-007     +/- 1.278e-006   (1005%)
+                                                        
+
+ g(x) = 8.66092e-010*x +1.27132e-007

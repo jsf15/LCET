@@ -1,0 +1,488 @@
+%%% Tipo de documento %%%
+\documentclass[
+ reprint,
+ amsmath,amssymb,
+ aps,
+]{revtex4-1}
+
+%%% Packages %%%
+\usepackage[ansinew]{inputenc}
+\usepackage[portuges]{babel}
+\usepackage{graphicx}
+\usepackage{dcolumn}
+\usepackage{bm}
+
+%%% Alterações na geometria da pagina %%%
+\setlength{\textheight}{770pt}
+\setlength{\voffset}{-10pt}
+
+\begin{document}
+
+%%% Título, autores e informações dos autores, data %%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\preprint{APS/123-QED}
+
+\title{Estudo das propriedades dos condensadores}
+
+\author{Gonçalo Quinta nº 65680, Fernando Rodrigues nº66326, Teresa Jorge nº65722 e Vera Patrício nº65726}
+\vspace{2mm}
+\affiliation{
+ \vspace{3mm}
+ \textbf{Laboratório de Complementos de Electromagnetismo e Termodinâmica}\\
+ Mestrado Integrado em Engenheria Física Tecnológica 2009/2010\\
+ Instituto Superior Técnico (IST)
+ \vspace{3mm}
+}
+
+\date{\today}
+
+
+%%% Abstract %%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{abstract}
+
+Foi estudado o processo de carga e descarga de um condensador de 1$\mu$F num circuito RC e através dos $\tau$ característicos obteve-se uma estimativa para a sua capacidade de (1,008$\pm$0,001)$\mu$F. Verificou-se igualmente a conservação de energia para os dois processos, a menos de alguns erros aleatórios. Foi também estudado o funcionamento de outro condensador em regime forçado tendo-se obtido um valor para a capacidade do condensador de (5,02$\pm$27,0)nF e para a constante dieléctrica do material que separa as armaduras de $(9,51\pm59,0)\times10^{-12}$.
+
+\vspace{2mm}
+\end{abstract}
+
+\maketitle
+
+
+%%% Introdução %%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Introdução}
+
+Um corpo condutor em equilíbrio electroestático com uma carga $Q$ encontra-se sempre a um potencial constante $V$, que se pode provar ser proporcional à carga armazenada. Assim, define-se a capacidade $C$ de um condutor como a razão
+\begin{equation}
+C=\frac{Q}{V}
+\end{equation} 
+que fornece uma medida da facilidade que um condutor tem em armazenar carga, dado o potencial a que ele se encontra. Esta quantidade depende apenas da sua geometria e do meio em que está inserido.\cite{eo}
+
+Existem, por outro lado, materiais incapazes de armazenar carga por não serem condutores, que se denominam dieléctricos. Quando estes são sujeitos a uma diferença de potencial, surgem dipolos no interior dos mesmos, e dependendo das caracterísctica do material pode surgir uma densidade de carga de polarização volumétrica e/ou superficial. \cite{eo}Devido a estas propriedades, este tipo de materiais funciona como um bloqueador de corrente entre dois meios.
+
+Um condensador é formado por um meio dieléctrico entre dois condutores. A vantagem do meio dieléctrico neste caso é evidente: os condutores podem ser colocadas muito próximos sem o risco de entrarem em contato. Num condensador plano de área $S$ formado por duas armaduras condutoras separadas por uma distância $d$ onde existe um meio dieléctrico de permitividade $\varepsilon$, a capacidade é dada por 
+\begin{equation}
+C=\frac{\varepsilon S}{d}
+\end{equation}
+
+Para distinguir os vários materiais dieléctricos, existe uma quantidade chamada constante dieléctrica - $\varepsilon_r$. Esta está directamente relacionada com a permitividade do meio eléctrico, $\varepsilon$, e do vácuo, $\varepsilon_0$, pela expressão
+$\varepsilon = \varepsilon_0\varepsilon_r$.
+
+e fornece uma medida de facilidade de polarização do material. Quanto maior for, maior é o campo criado pelas cargas de polarização, cujo sentido é o oposto ao do campo que as criou. Intuitivamente, as cargas de polarização acumuladas na superfície do material, como têm sinal contrário às cargas das placas, "ajudam" a atrair mais electrões de um lado e repelir do outro, aumentado a carga total armazenada. Assim, quanto maior for $\varepsilon_r$, maior é a quantidade de carga armazenada. Podia-se chegar à mesma conclusão directamente a partir da equação (2). 
+
+A constante dieléctrica depende também da frequência da corrente que passa no circuito, pois a orientação dos dipolos depende desta. Este dependência na frequência pode ser escrita como $C=(C_{R}+jC_{I})$\cite{erro}. A parte imaginária está relacionada com as perdas de energia no condensador, pois, ao vibrarem, as partículas constituintes do condensador dissipam energia, pelo que esta pode ser considerada como uma resistência em paralelo com o condensador real. 
+
+
+O estudo das propriedades dos condensadores neste trabalho laboratorial será feito a partir de um circuito RC, esquematizado na figura 1: 
+
+\begin{figure}[h!]
+\includegraphics[scale=0.4]{Imagens/RC}
+\caption{Circuito RC}
+\end{figure}
+
+A equação que descreve o circuito é dada através da lei das malhas
+\begin{equation}
+	\varepsilon _{a}=RI+V_c=RC\frac{dV_c}{dt}+Vc
+\end{equation}
+\footnotesize{atendendo que $I = \frac{dQ}{dt} = C\frac{dV_c}{dt}$\\}
+
+\normalsize
+Quando o gerador de corrente contínua se encontra em funcionamento, retira carga de uma das armaduras do condensador para a outra, criando uma diferença de potencial entre armaduras. Passado um certo tempo, a diferença de potencial entre armaduras deixará de aumentar, ficando o condensador carregado. Para decarregar o condensador, o gerador é substituído por um curto-circuito e a carga acumulada numa das armaduras vai fluir pelo sistema para a outra. Neste circuito é necessária uma resistência para dissipar a potência armazenada no condensador e evitar correntes muito elevadas. A tensão aos terminais do condensador em cada momento do processo de carga e descarga (onde deixa de existir fonte de tensão) é dada pela solução da equação (4). Note-se, no entanto, que as condições iniciais são diferentes, pelo que as equações também o serão. Assim, tem-se:\\
+
+Para a carga:	$V_c(t)={V_c}_{0}e^{-\frac{t}{RC}}+\varepsilon_{a}$\\
+
+Para a descarga:	$V_c(t)={V_c}_{0}e^{-\frac{t}{RC}}$ \\
+
+O parâmetro $RC$ é chamado de tempo de relaxação. A energia envolvida nestes processos obtém-se integrando a potência de cada elemento ao longo do tempo. Temos assim, respectivamente, a energia fornecida pelo gerador e dissipada na resistência:
+\begin{equation}
+	W_{e}= \int{\varepsilon_{a}I}dt = \varepsilon_{a}^2C, \qquad 	W_{r}= \int{RI^2}dt = \frac{1}{2}C \varepsilon_{a}^2
+\end{equation}
+
+A energia armazenada no condensador é dada por
+\begin{equation}
+	W_{c}=\frac{1}{2}C{V_c}^{2}
+\end{equation}
+
+Durante a carga de um condensador metade da energia gasta pelo gerador é dissipada na resistência a outra fica acumulada no condensador.\cite{lcet}
+
+%%% Experiência realizada %%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Experiência realizada}
+
+\hspace{-3.5mm}\textbf{Processo de carga e descarga do condensador}
+\vspace{1mm}
+
+O esquema eléctrico utilizado foi o circuito RC descrito na introdução. Este encontra-se ligado a um equipamento informático que mede a cada instante a tensão aos terminais do condensador. Primeiramente foi analisado o processo de carga do condensador, obtendo-se nessas medições um gráfico do tipo que se encontra na figura 2. Esses dados são linearizados obtendo-se um gráfico do género do da figura 3, criando-se para isso uma nova variável $v$ de modo aos dados se ajustarem à seguinte equação (derivada da equação (4)):
+\begin{equation}
+	\ln(E - Vc)= \ln(v)= \ln(E) - \frac{t}{RC}
+\end{equation}
+\footnotesize{E - tensão aplicada (aproximada pela tensão final no condensador)}
+\normalsize
+
+\begin{figure}[h!]
+\includegraphics[scale=0.4]{Imagens/cargaoriginal}
+\caption{Gráfico típico de v(t) para o processo de carga}
+\end{figure}
+
+\begin{figure}[h!]
+\includegraphics[scale=0.4]{Imagens/linearizacao}
+\caption{Gráfico típico de ln(v(t)) para o processo de carga}
+\end{figure}
+
+Este processo é repetido para resistências de 20k$\Omega$, 30k$\Omega$, 40k$\Omega$ e 50k$\Omega$. Um valor de C pode ser calculado ajustando os declives obtidos em função da resistência:
+
+\begin{equation}
+	\frac{1}{RC}=\frac{1}{\tau} \Leftrightarrow \tau = C_{estimado}R
+\end{equation} 
+
+Esta resistência corresponde à resistência total do circuito, ou seja a resistência aplicada ($R_a$) em série com a resistência do voltímetro ($R_v$) que procede às medições. Esta resistência total é calculada sabendo que é a soma das duas resistências em paralelo: 
+\begin{equation}
+	R=\frac{R_{a}R_v}{R_{a}+R_v}
+\end{equation}
+
+A resistência $R_v$ é calculada aplicando o teorema de Thévenin aos terminais do condensador, obtendo-se a expressão:
+\begin{equation}
+	R_v = \frac{-E' R_{a}}{E' - E}
+\end{equation}
+\footnotesize{E' - tensão no condensador; E - tensão aplicada\\}
+
+\normalsize
+Para se efectuar os cálculos das energias são calculados os integrais das curvas $v(t)$ e $v(t)^2$. Na figura 4 encontra-se um gráfico tipo para esta última grandeza.
+
+\begin{figure}[h!]
+\includegraphics[scale=0.4]{Imagens/cargavquadrado}
+\caption{Gráfico típico de $v^2(t)$ para o processo de carga}
+\end{figure}
+
+O processo de descarga é estudado de forma igual, fazendo-se o ajuste dos dados à equação (5) linearizada:
+\begin{equation}
+\ln\left ( V_{c}(t) \right )=\ln(V_{c0})-\frac{t}{RC} 
+\end{equation}
+
+Neste caso não é necessário calcular o integral de $Vc(t)$, valor que se usava para calcular a potência fornecida pela fonte de tensão, que no processo de descarga é substituída por um curto circuito. O gráfico tipo para a descarga encontra-se na figura 5.
+
+\begin{figure}[h!]
+\includegraphics[scale=0.4]{Imagens/descarga}
+\caption{Gráfico típico de Vc(t) para o processo de descarga}
+\end{figure}
+
+
+\hspace{-3.5mm}\textbf{Determinação da constante dieléctrica}
+\vspace{1mm}
+
+\begin{figure}[h!]
+\includegraphics[scale=0.4]{Imagens/fig2}
+\caption{Esquema de montagem - A - Resistência; B - R1(variável) C - Condensador; D - U2; E - U1; F - Fonte}
+\end{figure}
+
+Na segunda parte da experiência  estuda-se o comportamento de um condensador em regime forçado. O circuito é o da figura 6. 
+Uma das equações que descreve o circuito é
+\begin{equation}
+	i=\frac{U_{2}}{R_{eq}}+c\frac{dU_{2}}{dt}=\frac{U_{1}-U_{2}}{R_{1}}
+\end{equation}
+Por análise complexa podemos concluir que a capacidade do condensador  é dada por
+\begin{equation}
+	C=\frac{1}{\omega R_{1}}\sqrt{\left ( \frac{U_{1ef}}{U_{2ef}} \right )^{2}-\left ( 1+\frac{R_{1}}{R_{eq}} \right )^{2}}(10)
+\end{equation}
+
+Pela análise das potências dissipadas em cada resistência obtém-se uma relação para a determinação da resistência equivalente:
+\begin{equation}
+	R_{eq}=\frac{U_{2ef}^{2}}{\left \langle U_{1}\cdot U_{2} \right \rangle-U_{2ef}^{2}}R_{1}
+\end{equation}
+Os valores de $U_{2ef}$, $U_{1ef}$ e $\left \langle U_{1}\cdot U_{2} \right \rangle$ são retirados de um programa do osciloscópio. A resistência variável $ R_{1} $ é medida com um ohmímetro enquanto ainda está quente da passagem da corrente.
+O uso do osciloscópio introduz um erro pois a ponta de medida tem um condensador e uma resistência em paralelo ($R_{ponta}=1M\Omega $ e $C_{ponta}=120pF$).
+\begin{equation}
+	R_{condensador}=-\frac{R_{ponta}R_{eq}}{R_{eq}-R_{ponta}}
+\end{equation}
+\begin{equation}
+C_{condensador}=C-C_{ponta}
+\end{equation}
+
+A partir dos valores de capacidade e de resistência do condensador é possível determinar a constante dieléctrica real e imaginária - $\varepsilon _{R}=\frac{d}{S}C_{c}$ e $ \varepsilon _{I}=\frac{d}{S}\frac{1}{\omega R_{c}} $\cite{lcet}. Através do quociente $\frac{\varepsilon _{I}}{\varepsilon _{R}} $ obtem-se $tg(\delta)$, onde $\delta$ é o ângulo das perdas do condensador.
+Para a análise de resultados realizaram-se gráficos de ln(R)(ln($\omega$)), C(ln($\omega$)), $\varepsilon _{R}(ln(\omega))$, $\varepsilon _{I}(ln(\omega))$ e $tg(\delta)$(ln($\omega$)).
+
+%%% Resultados %%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Resultados}
+
+Obtiveram-se gráficos semelhantes aos da figuras 3, 4, 5 e 6 para os processos de carga de descarga. Os dados registados para os diferentes ensaios durante a carga encontram-se na Tabela I e para a descarga na Tabela II (nota: $R_a$ têm um erro associado de 5\% e as tensões de 0,01V.)
+
+\begin{table}[h!]
+\caption{Dados do processo de carga do condensador}
+\begin{ruledtabular}
+\begin{tabular}{cccccc}
+\multicolumn{1}{c}{\textrm{$R_{a} (\Omega)$}}&
+\textrm{${V_c}_{f}$ (V)}&
+\textrm{$\frac{1}{\tau}$ $(s^{-1})$ \footnote{os ensaios foram repetidos para diferentes limites da escala temporal, não se verificando desvios significativos}}&
+\textrm{a (ln(V))}&
+\textrm{$\int v$ (Vms)\footnote{para diminuir os erros, os integrais foram todos calculados até ao máximo da escala temporal}}&
+\textrm{$\int v^2 (V^2ms)$}\\
+\colrule
+10000	&	4,90	&	-0,1010	&	1,61	&	48,9	&	123	\\
+20000	&	4,81	&	-0,0510	&	1,57	&	93,4	&	226	\\
+30000	&	4,71	&	-0,0353	&	1,56	&	125	&	284	\\
+40000	&	4,63	&	-0,0267	&	1,53	&	167	&	369	\\
+50000	&	4,55	&	-0,0217	&	1,50	&	205	&	446	\\
+\end{tabular}
+\end{ruledtabular}
+\end{table}
+
+\begin{table}[h!]
+\caption{Dados do processo de descarga do condensador}
+\begin{ruledtabular}
+\begin{tabular}{ccccc}
+\multicolumn{1}{c}{\textrm{$R_{a} (\Omega)$}}&
+\textrm{${V_c}_{i}$ (V)}&
+\textrm{$\frac{1}{\tau}$ $(s^{-1})$}&
+\textrm{a (ln(V))}&
+\textrm{$\int v^2 (V^2ms)$}\\
+\colrule
+10000	&	4,90	&	-0,1020	&	1,62	&	125	\\
+20000	&	4,81	&	-0,0520	&	1,57	&	224	\\
+30000	&	4,71	&	-0,0352	&	1,55	&	316	\\
+40000	&	4,56	&	-0,0269	&	1,52	&	386	\\
+50000	&	4,49	&	-0,0219	&	1,50	&	459	\\
+\end{tabular}
+\end{ruledtabular}
+\end{table}
+
+\begin{table}[h!]
+\caption{Dados para determinação da constante dieléctrica}
+\begin{ruledtabular}
+\begin{tabular}{ccccccc}
+\multicolumn{1}{c}{\textrm{f (Hz)}}&
+\textrm{${U_{ef}}$1(V)}&
+\textrm{${U_{ef}}$2(V)}&
+\textrm{\scriptsize $<{U_{ef}}1\cdot{U_{ef}}2>$}&
+\textrm{erro}&
+\textrm{R1$(\Omega)$}&
+\textrm{$e_{R1}(\Omega)$}\\
+\colrule
+2k	&	5,37	&	2,67	&	7,32	&	0,08	&	27200	&	100	\\
+5k	&	5,36	&	2,67	&	7,19	&	0,08	&	10850	&	100	\\
+10k	&	5,34	&	2,66	&	7,13	&	0,08	&	5442	&	10	\\
+20k	&	5,31	&	2,65	&	7,14	&	0,08	&	2695	&	10	\\
+50k	&	5,20	&	2,59	&	6,88	&	0,08	&	1083	&	10	\\
+100k	&	5,04	&	2,53	&	6,58	&	0,08	&	540	&	1	\\
+200k	&	4,73	&	2,37	&	6,75	&	0,07	&	256	&	1	\\
+500k	&	3,95	&	1,96	&	4,09	&	0,06	&	106	&	1	\\
+1M	&	2,98	&	1,46	&	2,21	&	0,04	&	49,0	&	0,1	\\
+\end{tabular}
+\end{ruledtabular}
+\end{table}
+
+
+%%% Análise dos Resultados %%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Análise dos resultados}
+
+Com os dados da Tabela II, e para uma tensão aplicada de 4,99 V (antes de se iniciar o processo de descarga), obtiveram-se vários valores de $R_v$ aplicando a equação (4), cuja média é 491343 $\Omega$. Para o cálculo de R foi usado este valor. As energias calculadas para os dois casos encontram-se nas Tabelas IV e V.
+
+\begin{table}[h!]
+\caption{Energias do processo de carga do condensador}
+\begin{ruledtabular}
+\begin{tabular}{ccccc}
+\multicolumn{1}{c}{\textrm{$R_{a} (\Omega)$}}&
+\textrm{$W_{e}$\footnote{todas as energias vêm em $10^{-5}$} (J)}&
+\textrm{$W_{r}$} &
+\textrm{$W_{c}$} &
+\textrm{$W_{r}+W_{c}$} \\
+\colrule
+10000	&	2,4449	&	1,2550	&	1,2005	&	2,4555	\\
+20000	&	2,3377	&	1,1760	&	1,1568	&	2,3328	\\
+30000	&	2,0823	&	1,0045	&	1,1092	&	2,1137	\\
+40000	&	2,0904	&	0,9976	&	1,0718	&	2,0694	\\
+50000	&	2,0553	&	0,9828	&	1,0351	&	2,0179	\\
+\end{tabular}
+\end{ruledtabular}
+\end{table}
+
+\begin{table}[h!]
+\caption{Energias do processo de descarga do condensador}
+\begin{ruledtabular}
+\begin{tabular}{ccc}
+\multicolumn{1}{c}{\textrm{$R_{a} (\Omega)$}}&
+\textrm{$W_{r}$ ($\times10^{-5}$ J)}&
+\textrm{$W_{c}$ ($\times10^{-5}$ J)}\\
+\colrule
+10000	&	1,2754	&	1,2005	\\
+20000	&	1,1656	&	1,1568	\\
+30000	&	1,1176	&	1,1092	\\
+40000	&	1,0436	&	1,0397	\\
+50000	&	1,0114	&	1,0080	\\
+\end{tabular}
+\end{ruledtabular}
+\end{table}
+
+Foi feito o ajuste da função (2) - figura 7 - sendo o valor de C encontrado (1,0081$\pm$0,0004) $\mu$F para a descarga e $C=(1,0142\pm0,0004)$ $\mu$F para a carga. O valor médio de $C_{R}$ do condensador é de $(5,02\pm0.27)nF$. O valor médio de $\varepsilon_{R}$ é  $(9.51\pm 0.59)$.
+
+\begin{figure}[h]
+\includegraphics[scale=0.20]{Imagens/grafico4}
+\caption{Ajuste do declive em função de $R_a$ para cálculo de C: à esquerda para a descarga e à direita para a carga do condensador}
+\end{figure}
+
+Os valores das resistências e capacidades equivalentes calculadas encontram-se na tabelas VII.
+
+\begin{table}[h!]
+\caption{Resistências e Capacidades equivalentes calculadas}
+\begin{ruledtabular}
+\begin{tabular}{cccccc}
+\multicolumn{1}{c}{\textrm{f (Hz)}}&
+\textrm{Req$(\Omega$)}&
+\textrm{$e_{Req}(\Omega$)}&
+\textrm{Ceq(F)}&
+\textrm{$e_{Ceq}$(F)}&\\
+\colrule
+2k	&	1,04E+06	&	1,60E+05	&	5,06E-09	&	2,6E-10	&\\
+5k	&	1,33E+06	&	6,40E+05	&	5,09E-09	&	2,6E-10	&\\
+10k	&	7,64E+05	&	4,10E+05	&	5,08E-09	&	2,6E-10	&\\
+20k	&	1,61E+05	&	3,80E+04	&	5,10E-09	&	2,6E-10	&\\
+50k	&	4,23E+04	&	7,20E+03	&	5,07E-09	&	2,6E-10	&\\
+100k	&	1,97E+04	&	3,00E+03	&	5,03E-09	&	2,6E-10	&\\
+200k	&	1,23E+03	&	4,00E+01	&	4,96E-09	&	2,7E-10	&\\
+500k	&	1,62E+03	&	1,60E+02	&	5,14E-09	&	2,7E-10	&\\
+1M	&	1,31E+03	&	2,70E+02	&	5,71E-09	&	3,1E-10	&\\
+\end{tabular}
+\end{ruledtabular}
+\end{table}
+
+%\begin{table}[h!]
+%\caption{Resistências calculadas}
+%\begin{ruledtabular}
+%\begin{tabular}{cccccc}
+%\multicolumn{1}{c}{\textrm{f (Hz)\footnote{erro: 5\%}}}&
+%\textrm{Req$(\Omega$)}&
+%\textrm{$e_{Req}(\Omega$)}&
+%\textrm{$R_{condensador}(\Omega$)}&
+%\textrm{$e_{Rcondensador}(\Omega$)}\\
+%\colrule
+%2k	&	1,04E+06	&	1,6E+05	&	-2,48E+07	&	9,3E+07	&	\\
+%5k	&	1,33E+06	&	6,4E+05	&	-4,02E+06	&	5,8E+06	&	\\
+%10k	&	7,64E+05	&	4,1E+05	&	3,24E+06	&	7,4E+06	&	\\
+%20k	&	1,61E+05	&	3,8E+04	&	1,92E+05	&	5,5E+04	&	\\
+%50k	&	4,23E+04	&	7,2E+03	&	4,42E+04	&	7,8E+03	&	\\
+%100k	&	1,97E+04	&	3,0E+03	&	2,01E+04	&	3,1E+03	&	\\
+%200k	&	1,23E+03	&	4E+01	&	1,24E+03	&	4E+01	&	\\
+%500k	&	1,62E+03	&	1,6E+02	&	1,62E+03	&	1,6E+02	&	\\
+%1M	&	1,31E+03	&	2,7E+02	&	1,32E+03	&	2,7E+02	&	\\
+%\end{tabular}
+%\end{ruledtabular}
+%\end{table}
+
+%\begin{table}[h!]
+%\caption{Capacidades calculadas}
+%\begin{ruledtabular}
+%\begin{tabular}{cccccc}
+%\multicolumn{1}{c}{\textrm{f (Hz)\footnote{erro: 5\%}}}&
+%\textrm{Ceq(F)}&
+%\textrm{$e_{Ceq}$(F)}&
+%\textrm{C(F)}&
+%\textrm{$e_{C}$(F)}\\
+%\colrule
+%2k	&	5,06E-09	&	2,6E-10	&	4,94E-09	&	2,6E-10	\\
+%5k	&	5,09E-09	&	2,6E-10	&	4,97E-09	&	2,6E-10	\\
+%10k	&	5,08E-09	&	2,6E-10	&	4,96E-09	&	2,6E-10	\\
+%20k	&	5,10E-09	&	2,6E-10	&	4,98E-09	&	2,6E-10	\\
+%50k	&	5,07E-09	&	2,6E-10	&	4,95E-09	&	2,6E-10	\\
+%100k	&	5,03E-09	&	2,6E-10	&	4,91E-09	&	2,6E-10	\\
+%200k	&	4,96E-09	&	2,7E-10	&	4,84E-09	&	2,7E-10	\\
+%500k	&	5,14E-09	&	2,7E-10	&	5,02E-09	&	2,7E-10	\\
+%1M	&	5,71E-09	&	3,1E-10	&	5,59E-09	&	3,1E-10	\\
+%\end{tabular}
+%\end{ruledtabular}
+%\end{table}
+
+%\begin{table}[h!]
+%\caption{Constante dieléctrica}
+%\begin{ruledtabular}
+%\begin{tabular}{cccccc}
+%\multicolumn{1}{c}{\textrm{f (Hz)\footnote{erro: 5\%}}}&
+%\textrm{Re{$\epsilon$}}&
+%\textrm{$e_{Re{\epsilon}}$}&
+%\textrm{Im{$\epsilon$}}&
+%\textrm{$e_{Im{\epsilon}}$()}\\
+%\colrule
+%2k	&	9,37E-12	&	5,80E-13	&	-6,07E-15	&	2,23E-14	\\
+%5k	&	9,43E-12	&	5,80E-13	&	-1,50E-14	&	2,09E-14	\\
+%10k	&	9,40E-12	&	5,80E-13	&	9,32E-15	&	2,19E-14	\\
+%20k	&	9,44E-12	&	5,80E-13	&	7,84E-14	&	2,69E-14	\\
+%50k	&	9,39E-12	&	5,80E-13	&	1,36E-13	&	3,21E-14	\\
+%100k	&	9,31E-12	&	5,80E-13	&	1,50E-13	&	3,22E-14	\\
+%200k	&	9,17E-12	&	5,90E-13	&	1,22E-12	&	1,12E-13	\\
+%500k	&	9,51E-12	&	6,00E-13	&	3,72E-13	&	5,87E-14	\\
+%10M	&	1,06E-11	&	7,00E-13	&	2,29E-13	&	6,10E-14	\\
+%\end{tabular}
+%\end{ruledtabular}
+%\end{table}
+
+
+
+\begin{figure}[h!]
+\includegraphics[scale=0.2]{Imagens/grafico1}
+\caption{Esquerda: Capacidade em função de $\ln(\omega)$; Direita: $\ln$(Resistência) função de $\ln(\omega)$}
+\end{figure}
+
+\begin{figure}[h!]
+\includegraphics[scale=0.2]{Imagens/grafico2}
+\caption{Esquerda: $\Re({\varepsilon})$ em função de $\ln(\omega)$; Direita: $\Im({\varepsilon})$ em função de $\ln(\omega)$}
+\end{figure}
+
+\begin{figure}[h!]
+\includegraphics[scale=0.2]{Imagens/grafico3}
+\caption{Esquerda: $\Im({\varepsilon})$ em função de $\Re({\varepsilon})$ ; Direita:  quociente entre $\Im({\varepsilon})$ com $\Re({\varepsilon})$ (ou $\tan(\delta)$) em função de $\ln(\omega)$}
+\end{figure}
+
+
+%%% Conclusão e críticas %%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Conclusão e críticas}
+
+Através dos ajustes da figura 7, foi estimado um valor de C de $(1,0081 \pm 0,0004) \mu$F para o processo de carga e de $(1,0142 \pm 0,0004)\muF$ para o processo de descarga, que coincidem com o esperado. No primeiro ajuste é possível observar a existência de uma ordenada na origem com o valor de (0.10599$\pm$0.03252) ($\Omega$ mF). Concluiu-se que este valor corresponde a uma resistência residual que previne o condensador de descarregar instantaneamente num circuito sem resistência, evitanto assim que este se destrua. Para o condensador em curto circuito podemos considerar um tempo aproximado de relaxação residual de $\tau_{0} =0.1ms$. Analisando as energias calculadas para o processo de carga confirma-se o princípio da conservação da energia e a equipartição desta entre a bateria e o condensador, considerando o erro associado de 2\%. Em relação ao processo de descarga, também é possivel confirmar que a energia dissipada na resistência é a mesma armazenada no condensador. Para este caso verifica-se que a energia armazenada no condensador é sempre inferior à dissipada na resistência, aspecto curioso e contrário ao esperado. Se a energia dissipada na resistência fosse menor,o facto podia ser justificado com a existência de outras perdas ao longo do circuito, nomeadamente nos condutores . Assim, a única justificação para este resultado pode advir de um erro sistemático introduzido pelo programa informático.
+
+Na segunda parte do trabalho, determinou-se uma capacidade média para o condensador de $(5.02E\pm0.27)$nF. Este valor é compatível com o valor esperado de de $4.897nF$, medido para $1kHz$. A medição que tem maior peso no erro do condensador é a da frequência angular, pois todas as outras medições foram controladas de modo à diferença de potencial fornecida ao sistema estar sempre na mesma gama e a diferença de potencial aos terminais do condensador ser metade da anterior. Com o aumento da frequência da tensão fornecida ao sistema  verificou-se uma diminuição da resistência equivalente, o que indica que com o aumento da frequência o condensador foi aumentando a sua permeabilidade eléctrica deixando passar cada vez mais corrente. Em relação às resistências é de notar que algumas são negativas e os seus erros são $300\%$ do seu valor, o que pode ser explicados tendo em conta que para esta gama de frequências muito baixas o condensador funciona quase como um circuito aberto, passando muito pouca corrente através dele, dificultando o cálculo correcto de R. Na análise dos resultados notou-se que ao menor valor de resistência do condensador, obtido com uma frequência de $200kHz$, corresponde o valor de capacidade do condensador mais próximo do "valor teórico". Os valores medidos foram$ (1.24\pm0.04)$k$\Omega$ para a resistência equivalente e $(4.84\pm0.27)$nF para a capacidade. No ajuste da figura 8 evidencia-se uma dependência da resistência do condensador de -1.5 da potência da frequência.
+
+O valor médio da parte real da constante dieléctrica do meio obtida foi $(9.51\pm 0.59)10^{-12}Fm^{-1}$. A parte imaginária da constante dieléctrica depende da frequência imposta ao condensador e da resistência equivalente deste. Com o aumento de um dos factores o outro diminui, mas o efeito que prevalece é o aumento da parte imaginária com a frequência. Supõe-se a sua dependência  da raiz da frequência, suposição baseada na dependência verificada da resistência e na relação apresentada na experiência realizada. Do gráfico da figura 10 é possível concluir que não existe nenhuma dependência entre a parte real e a parte imaginária da constante dieléctrica. A partir do gráfico das tangentes do ângulo de perdas, o quociente do valor imaginário com o valor real da constante dieléctrica é possivel concluir que as perdas aumentam com a frequência e que estas são muito pouco relevantes, a parte real da constante dieléctrica tem mais peso que a parte imaginária. 
+
+        
+%%% Bibliografia %%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{thebibliography}{20}
+
+\bibitem{LivroAzul} \textit{Introdução à Física} by J. D. Deus, \textit{et al.}, McGraw-Hill, 2000
+\bibitem{eo} \textit{Notas aulas teóricas Professor Jorge Loureiro} 
+\bibitem{lcet} \textit{Notas aulas teóricas Professor João Figueirinhas} 
+\end{thebibliography}	
+
+	
+\end{document}
+
+
+%%% Modelo de tabela %%%
+
+%\begin{table}[h!]
+%\caption{Dados para o cálculo do caudal (às 9h00, 9h30, 10h00 e 10h30, respectivamente)}
+%\begin{ruledtabular}
+%\begin{tabular}{cccc}
+%\multicolumn{1}{c}{\textrm{$\Delta m$ (kg)}}&
+%\textrm{$e_\Delta m$ (Kg)}&
+%\textrm{$\Delta t$(s)}&
+%\textrm{$e_{\Delta t}$ (s)}\\
+%\colrule
+%0,100	& 	    & 90,21	& \\
+%0,100	& 0,001	& 90,66	& 0,02 \\
+%0,100 &       & 90,33 &     \\
+%0,100 &       & 91,33 &    \\
+%\end{tabular}
+%\end{ruledtabular}
+%\end{table}
+
+
+%%MODELO FIGURA%%%%
+%\begin{figure}[h]
+%\includegraphics[scale=0.25]{Imagens/T(t)}
+%\caption{Ajustes gráficos à temperatura de T1 em 5 momentos diferentes}
+%\end{figure}

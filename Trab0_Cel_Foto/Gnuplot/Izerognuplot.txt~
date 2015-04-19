@@ -1,0 +1,19 @@
+set title "Tensão com corrente nula" font ",15"
+set ylabel "Tensão (V)"
+set xlabel "Nível de iluminação (%)"
+set yrange [2.1:2.4]
+set xrange [40:105]
+
+#Fitting  (linear?)
+f1(x)=a1*x+b1
+a1=0.005; b1=1.9;
+fit f1(x) 'Izero.dat' using 1:2 via a1,b1
+
+
+#Fit Plot (que legenda é esta?)
+
+set key left top
+
+plot "< awk '{if($3 == \"red\") print}' Izero.dat" u 1:2:(0.001) w yerr lt rgb "red" notitle,\
+"< awk '{if($3 != \"red\") print}' Izero.dat" u 1:2:(0.001) w yerr lt rgb "blue" t "Corrente I=0A",\
+f1(x) lt rgb "#228B22" notitle ,

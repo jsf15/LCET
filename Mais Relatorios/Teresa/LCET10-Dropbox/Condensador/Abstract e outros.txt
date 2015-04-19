@@ -1,0 +1,15 @@
+
+Abstract
+Foi estudado o processo de carga e descarga de um condensador de 1$\muF$ num circuito RC e através dos $\Tau$ caracteristicos obteve-se uma estimativa para a sua capacidade de (1,008 ± 0,001)E-3 mF. Verificou-se igualmente a conservação de energia para os dois processos, a menos de alguns erros aleatórios. Foi também estudado o seu funcionamento do regime forçado tendo-se obtido um valor para a capacidade do condensador de (5,02E-09$\pm$2,70E-10)F e para a constante dielectrica do material que separa as armaduras de (9,51E-12$\pm$5,9E-13).
+
+
+
+
+
+O meu texnicenter não está a abrir nada... atenção com isto:
+Tabela II - é m e não 1/m
+Tabela IV - faltam os erros (tinha posto ontem...)
+nessa secção - falta referir que as energias estão na tabela V e VI
+Falta por o erro na capacidade média (5,02E-09$\pm$2,70E-10)F
+Tabela IX - tirar o nome de coluna Ceq
+Eu já tinha posto uma tabela com as constantes dielectricas mas agora no pdf que está la não estou a ver

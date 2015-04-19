@@ -1,0 +1,25 @@
+set notable
+set zlabel "Temperatura (K)"
+set ylabel "t (s)"
+set xlabel "Distância (m)"
+#set yrange [0:1]
+set key font ",15"
+set xrange[0:0.12]
+set ticslevel 0
+set view 120,30
+
+############# - Plot1
+L=0.12
+q=0.002
+t1=10
+t2=10
+
+B= -2*((cos(pi*n)-1)*(t1-t2))*((pi*n*L)**(-1))
+v(x,y)=sin(n*pi*x/L)*exp(-k*y*n*n*pi*pi/(L*L))*B
+sum1(x,y)=sum[n=0:5] v(x,y)
+T(x,y)=t1+(t2-t1)*x/L+sum1(x,y)
+
+
+fit T(x,y) 'Trans1.dat' using 1:2:3 via k,t1,t2
+splot T(x,y)
+

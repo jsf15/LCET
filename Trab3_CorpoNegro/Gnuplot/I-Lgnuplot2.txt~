@@ -1,0 +1,27 @@
+reset
+set notitle
+set ylabel "Intensidade"
+set xlabel "λ(nm)"
+set yrange [0:1.1]
+set xrange[400:6000]
+set key font ",15"
+h=6.62606957*10**(-34)
+c=299792458
+k=1.3806488*10**(-23)
+B=2.8977685*10**(-3)
+
+f(x)=a*(2*pi*h*c*c/(((x-b)*10**(-9))**5))*(1/(exp((h*c)/(k*t1*((x-b)*10**(-9))))-1))/(d*t1**5)
+g(x)=a*(2*pi*h*c*c/(((x+90)*10**(-9))**5))*(1/(exp((h*c)/(k*T*((x+90)*10**(-9))))-1))/(d*T**5)
+
+d=(2*pi*h*c*c/(B**5))*(1/(exp((h*c)/(k*B))-1))
+a=1;
+b=10;  #*10**(-9);
+t1=2404.311392;
+T=2130.311392;
+fit f(x) 'I-L2.dat' using 1:($2/0.00607567) via b,t1
+
+#set key left top
+
+plot f(x) t "Fit" lw 1.5 lt rgb '#800080' , g(x) t "T=(2130±88)K" lw 1.5 lt rgb '#006400',\
+"< awk '{if($6 != \"red\") print}' I-L2.dat" using 1:($2/0.00607567):3:4:(($2-$5)/0.00607567):(($2+$5)/0.00607567) with xyerrorbars notitle,\
+"< awk '{if($6 == \"red\") print}' I-L2.dat" using 1:($2/0.00607567):3:4:(($2-$5)/0.00607567):(($2+$5)/0.00607567) with xyerrorbars lt rgb "red" notitle

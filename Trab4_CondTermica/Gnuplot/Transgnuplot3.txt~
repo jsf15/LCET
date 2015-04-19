@@ -1,0 +1,24 @@
+reset
+set term aqua
+set notable
+set isosamples 15,15
+set ylabel "Temperatura (K)" offset 0,-2,0
+set xlabel "Distância (m)"
+set key font ",15"
+set ticslevel 0
+#set xrange [0:0.12]
+
+
+f(x)=a*x*x+b*x+c
+fit f(x)'TRANS-tfixo.dat' using 1:2 via a,b,c
+
+plot "TRANS-tfixo.dat" using 1:2 lt rgb 'blue' lw 2 notitle ,\
+f(x) t "t=100.0781s"
+
+#fit:
+#a               = -438.942         +/- 181.9        (41.44%)
+#b               = 171.3            +/- 22.48        (13.12%)
+#c               = 38.9095          +/- 0.5684       (1.461%)
+
+
+#NOT WORKING!!!!!!!!

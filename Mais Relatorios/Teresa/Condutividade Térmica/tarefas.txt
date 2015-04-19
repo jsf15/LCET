@@ -1,0 +1,4 @@
+resistencias (erro) (done)
+potencias (done)
+calcular k (done)
+esperiencia realizada (done)

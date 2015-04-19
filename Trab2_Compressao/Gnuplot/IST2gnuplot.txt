@@ -1,0 +1,16 @@
+set title "Compressão isotérmica" font ",15"
+set ylabel "Pressão (kPa)"
+set xlabel "Volume (cm^3)"
+#set yrange [7:10]
+#set xrange [6:17]
+
+#Fitting  (linear é melhor)
+f1(x)=a1*x**(b1)
+a1=20000; b1=-1.4;
+fit f1(x) 'IST2.dat' using 1:2 via a1,b1
+
+
+
+plot "< awk '{if($4 != \"red\") print}' IST2.dat" u 1:2 lt rgb "blue" t "Compressão isotérmica"  ,\
+"< awk '{if($4 == \"red\") print}' IST2.dat" u 1:2 lt rgb "red" notitle ,\
+f1(x) lt rgb "#228B22" notitle 

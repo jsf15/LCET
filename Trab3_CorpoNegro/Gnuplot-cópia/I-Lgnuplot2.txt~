@@ -1,0 +1,23 @@
+set title "Intensidade função de comprimento de onda" font ",15"
+set ylabel "Intensidade()"
+set xlabel "Comprimento de onda (m^-1)"
+set yrange [0:1.1]
+set xrange[500:6000]
+h=6.62606957*10**(-34)
+c=299792458
+k=1.3806488*10**(-23)
+B=2.8977685*10**(-3)
+
+f(x)=a*(2*pi*h*c*c/(((x-b)*10**(-9))**5))*(1/(exp((h*c)/(k*t1*((x-b)*10**(-9))))-1))/(d*t1**5)
+g(x)=a*(2*pi*h*c*c/(((x)*10**(-9))**5))*(1/(exp((h*c)/(k*T*((x)*10**(-9))))-1))/(d*T**5)
+
+d=(2*pi*h*c*c/(B**5))*(1/(exp((h*c)/(k*B))-1))
+a=1;
+b=10;  #*10**(-9);
+t1=2230.0885526666;
+T=2230.0885526666;
+fit f(x) 'I-L2.dat' using 1:($2/6.1) via b,t1
+
+#set key left top
+
+plot f(x) notitle lt rgb 'blue' , g(x) notitle lt rgb 'strawberry' , "I-L2.dat" u 1:($2/6.1) lt rgb 'blue' t "ahhh"

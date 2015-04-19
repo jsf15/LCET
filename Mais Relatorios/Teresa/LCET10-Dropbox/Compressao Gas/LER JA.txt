@@ -1,0 +1,10 @@
+- gráficos dos fits!
+
+- se fosse possível, gráficos da temperatura + pressão + volume tudo em função do tempo!
+
+- e pronto, já tá. kk coisa k achem k falta, adicionem please!
+
+
+graficos dos fits? não serve já os graficos dos log?
+
+acho que falta uma notazinha em relação aos erros. Os de pressão estavam la, mas e os do volume e temperatura?

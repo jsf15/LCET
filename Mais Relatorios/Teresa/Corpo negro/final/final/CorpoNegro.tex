@@ -1,0 +1,402 @@
+%%% Tipo de documento %%%
+\documentclass[
+ reprint,
+ amsmath,amssymb,
+ aps,
+]{revtex4-1}
+
+%%% Packages %%%
+\usepackage[ansinew]{inputenc}
+\usepackage[portuges]{babel}
+\usepackage{graphicx}
+\usepackage{dcolumn}
+\usepackage{bm}
+
+%%% Alterações na geometria da pagina %%%
+\setlength{\textheight}{700pt}
+
+\begin{document}
+
+%%% Título, autores e informações dos autores, data %%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\preprint{APS/123-QED}
+
+\title{Corpo Negro}
+
+\author{Gonçalo Quinta nº 65680, Fernando Rodrigues nº66326, Teresa Jorge nº65722 e Vera Patrício nº65726}
+\vspace{2mm}
+\affiliation{
+ \vspace{3mm}
+ \textbf{Laboratório de Complementos de Electromagnetismo e Termodinâmica}\\
+ Mestrado Integrado em Engenheria Física Tecnológica 2009/2010\\
+ Instituto Superior Técnico (IST)
+ \vspace{3mm}
+}
+
+\date{\today}
+
+
+%%% Abstract %%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{abstract}
+
+Foi estudada a radiação de um corpo  negro usando como modelo uma lâmpada de filamento de tugnsténio. A constante de Wien calculada foi de (4,21761$\pm$0,63870) E-03 mK. Foi feito um ajuste gráfico dos pontos experimentais à lei de Planck, que se ajustou parcialmente aos resultados obtidos. A partir do ajuste gráfico à lei de Stefan foi obtida uma dependência da (4.8274 $\pm$ 0.2491) e potência da temperatura e um valor do produto $\epsilon\sigma$ de 1.478E-08.\textbf{EVENTUALMENTE TEM QUE SER MUDADO}. A partir do valor correcto de $\sigma$ obtemos um $\epsilon$ para o filamento de  0,26. As leis de Kirchoff foram verificadas experimentalmente.
+
+\vspace{2mm}
+\end{abstract}
+
+\maketitle
+
+
+%%% Introdução %%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Introdução}
+
+Um corpo negro é definido como um objecto que absorve toda a radiação que sobre ele inside, emitindo apenas em função da sua temperatura. O modelo usado para o descrever é o de uma cavidade com uma pequena abertura, estando as suas paredes revestidas de osciladores electromagnéticos. A radiação que entra pela abertura é reflectida sucessivamente nas suas paredes, até ser totalmente absorvida e se atingir o equilíbrio térmico. Nesse caso, a radiação emitida pela cavidade depende apenas da temperatura das suas paredes, já que que é originada apenas pelos osciladores, sendo contínua em todo o espectro \cite{LivroAzul}. O presente trabalho destina-se a estudar algumas das propriedades dessa radiação. 
+
+Para o estudo da energia absorvida, define-se a grandeza aborvância como:
+\begin{equation}
+Q=\frac{E_{abs}}{E_{inc}}
+\end{equation}
+\footnotesize{$E_{abs}$ - Energia absorvida $(J)$\\ 
+$E_{inc}$ - Energia incidente $(J)$\\}
+
+\normalsize
+Pela definição de corpo negro acima exposta se tem que a sua absorvância será 1.
+Já para o estudo da energia emitida se tem a emissividade definida como
+\begin{equation}
+e = \frac{I}{I_n}
+\end{equation}
+\footnotesize{I - Potência emitida por unidade de área $(W/m)$\\
+$I_n$ - Potência emitida por unidade de área por um corpo negro à mesma temperatura $(W/m)$\\}
+
+\normalsize
+\hspace{-3.5mm}em que $I_n$ corresponde ao máximo que é possivel irradiar, pelo que $e \leq 1$, sendo o caso limite (igual a 1) o do corpo negro. Na verdade, esta grandeza depende da temperatura do corpo, do ângulo de emissão e do comprimento de onda analisado, mas irá assumir-se que é constante. O teorema de Kirchoff relaciona estas duas quantidades, afirmando que, em equilibrio térmico,  a emissividade e absorvância de um corpo são iguais. \cite{kirchoff} Pode-se assim afirmar que materiais que são bons reflectores emitirão pouco e vice-versa.
+
+Experimentalmente, sabe-se que a potência irradiada por área por um corpo negro vai apenas depender da sua temperatura, pela relação conhecida como lei de Stefan-Boltzman \cite{stefan}
+\begin{equation}
+I_n=\sigma T^4
+\end{equation}
+\footnotesize{$\sigma$ - constante de Stefan-Boltzman = $5,670400\times10^{-8} Js^{-1}m^{-2}K^{-4}$}
+
+\normalsize
+\hspace{-3.5mm}ou, para corpos que não sejam negros, obtém-se directamente de (2) que
+\begin{equation}
+I_n=e\sigma T^4
+\end{equation}
+de onde se conclui que a energia irradiada por um corpo negro e outro qualquer difere apenas na intensidade. Ainda por vias experimentais, é sabido que o comprimento de onda da energia emitida para a qual a intensidade é máxima, se relaciona com a temperatura do corpo pela relação conhecida como lei de Wien \cite{wien}
+\begin{equation}
+\lambda_{max}=\frac{B}{T}
+\end{equation}
+\footnotesize{B - Constante de Wien = $2.8977685\times10^{-3} m K$\\}
+
+\normalsize
+\hspace{-3.5mm}que explica o facto dos corpos exibirem cores diferentes consoante a temperatura a que se encontram.
+
+No final do séc.XIX, conhecidas estas duas leis, tentou-se explicar o comportamento da radiação emitida pelo corpo negro, tendo-se chegado à expressão clássica
+\begin{equation}
+U_\nu=\frac{8\pi\nu^2}{c^3}kT
+\end{equation}
+\footnotesize{$U_\nu$ - Densidade de energia emitida numa dada frequência $(W/m^3)$\\ 
+$\nu$ - Frequência da radiação emitida (Hz)\\
+$c$ - velocidade da luz no vácuo (m/s)\\
+$k$ - constante de Stefan-Boltzman $(Js^{-1}m^{-2}K^{-4})$\\
+$T$ - temperatura do corpo (K)\\}
+
+\normalsize
+também conhecida como lei de Rayleigh-Jeans. No entanto, embora a expressão estivesse aproximadamente de acordo com os resultados experimentais para $\lambda \to \infty$, o mesmo não se verificava no limite $\lambda \to 0$, visto que se previa uma intensidade infinita quando na verdade era nula.
+
+Foi Planck que ultrapassou esta dificuldade, conhecida como catástrofe do ultravioleta, propondo o que viria a constituir a base do modelo quântico, assumindo que para cada frequência só seriam possíveis determinados valores de energia, contrariamente ao espectro contínuo clássico. Assim, a densidade de energia por frequência seguiria a chamada distribuição de Planck, dada por:
+\begin{equation}
+U_\nu=\frac{8\pi \nu^2}{c^3} \frac{h \nu}{e^{\frac{h\nu}{kT}} - 1}
+\end{equation}
+\footnotesize{$h$ - constante de Planck = $6,626\times 10^{-34}$ (J/s)\\}
+
+\normalsize
+Esta expressão está de perfeito acordo com os dados experimentais, sendo possivel reencontrar a lei de Wien, dada pelo ponto nulo da primeira derivada, e de Stefan-Boltzman, que corresponde à sua integração em todos os comprimentos de onda. Deste modo, é também possivel encontrar os valores das constantes
+\begin{equation}
+B = \frac{hc}{4,96k} \quad \textrm{e} \quad \sigma = \frac{2\pi^5k^4}{15c^5h^5} 
+\end{equation}
+
+
+%%% Experiência realizada %%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Experiência realizada}
+\subsection{Aspectos Gerais}
+
+O modelo de corpo negro usado foi uma lâmpada de filamento de tugsténio. Admitindo-se que a resistência da lâmpada e a resistividade do tungsténio são proporcionais e sabendo o valor da resistividade para 300K, o valor da resistividade a qualquer temperatura pode ser obtido através de:
+
+\begin{equation}
+	\frac{\rho(T)}{\rho(300K)}=\frac{R_T}{R_{300K}}
+\end{equation}
+\footnotesize{$\rho(T)$ - resistividade à temperatura T ($\Omega$/m)\\
+$R$ - resistência à temperatura T ($\Omega$)\\
+$R_{300K}$ - resistência à temperatura 300K = 0.278 $\Omega$\\
+$T$ - temperatura (K)\\}
+
+\normalsize
+As temperaturas correspondentes a cada resistividade encontram-se tabeladas. A resistência é determinada aplicando a Lei de Ohm.
+
+O comprimento de onda da radiação obtém-se com recurso a uma tabela que contém o comprimento de onda referente a cada índice de refracção. Este é calculado para cada medição através da equação (10), deduzida a partir da lei de Snell
+
+\begin{equation}
+	n=\sqrt{sin(\theta)^2+(\frac{sin(\alpha+\theta+\delta)+cos(\alpha)sin(\theta))}{sin(\alpha)})^2}
+\end{equation}
+\footnotesize{$\theta$ - ângulo de incidência\\$\alpha$ - ângulo interior do prisma\\ $\delta$ - ângulo de desvio\\}
+
+\normalsize
+É necessário calibrar o goniómetro para a determinação do ângulo $\delta$, que é definido como o ângulo entre o feixe a ser medido e  a normal à face de incidência do prisma. Este ângulo é calculado fazendo a diferença entre o ângulo inicialmente obtido através do alinhamento do feixe reflectido com o feixe incidente, e o ângulo registado para cada medição.  Já o ângulo $\theta$, constante ao longo de todas as medições, é obtido fixando uma posição para o prima, que neste caso corresponde ao alinhamento para a radiação verde.
+
+\subsection{Verificação da Lei de Wien e de Planck}
+
+\begin{figure}[h]
+\includegraphics[scale=0.3]{Imagens/fig1}
+\caption{Determinação da intensidade por comprimento de onda}
+\end{figure}
+
+Usando o equipamento esquematizado na figura 1 e alterando sucessivamente a posição do detector registam-se as intensidades referentes a diferentes comprimentos de onda, iniciando-se as medições na radiação verde e terminando quando as intensidades deixam de ser significativas. Este procedimento é feito para uma tensão de 6, 9 e 12V, tendo o cuidado de deixar estabilizar a temperatura da lâmpada.
+Para verificar a Lei de Wien são seleccionados os comprimentos de onda correspondentes à intensidade máxima e traça-se um gráfico destes em função da temperatura a que o corpo negro se encontrava - equação (5). A constante de Boltzman será a constante de proporcionalidade inversa entre os dois.  
+Os resultados são também comparados com a curva teórica esperada para a intensidade de radiação de um corpo negro - lei de Planck. Essa comparação é feita graficamente, representando a intensidade medida em função do comprimento de onda e normalizadando o máximo ao máximo teórico, e comparando essa curva com a curva teórica, dada pela equação (11).
+
+\begin{equation}
+	I_\lambda \Delta\lambda = \frac{2\pi h c^2}{\lambda^5} \frac{1}{e^\frac{hc}{KT\lambda}-1}\Delta\lambda
+\end{equation}
+
+\subsection{Verificação da Lei de Stefan}
+
+\begin{figure}[h]
+\includegraphics[scale=0.3]{Imagens/fig2}
+\caption{Determinação da intensidade total }
+\end{figure}
+
+Para uma distância fixa, a intensidade total da luz radiada é medida para diferentes tensões (que correspondem a diferentes temperaturas da lâmpada) aplicadas, usando a montagem da figura 2. A lei de Stefan verifica-se graficamente, ajustando as intensidades e temperaturas obtidas não à equação (4), mas à sua forma logaritmica:
+
+\begin{equation}
+	log(I)= log(\epsilon\sigma) + 4log(T)
+\end{equation}
+A constante de stefan corresponde à ordenada na origem e o declive à dependência da quarta potência da temperatura.
+
+\subsection{Verificação da Lei de Kirchoff}
+
+\begin{figure}[h]
+\includegraphics[scale=0.3]{Imagens/fig3}
+\caption{Esquema de montagem para comparação de emissividades}
+\end{figure}
+
+A verificação da Lei de Kirchoff é feita recorrendo a um cubo de Leslie: um cubo com as 4 faces laterais revestidas com diferentes materiais - preto, metálico, branco e branco fosca - que têm diferentes poderes de absorção de emissão. Para uma dada temperatura, é registada a intensidade luminosa radiada por cada face.
+
+	
+%%% Resultados %%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Resultados}
+
+\textbf{Calibração do goniómetro}
+
+Âlgulo $\alpha$ - 60º\\
+Ângulo da normal - 239º 30' $\pm$ 2''\\
+Ângulo de incidência - 194º 60' $\pm$ 2''\\
+
+\begin{table}[ht]
+\caption{Dados da intensidade e tensão da lâmpada para determinação da sua temperatura}
+\begin{ruledtabular}
+\begin{tabular}{cccc}
+\textrm{V (V)}&
+\textrm{$e_{V}$(V)}&
+\multicolumn{1}{c}{\textrm{I (A)}}&
+\textrm{$e_{I}$(A)}\\
+\colrule
+6,01&0,01&	1,17&	0,01\\
+9,11&	0,01&	1,45&	0,01\\
+12,16&0,01&	1,68&	0,01\\
+\end{tabular}
+\end{ruledtabular}
+\end{table}
+
+
+\begin{table}[ht]
+\caption{Dados da intensidade para cada ângulo de desvio para 6, 9 e 12 V}
+\begin{ruledtabular}
+\begin{tabular}{cccccc}
+\textrm{$\delta_{6V}$\footnote{Erro $\pm$ 1''}}&
+\textrm{$I_{6V}$(V)\footnote{Erro $\pm$ 0,3E-05V}}&
+\multicolumn{1}{c}{\textrm{$\delta_{9V}$}}&
+\textrm{$I_{9V}$(V)}&
+\textrm{$\delta_{12V}$}&
+\textrm{$I_{12V}$(V)}\\
+\colrule
+172º20'	&	9,00E-07	&	172º0'	&	8,00E-07	&	171º40'	&	2,00E-7\\
+173º0'	&	2,20E-06	&	172º40'	&	3,00E-06	&	172º0'	&	3,00E-06\\
+173º20'	&	3,10E-06	&	173º0'	&	6,00E-06	&	172º40'	&	1,10E-05\\
+174º0'	&	1,26E-05	&	173º40'	&	2,05E-05	&	173º0'	&	2,27E-05\\
+174º20'	&	1,68E-05	&	174º0'	&	3,46E-05	&	173º40'	&	4,38E-05\\
+175º0'	&	3,22E-05	&	174º40'	&	6,80E-05	&	174º0'	&	7,00E-05\\
+175º20'	&	3,36E-05	&	175º0'	&	7,75E-05	&	174º40'	&	7,20E-05\\
+175º40'	&	3,25E-05	&	175º40'	&	6,77E-05	&	175º0'	&	8,10E-05\\
+176º0'	&	2,45E-05	&	175º20'	&	7,75E-05	&	175º40'	&	1,02E-04\\
+176º20'	&	1,79E-05	&	176º0'	&	5,17E-05	&	176º0'	&	8,40E-05\\
+177º0'	&	5,50E-06	&	176º40'	&	2,10E-05	&	176º40'	&	3,59E-05\\
+177º20'	&	2,30E-06	&	177º0'	&	1,12E-05	&	177º0'	&	1,81E-05\\
+				&		        &	177º40'	&	1,60E-06	&	177º40'	&	5,00E-06\\
+\end{tabular}
+\end{ruledtabular}
+\end{table}
+
+
+\normalsize
+\begin{table}[ht]
+\caption{Dados da intensidade para diferentes tensões aplicadas à lampada}
+\begin{ruledtabular}
+\begin{tabular}{cccccc}
+\textrm{$V_{lampada}$(V)}&
+\textrm{$e_{V}$(V)}&
+\multicolumn{1}{c}{\textrm{$I_{lampada}$}(A)}&
+\textrm{$e_{I}$(A)}&
+\textrm{$V_{medida}$(V)}&
+\textrm{$e_{V}$(V)}\\
+\colrule
+5,1	&	0,01	&	1,08	&	0,01	&	0,00405	&	0,00003	\\
+6	  &	0,01	&	1,17	&	0,01	&	0,00634	&	0,00003	\\
+7,08	&	0,01	&	1,28	&	0,01	&	0,00826	&	0,00003	\\
+8,06	&	0,01	&	1,36	&	0,01	&	0,01019	&	0,00003	\\
+9,1	  &	0,01	&	1,45	&	0,01	&	0,01247	&	0,00003	\\
+10,03	&	0,01	&	1,53	&	0,01	&	0,01458	&	0,00003	\\
+11,1	&	0,01	&	1,61	&	0,01	&	0,01725	&	0,00003	\\
+12,01	&	0,01	&	1,68	&	0,01	&	0,01961	&	0,00003	\\
+\end{tabular}
+\end{ruledtabular}
+\end{table}
+
+
+\begin{table}[ht]
+\caption{Dados da intensidade irradiada pelas superficies do cubo de Leslie a 117ºC}
+\begin{ruledtabular}
+\begin{tabular}{ccccc}
+\textrm{Preto}&
+\textrm{Espelhado}&
+\multicolumn{1}{c}{Branco}&
+\textrm{Branco Fosco}&
+\textrm{erro}\\
+\colrule
+1,11E-02	V	\footnote{Erro $\pm$ 0,3E-05V}&	7,70E-04	V	&	2,86E-03	V	&	1,09E-02 & 0,3E-05V\\
+\end{tabular}
+\end{ruledtabular}
+\end{table}
+
+%%% Análise dos Resultados %%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Análise dos resultados}
+
+\subsection{Lei de Planck}
+
+A temperatura da lâmpada foi determinada como descrito nos Aspectos Gerais da Secção II  usando os valores da tabela I, estando os resultados na tabela V.
+
+\begin{table}[ht]
+\caption{Temperatura da lâmpada calculada para 6, 9 e 12V, respectivamente}
+\begin{ruledtabular}
+\begin{tabular}{cccccc}
+\textrm{R($\Omega$)}&
+\textrm{$e_{R}$($\Omega$)}&
+\multicolumn{1}{c}{\textrm{$\rho$($\Omega$m)}}&
+\textrm{$e_{\rho}$($\Omega$m)}&
+\textrm{T(K)}&
+\textrm{$e_{T}$(K)}\\
+\colrule
+5,13	&	0,05	&	11,45	&	0,11	&	1883,25	&	14,17\\
+6,28	&	0,05	&	13,79	&	0,11	&	2193,15	&	13,15\\
+7,24	&	0,05	&	15,74	&	0,11	&	2435,04	&	12,23\\
+\end{tabular}
+\end{ruledtabular}
+\end{table}
+
+Procedeu-se ao ajuste dos dados da tabela II à expressão (11), após os ângulos terem sido convertidos em comprimentos de onda usando a equação (10). Foram usadas para esse ajuste o valor da temperatura calculado anteriormente assim como valores que melhor se ajustavam aos pontos, encontrando-se os resultados nas figuras 4, 5 e 6.
+
+\begin{figure}[h]
+\includegraphics[scale=0.35]{Imagens/P6V}
+\caption{Ajuste 6V}
+\end{figure}
+
+\begin{figure}[h]
+\includegraphics[scale=0.35]{Imagens/P9V}
+\caption{Ajuste 9V}
+\end{figure}
+
+\begin{figure}[h]
+\includegraphics[scale=0.35]{Imagens/P12V}
+\caption{Ajuste 12V}
+\end{figure}
+
+
+\subsection{Lei de Wien}
+
+Com os máximos de intensidade da Tabela II, mais uma vez convertendo os ângulos em comprimento de onda, foi feito o ajuste gráfico à função (5), estando o resultado obtido na figura 7. O factor B obtido foi de (4,21761$\pm$0,63870) E-03 mK.
+
+
+\begin{figure}[h]
+\includegraphics[scale=0.25]{Imagens/wien}
+\caption{Ajuste lei de Wien}
+\end{figure}
+
+
+\subsection{Lei de Stefan}
+
+Usando os dados da Tabela III procedeu-se ao ajuste da intensidade em função da temperatura de acordo com a expressão (12), estando os resultados na figura 8. O declive obtido foi de 4.8274 $\pm$ 0.2491 e o valor de Log($\epsilon\sigma$) de -18.0288 $\pm$ 0.8282, a que corresponde um valor de $\epsilon\sigma$ de 1.478E-08.\textbf{cuidado! logaritmo de base 10 transformado em neperiano} Dividindo pelo valor exacto de $\sigma$ obtemos um $\epsilon$ de 0,26.
+
+\begin{figure}[h]
+\includegraphics[scale=0.25]{Imagens/stefan}
+\caption{Lei de Stefan}
+\end{figure}
+
+
+
+
+%%% Conclusão e críticas %%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Conclusão e críticas}
+
+
+
+%%% Bibliografia %%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{thebibliography}{20}
+
+\bibitem{LivroAzul} \textit{Introdução à Física} by J. D. Deus, \textit{et al.}, McGraw-Hill, 2000
+\bibitem{kirchoff} http://en.wikipedia.org/wiki/Kirchhoff's\_law\_of\_thermal\_radiation
+\bibitem{wien} http://en.wikipedia.org/wiki/Wien's\_displacement\_law
+\bibitem{stefan} http://en.wikipedia.org/wiki/Stefan-Boltzmann\_law
+
+\end{thebibliography}	
+
+	
+\end{document}
+
+
+
+
+
+
+
+%%% Modelo de tabela %%%
+
+%\begin{table}[h!]
+%\caption{Determinação da eficiência, da potência de arrefecimento e da eficiência de Carnot}
+%\begin{ruledtabular}
+%\begin{tabular}{ccccccc}
+%\textrm{$V2$ (V)}&
+%\textrm{$T_a$ (ºC)}&
+%\textrm{$\epsilon$}&
+%\textrm{$e_{\epsilon}$}&
+%\textrm{$\epsilon_{Carnot}$}&
+%\multicolumn{1}{c}{\textrm{$P1$ (W)}}&
+%\textrm{$e_{P1}$ (W)}\\
+%\colrule
+%2,344 & 17,11 & 2,47 & 0,06 & 29,01 & 1,996 & 0,068 \\
+%1,458 & 15,81 & 2,17 & 0,07 & 36,83 & 0,670 & 0,039 \\
+%2,320 & 20,90 & 3,75 & 0,08 & 36,09 & 2,842 & 0,081 \\
+%\end{tabular}
+%\end{ruledtabular}
+%\end{table}
+
+

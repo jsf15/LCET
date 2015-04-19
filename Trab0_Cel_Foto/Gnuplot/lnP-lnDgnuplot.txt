@@ -1,0 +1,24 @@
+set title "Logaritmo da potência em função do logaritmo distância" font ",15"
+set ylabel "ln(P)"
+set xlabel "ln(D)"
+set yrange [-4:-2.4]
+set xrange [-1.5:0]
+set format y '%.2g'
+
+#Fit
+f1(x)=a1*x+b1
+a1=-0.2; b1=-2.8;
+fit [-1.4:-0.80] f1(x) 'lnP-lnD.dat' using 1:2 via a1,b1
+
+f2(x)=a2*x+b2
+a2=-2; b2=-4;
+fit [-0.55:-0.2] f2(x) 'lnP-lnD.dat' using 1:2 via a2,b2
+#fit [-0.6:-0.2] f2(x) 'lnP-lnD.dat' using 1:2 via a2,b2
+
+
+#Fit Plot
+set key right top
+plot "< awk '{if($4 != \"red\") print}' lnP-lnD.dat" u 1:2:3 w yerr lt rgb "blue" t "Resistência de 2003 Ω" ,\
+"< awk '{if($4 == \"red\") print}' lnP-lnD.dat" u 1:2:3 w yerr lt rgb "red" notitle,\
+f1(x) notitle ,\
+f2(x) notitle

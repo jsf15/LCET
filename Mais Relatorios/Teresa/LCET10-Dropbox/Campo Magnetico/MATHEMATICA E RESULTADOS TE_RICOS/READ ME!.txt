@@ -1,0 +1,16 @@
+-- Programa pra 1 espira de 320 espiras (LOL) está a funcionar bem. pode demorar um bokadinho a gerar os dados ás vezes
+
+-- Deu tudo certinho, só a ultima parte em k o Z é constante e o X varia é que deu um bokado maior do que o medido, o que 
+até faz sentido pk akela porcaria n tem o formato de uma só espira, há-de divergir dos resultados teóricos quando se aproxima mais das
+zonas onde a aproximação é uma granda merda, nomeadamente perto da "espira" de grossura infinitesimal, onde na verdade tem tipo 1,5 cm de grossura... -.-'
+
+-- vou fazer agr a mesma coisa com 2 "espiras", deverá ser muito mais rapido do k foi até agr
+
+
+GO Gonçalo GO. já sei qual é o erro para o solenoide (o meu zero nao era o mesmo do de quem fez as medições) vou torturar um bocadinho mais os numeros a ver se dá alguma coisa
+
+-- E prantes, tá tudo. Mais uma vez deu tudo muito bonito e parecido! o mais engraçado é k se fez uma erro sistemático kk pk houve uma zona
+muito uniforme nos dados em k dava sempre 4.18 mT, mas teóricamente deveria dar 4.23 mT (sim, eu confirmei à mão e em todo o lado!). Isto
+pode indicar uma falha tecnica kk na sonda de Hall (lembram-se do stor ter dito k akilo se partiu e ele teve k arranjar de novo?)
+
+-- dados tagenciais de Helmhotz dão estranhos nos primeiros centimetros pk akilo era uma pissad* pra medir correntemente, nunca fikava tagencial mesmo

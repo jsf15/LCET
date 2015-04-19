@@ -1,0 +1,13 @@
+ h(x)=8*pi*h*c/(x*x*x*x*x*(exp(h*c/(x*K*t))-1))
+ f(x)=8*pi*h*c/(x*x*x*x*x*(exp(h*c/(K*T*x))-1)); 
+ pi = 3.14159265; 
+ set xrange [0:7e-6] 
+ K=1.3806503e-23
+ c=3e8
+ h=6.626e-34
+ T=2200
+ t=1800
+ set title "Distribuicao de Planck para 9V"
+ set xlabel "comprimentos de onda (metros)" 
+ set ylabel "intensidade (normalizada)" 
+ plot "pontosV9.dat" title 'pontos', f(x)/8817 title 'distribuicao de planck para T=2200K', h(x)/3232 title 'distribuicao de planck para t=1800K'

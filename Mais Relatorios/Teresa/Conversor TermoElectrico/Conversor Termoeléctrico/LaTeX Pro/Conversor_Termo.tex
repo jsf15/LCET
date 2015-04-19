@@ -1,0 +1,414 @@
+%%% Tipo de documento %%%
+\documentclass[
+ reprint,
+ amsmath,amssymb,
+ aps,
+]{revtex4-1}
+
+%%% Packages %%%
+\usepackage[ansinew]{inputenc}
+\usepackage[portuges]{babel}
+\usepackage{graphicx}
+\usepackage{dcolumn}
+\usepackage{bm}
+
+%%% Alterações na geometria da pagina %%%
+\setlength{\textheight}{700pt}
+
+\begin{document}
+
+%%% Título, autores e informações dos autores, data %%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\preprint{APS/123-QED}
+
+\title{Conversor Termoeléctrico}
+
+\author{Gonçalo Quinta nº 65680, Fernando Rodrigues nº66326, Teresa Jorge nº65722 e Vera Patrício nº65726}
+\vspace{2mm}
+\affiliation{
+ \vspace{3mm}
+ \textbf{Laboratório de Complementos de Electromagnetismo e Termodinâmica}\\
+ Mestrado Integrado em Engenheria Física Tecnológica 2009/2010\\
+ Instituto Superior Técnico (IST)
+ \vspace{3mm}
+}
+
+\date{\today}
+
+
+%%% Abstract %%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{abstract}
+\vspace{2mm}
+Foi estudado o funcionamento de um conversor termoelectrico baseado na célula de Peltier em dois regimes. 
+No primeiro, em que a tensão gerada pela célula é aplicada a uma resistência que aquece, foi determindado que uma resistência de $4,13 \pm 0,97$ A maximiza essa conversão. De entre os valores obtidos, o rendimento máximo obtido nesse processo foi de $0,90\pm0,02 \%$. O rendimento corrigido, para 16 V, tendo em conta as perdas termoelectricas do sistema, foi de 7,60\%. A resistência térmica do sistema obtida foi de $3,89 \pm 0,36$ K/J. 
+A mesma célula, funcionando como bomba de calor, tem uma potência de arrefecimento máxima de $2,842 \pm 0,081$ W e uma eficiência máxima de $3,75\pm0,08$, dentro da gama de resultados obtidos.
+\end{abstract}
+
+\maketitle
+
+
+%%% Introdução %%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Introdução}
+A célula de Peltier é um aparelho que funciona com base em efeitos termoeléctricos, cujo propósito consiste em converter directamente diferenças de temperatura nas extremidades da célula em voltagem eléctrica, e vice-versa. Numa escala atómica, a aplicação de um gradiente de temperatura nas extremidades de um condutor origina uma diferença de energias cinéticas das partículas entre as duas extremidades, nomeadamente das cargas eléctricas. Ligando esse condutor a um circuito, irá originar-se um fluxo de cargas da extremidade mais quente para a mais fria, criando uma pequena voltagem - efeito de Seebeck. Inversamente, ao aplicar-se uma diferença de potencial nas extremidades, irá haver uma maior discrepância nas barreiras de potencial nas junções dos condutores, correspondendo a uma maior e menor densidade de energias cinéticas das partículas nas extremidades, ou seja, numa diferença de temperaturas - efeito de Peltier. Estes dois efeitos não são independentes, já que qualquer um deles dá origem ao outro, e é precisamente deles e desta dualidade que a célula de Peltier faz uso principalmente, retirando calor da fonte quente para a fonte fria ou vice-versa.
+
+
+É de notar que estes efeitos ocorrem única e exclusivamente na presença de 2 condutores diferentes, já que é na junção dos dois que existe uma quebra do fluxo de calor, ocorrendo pontos de aquecimento (onde se liberta calor) e de arrefecimento (onde entra calor). Assim, cada par de materiais A e B tem um coeficiente específico para cada efeito. Um desses coeficientes denomina-se coeficiente de Peltier, e relaciona a densidade de energia $J_W$ com a densidade de corrente $J_c$ numa junção
+\begin{equation}
+\Pi_{AB} \equiv \frac{J_W}{J_c}
+\end{equation}
+O restante coeficiente, o de Seebeck, serve como uma medida de diferença de potencial $\Delta \phi$ originada devido a uma determinada diferença de temperaturas $\Delta T$
+\begin{equation}
+S_{AB} \equiv \frac{\Delta \phi_{AB}}{\Delta T}
+\end{equation}
+estando relacionado com o coeficiente de Peltier pela 2ª relação de Kelvin
+\begin{equation}
+\Pi_{AB} = TS_{AB}
+\end{equation}
+onde $T$ é a média das temperaturas absolutas nas junções. 
+
+Existe ainda um terceiro fenómeno termoeléctrico relacionado com os anteriores mas que não será abordado na experiência. Esse é o efeito de Thomson que diz que qualquer corpo que conduza corrente eléctrica, quando a conduz, emite ou absorve calor, estando relacionado com os restantes fenómenos pela 1ª relação de Kelvin
+\begin{equation}
+\frac{d\Pi_{AB}}{dT} + \tau_A - \tau_B = S_{AB}
+\end{equation}
+onde $\tau$ representa o coeficiente de Thomson do metal, sendo este o único em que se pode medir individualmente a partir do material, ao contrário dos 2 restantes.
+
+Os metais foram os primeiros materiais onde o efeito de Peltier foi verificado, sendo usados de hoje em dia semicondutores com elementos PN que conduzem a corrente eléctrica por electrões e lacunas, sendo este o caso célula de Peltier a usar no trabalho. Dependendo do sentido da corrente usado, a célula de Peltier pode bombear calor da fonte fria para a fonte quente ou da fonte quente para a fonte fria, sendo que esta experiência se focará na primeira funcionalidade, visto ser a razão principal do uso deste tipo de células.
+
+Neste trabalho iremos utilizar a célula de Peltier como motor (a produzir trabalho eléctrico numa resistência) e como bomba de calor (a arrefecer a extremidade mais fria), razão pela qual calcularemos, entre outras quantidades, o rendimento $\eta$ e eficiência $\epsilon$ dos mesmos, sendo estes dados respectivamente por 
+\begin{equation}
+\eta = \frac{P_R}{P_E}, \qquad \epsilon = \frac{P_Q}{P_W} 
+\end{equation}
+\footnotesize{\textbf{$P_R$} - Potência utilizada para produzir trabalho útil na resistência (W)\\
+\textbf{$P_E$} - Potência transferida para a célula pela fonte quente (W)\\
+\textbf{$P_Q$} - Potência transferida para para a fonte quente (W)\\
+\textbf{$P_W$} - Potência transferida para a célula (W)}\\
+
+\normalsize
+\hspace{-3.7mm}onde o rendimento será sujeito a um tratamento mais rigoroso, com certas correcções posteriores.
+
+
+%%% Experiência realizada %%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Experiência realizada}
+
+\subsection{Estudo do efeito de Seebeck:\\
+Conversão das diferenças de temperaturas em corrente eléctrica}
+
+O sistema em causa está esquematizado na figura 1:
+
+\begin{figure}[h]
+\includegraphics[scale=0.3]{Imagens/fig3}
+\caption{Esquema da montagem}
+\end{figure}
+
+\subsubsection{Determinação da resistência de carga óptima}
+
+Para se determinar esta grandeza, que corresponde à resistência para o qual a potência fornecida ao circuito é a maior possível, são estudados os valores de corrente gerados pela célula no equilíbrio térmico com duas resistências $R2$ diferentes, neste caso de 5 e 2 $\Omega$. Recorrendo ao teorema de Thévenin, é assim possível obter a resistência óptima, dada pela expressão  
+\begin{equation}
+R2_o= \frac {5I2_5-2I2_2}{I2_2-I2_5} - 2R_a
+\end{equation}
+\footnotesize{\textbf{$I2_2$} - Corrente do circuito utilizando R2 = 2 $\Omega$ (A)\\
+\textbf{$I2_5$} - Corrente do circuito utilizando R2 = 5 $\Omega$ (A)\\
+\textbf{$R_a$} - Resistência interna do amperímetro ($\Omega$)}
+\normalsize
+
+\subsubsection{Determinação do rendimento da célula e sua variação com a temperatura da fonte quente}
+	
+Usando o valor da resistência óptima obtida anteriormente, vão ser aplicadas várias tensões na fonte E1 e medidas as respostas do sistema, para cada tensão, após ter sido atingido o estado de equilibrio: as temperaturas atingidas na fonte fria, fonte quente e na saída e entrada de refrigeração, assim como as tensões e correntes atingidas no circuito ligado a R2. A partir destes valores é possivel calcular a potência fornecida (P1), potência gerada pela célula de Peltier (P2) e potência dissipada para a fonte fria (P3):
+\begin{equation}
+P1 = V1 I1
+\end{equation}
+\begin{equation}
+P2 = \frac{V2^2}{R2}
+\end{equation}
+\begin{equation}
+P3 = \frac {\Delta m}{\Delta t}(T_c-T_d)4.18c
+\end{equation}
+	
+\footnotesize{c - capacidade calorifica da água (cal $g^{-1}$ $ºC^{-1}$)}\\
+
+\normalsize
+\hspace{-3.7mm}onde $P3$ é calculada com recurso ao caudal $\frac{\Delta m}{\Delta t}$ medido anteriormente. Este último é determinado por meio de uma proveta, cronometrando o tempo que demora a encher-se $100 mL$ de volume.
+
+A partir destes valores é possível calcular o rendimento da célula utilizando a fórmula mencionada na introdução, que, utilizando a notação do esquema, toma agora a forma
+\begin{equation}
+\eta = \frac{P2}{P1}
+\end{equation}
+ 
+ 
+ 
+\subsubsection{Determinação da potência transmitida à fonte fria por condução e da resistência térmica}
+
+Interrompendo a corrente $I2$, existe apenas transferência de energia por condução, da fonte quente para a fonte fria, efeito esse que também se encontra presente durante o funcionamento da célula de Peltier. Nessas condições, regula-se a fonte E1 de modo a fornecer 16 V de tensão, deixando o sistema estabilizar. Atingido o equilíbrio térmico, registam-se os valores de todas as grandezas envolvidas, para uma posterior determinação da potência transferida por condução para a fonte fria - $P_{FF}$ - dada pela fórmula (9).
+
+Esse potência será utilizada para corrigir o rendimento obtido para a célula de Peltier trabalhando nas mesma condições, em que é fornecida uma tensão de 16 V, correcção essa que, observando as trocas de energia presentes, altera o rendimento para
+\begin{equation}
+\eta' = \frac{P2}{P2 + P3 - P_{FF}}
+\end{equation}
+
+Outro resultado útil que se pode obter com $P_{FF}$ é chamado de resistência térmica, que se trata de uma medida da dissipação de energia entre as duas faces da célula, sendo a sua expressão 
+\begin{equation}
+R_{t}= \frac{T_A - T_B}{P3}
+\end{equation}
+
+Para averiguar a eficácia da célula, compara-se os rendimentos obtidos pelos respectivos rendimentos de motores reversíveis operando às mesmas temperaturas. Estes últimos são calculados utilizando
+\begin{equation}
+\eta_{rev} = 1-\frac{T_b}{T_a}
+\end{equation}
+
+
+	
+\subsection{Estudo do efeito de Peltier:\\
+Bomba de calor}
+
+A figura 2 esquematiza o circuito usado: 
+
+\begin{figure}[h]
+\includegraphics[scale=0.3]{Imagens/fig2}
+\caption{Esquema da montagem - Bomba de calor}
+\end{figure}
+
+\subsubsection{Determinação da eficiência da bomba de calor e da potência de arrefecimento}
+
+Substituindo R2 no circuito por uma fonte de tensão E2 em série com uma resistência de $10 \Omega$, faz-se variar a fonte de tensão E1 de modo a alterar a potência transferida à fonte fria (P1). O sistema atinge assim equilíbrio térmico a diferentes temperaturas, transferindo uma potência P3 para a fonte quente, sendo resgistadas todas as grandezas envolvidas. Com os dados obtidos, é possível calcular a eficiência $\epsilon$ - razão entre a potência transferida para a fonte quente e a potência dada à bomba de calor - referida em (5), cuja expressão fica
+\begin{equation}
+\epsilon = \frac{P3}{V2I2}
+\end{equation}
+
+Finalmente, calcula-se a potência de arrefecimento, que corresponde simplesmente à potência fornecida à fonte fria - P1. Novamente, para uma avaliação da utilidade da célula de Peltier como bomba de calor, serão comparadas as eficiências obtidas com as calculadas para uma máquina reversível operando nas mesmas condições, sendo estas últimas calculadas a partir de
+\begin{equation}
+\epsilon_{rev} = \frac{1}{1-\dfrac{T_a}{T_b}}
+\end{equation}
+	
+
+%%% Resultados %%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Resultados}
+
+Para todas as medições que se seguem, o erro de leitura considerado de $I2$ foi de $0,2$ mA, de $I1$ foi $0,01$ A. Para $V2$ o erro de leitura corresponde a $0,02$ mV e 0,01 V para $V1$. Quanto à resistência e temperatura, foram considerados erros de $0,1$ ºC e 5\% respectivamente. 
+
+\begin{table}[h!]
+\caption{Dados para a determinação da resistência óptima
+}
+\begin{ruledtabular}
+\begin{tabular}{cccccc}
+\textrm{R2 ($\Omega$)}&
+\textrm{$e_{R2}$($\Omega$)}&
+\multicolumn{1}{c}{\textrm{I2 (mA)}}&
+\textrm{$e_{I2}$(mA)}&
+\textrm{$V_{a}$ \footnote{Tensão do amperímetro para o cálculo da sua resistência interna} (mV)}&
+\textrm{$e_{V_{a}}$(mV)}\\
+\colrule
+5 & 0,25 & 55,2 & 0,2 & 27,2 & 0,1\\
+2 & 0,10 & 79,5 & 0,2 & 18,9 & 0,1\\
+\end{tabular}
+\end{ruledtabular}
+\end{table}
+
+
+\begin{table}[h!]
+\caption{Dados das correntes e voltagens estabilizadas dada a voltagem $V1$
+}
+\begin{ruledtabular}
+\begin{tabular}{cccc}
+\textrm{$V1$ (V)}&
+\textrm{$I1$(A)}&
+\multicolumn{1}{c}{\textrm{$V2$ (V)}}&
+\textrm{$I2$(A)}\\
+\colrule
+7,05 & 0,34 & 0,157 & 0,031\\ 
+10,06 & 0,48 & 0,306 & 0,061\\
+13,05 & 0,63 & 0,466 & 0,108\\ 
+16,01 & 0,77 & 0,665 & 0,154\\
+\end{tabular}
+\end{ruledtabular}
+\end{table}
+
+\begin{table}[h!]
+\caption{Dados das temperaturas estabilizados dada a voltagem $V1$
+}
+\begin{ruledtabular}
+\begin{tabular}{ccccc}
+\textrm{$V1$ (V)}&
+\multicolumn{1}{c}{\textrm{$Ta$(ºC)}}&
+\textrm{$Tb$(ºC)}&
+\textrm{$Tc$(ºC)}&
+\textrm{$Td$(ºC)}\\
+\colrule
+7,05 & 30,84 & 23,85 & 19,667 & 19,41\\
+10,06 & 41,99 & 28,05 & 20,19 & 19,56\\
+13,05 & 57,16 & 34,20 & 21,285 & 20,18\\
+16,01 & 74,69 & 40,44 & 22,068 & 20,46\\
+\end{tabular}
+\end{ruledtabular}
+\end{table}
+
+\begin{table}[h!]
+\caption{Dados para a medição do caudal
+}
+\begin{ruledtabular}
+\begin{tabular}{cccc}
+\textrm{$m$ (g)}&
+\multicolumn{1}{c}{\textrm{$e_m$(g)}}&
+\textrm{$t$(s)}&
+\textrm{$e_t$(s)}\\
+\colrule
+100	& 1 &	62 & 0,5\\
+\end{tabular}
+\end{ruledtabular}
+\end{table}
+
+\begin{table}[h!]
+\caption{Dados das temperaturas estabilizadas para determinação da potência transmitida por condução
+}
+\begin{ruledtabular}
+\begin{tabular}{cccc}
+\multicolumn{1}{c}{\textrm{$Ta$(ºC)}}&
+\textrm{$Tb$(ºC)}&
+\textrm{$Tc$(ºC)}&
+\textrm{$Td$(ºC)}\\
+\colrule
+38,00 & 74,938 & 22,33 & 20,92\\
+\end{tabular}
+\end{ruledtabular}
+\end{table}
+
+\begin{table}[h!]
+\caption{Dados das temperaturas estabilizados fornecida a voltagem $V2$ à célula
+}
+\begin{ruledtabular}
+\begin{tabular}{ccccc}
+\textrm{$V2$ (V)}&
+\multicolumn{1}{c}{\textrm{$Ta$(ºC)}}&
+\textrm{$Tb$(ºC)}&
+\textrm{$Tc$(ºC)}&
+\textrm{$Td$(ºC)}\\
+\colrule
+2,344 & 17,11 & 27,48 & 21,71 & 21,28\\
+1,458 & 15,81 & 23,88 & 21,53 & 21,39\\
+2,320 & 20,90 & 29,28 & 22,36 & 21,70\\
+\end{tabular}
+\end{ruledtabular}
+\end{table}
+
+\begin{table}[h!]
+\caption{Voltagens e correntes de cada regime estável durante o funcionamento da célula como bomba de calor
+}
+\begin{ruledtabular}
+\begin{tabular}{cccc}
+\textrm{$V2$ (V)}&
+\multicolumn{1}{c}{\textrm{$I2$(A)}}&
+\textrm{$V1$(V)}&
+\textrm{$I1$(A)}\\
+\colrule
+2,344	& 0,499	& 6,44 & 0,31\\
+1,458	& 0,300	& 3,72 & 0,18\\
+2,320 & 0,505 &	7,68 & 0,37\\
+\end{tabular}
+\end{ruledtabular}
+\end{table}
+
+%%% Análise dos Resultados %%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Análise dos resultados}
+
+Obtendo a resistência interna do amperímetro, $0,342 \pm 0,002$ A, foi possível encontrar a carga que maximiza o rendimento, sendo esta $4,13 \pm 0,97$ A. Com as potências que se encontram na tabela VIII
+
+\begin{table}[h!]
+\caption{Determinação das potências
+}
+\begin{ruledtabular}
+\begin{tabular}{cccccc}
+\textrm{$P1$ (W)}&
+\textrm{$e_P1$(W)}&
+\multicolumn{1}{c}{\textrm{$P2$ (W)}}&
+\textrm{$e_{P2}$(W)}&
+\textrm{$P3$ (W)}&
+\textrm{$e_P3$(W)}\\
+\colrule
+2,40 & 0,07 & 0,0061 & 0,0003 & 1,75 & 0,71\\
+4,83 & 0,11 & 0,0234 & 0,0012 & 4,22 & 0,75\\
+8,22 & 0,14 & 0,0543 & 0,0027 & 7,43 & 0,81\\
+12,33 & 0,17 & 0,1106 & 0,0055 & 10,85 & 0,87\\
+\end{tabular}
+\end{ruledtabular}
+\end{table}
+
+\hspace{-3.7mm}determinaram-se os rendimentos $\eta$ para cada temperatura $Ta$ da fonte quente, estando eles registados na tabela IX. O caudal obtido no ínicio do trabalho foi $1,61 \pm 0,03$ g/s, tendo sido considerado constante até ao final da experiência.
+
+\begin{table}[h!]
+\caption{Determinação do rendimento com a temperatura da fonte quente, e rendimento de Carnot
+}
+\begin{ruledtabular}
+\begin{tabular}{cccccc}
+\textrm{$Ta$ (ºC)}&
+\textrm{$\eta$ (\%)}&
+\multicolumn{1}{c}{\textrm{$e_{\eta}$ (\%)}}&
+\textrm{$\eta_{Carnot}$ (\%)}\\
+\colrule
+30,8 & 0,26  & 0,02  & 2,3 \\
+42,0 & 0,49  & 0,03  & 4,4 \\
+57,2 & 0,66  & 0,04  & 7,0 \\
+74,7 & 0,90  & 0,06  & 9,8 \\
+\end{tabular}
+\end{ruledtabular}
+\end{table}
+
+Relativamente à potência transmitida por condução e resistência térmica calculadas, obtiveram-se os valores $9,51 \pm 0,85$ J e $3,89 \pm 0,36$ K/J, respectivamente. Como consequência, o valor para o rendimento corrigido quando se fornece uma tensão de 16 V a R1 é de 7,60\%.
+
+Quanto à segunda metade do trabalho laboratorial, a eficiência e potência de arrefecimento obtidos encontram-se na tabela X:
+
+\begin{table}[h!]
+\caption{Determinação da eficiência, da potência de arrefecimento e da eficiência de Carnot
+}
+\begin{ruledtabular}
+\begin{tabular}{ccccccc}
+\textrm{$V2$ (V)}&
+\textrm{$T_a$ (ºC)}&
+\textrm{$\epsilon$}&
+\textrm{$e_{\epsilon}$}&
+\textrm{$\epsilon_{Carnot}$}&
+\multicolumn{1}{c}{\textrm{$P1$ (W)}}&
+\textrm{$e_{P1}$ (W)}\\
+\colrule
+2,344 & 17,11 & 2,47 & 0,06 & 29,01 & 1,996 & 0,068 \\
+1,458 & 15,81 & 2,17 & 0,07 & 36,83 & 0,670 & 0,039 \\
+2,320 & 20,90 & 3,75 & 0,08 & 36,09 & 2,842 & 0,081 \\
+\end{tabular}
+\end{ruledtabular}
+\end{table}
+
+
+%%% Conclusão e críticas %%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Conclusão e críticas}
+
+Os maus contactos nos aparelhos por vezes interromperem o circuito, e o facto da fonte quente estar em contacto com o ar, dissipando energia, contribuiram para o erro experimental. Uma maneira de evitar a perda energética na fonte quente seria isolando-a ou envolvendo toda a célula num ambiente de vácuo. Verificou-se que os termómetros não se encontravam calibrados, uma vez que indicavam diferentes temperaturas ambiente. A calibração teve de ser feita manualmente, assumindo que todos estariam à mesma temperatura inicial, considerando para efeitos de calibração as diferenças de temperaturas registadas em cada canal, o que pode ter contribuído para o erro.  O sistema demorava também muito tempo a atingir o equilíbrio térmico, o que pode ter precipitado o registo de valores antes deste se verificar. Esta situação poderia ser minorada, novamente, melhorando o isolamento do sistema. Mais ainda, o valor da resistência óptima tivesse uma precisão de 78\%, foi utilizado um valor arredondado à unidade, já que era essa a precisão máxima disponível, não tendo sido fornecido, portanto, a potência máxima ao circuito.
+
+Os rendimentos obtidos para a célula de Peltier a funcionar como motor foram muito baixos, cerca de 10\% dos esperados para uma máquina de Carnot, sendo o máximo atingido de $(0,90\pm0,02) \%$ com uma precisão de 93,63\%, para uma tensão aplicada de 16V. Verificou-se também que o rendimento aumenta com a tensão, embora o esperado nunca fosse próximo do de uma máquina de Carnot, já que esta é ideal. Os valores obtidos são muito baixos quando comparados com outros motores não ideais como os a diesel ou gasolina, isto porque a célula de Peltier não foi construída para trabalhar desse modo. O facto de existir resistência térmica implica que rendimento da célula nunca seria máximo, já que em equilibrio, por cada watt de potência fornecido a fonte fria aquece cerca de 4K (com 91\% de precisão), diminuindo assim a diferença de temperatura entre fontes, e portanto a capacidade da célula de gerar calor.
+
+Comparando com uma máquina de Carnot, a eficiência máxima obtida ($3,75\pm0,08$ com 99\% de precisão) tal como tinha acontecido no caso anterior, é muito inferior, pelas mesmas razões.
+É de notar que a potência de arrefecimento máxima e o máximo de eficiência foram atingidos não só quando se usou uma maior corrente mas quando a temperatura da fonte fria se aproximou mais da temperatura ambiente. Tal pode ser explicado atendendo a que nessa situação a fonte fria se encontra em equilíbrio térmico com o ar envolvente, pelo que nesse caso a bomba extrairá calor preferencialmente da resistência e não do ar. 
+
+
+
+
+%%% Bibliografia %%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{thebibliography}{20}
+
+\bibitem{Ref1} http://en.wikipedia.org/wiki/Thermoelectric\_cooling
+\bibitem{Ref2} http://en.wikipedia.org/wiki/Thermoelectric\_effect
+               \#Thomson\_effect
+\bibitem{Ref3} http://pt.wikipedia.org/wiki/Efeito\_Peltier
+\bibitem{Ref4} http://pt.wikipedia.org/wiki/Efeito\_Seebeck 
+
+\end{thebibliography}	
+	
+	
+\end{document}

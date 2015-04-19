@@ -1,0 +1,105 @@
+Start at Wednesday, March 24, 2010    10:01:33
+=========================================
+
+Registration Info : 
+
+Windows Version:
+Home Edition Service Pack 2 (Build 6002)
+
+Module Info:
+Company: fCoder Group, Inc.
+Product Name: ImageConverter Plus
+Product Version: 7.1.47.90206
+
+CPU Info:
+Vendor: GenuineIntel
+Vendor ID: Intel Corporation
+Extended Processor Name: Pentium® III (0.25 µm)
+Procesor Clock Frequecy: 2493
+Logical processors per physical: 2
+Stepping code: 6
+MMX support: yes
+MMX+ support: no
+SSE support: yes
+SSE2 support: yes
+3DNow suppor: no
+3DNow+ suppor: no
+AI64 support: no
+Hyperthreading support: no
+L1 cache size: -1
+L2 cache size: -1
+L3 cache size: -1
+
+Monitor info:
+Color depth: 32 Bits per pixel.
+Pixel Width: 1280
+Pixel Height: 800
+Refresh frequency: 60 Hz
+
+Internet Explorer Version: 6.0
+Build Number: 6002
+
+Printers list: 
+Snagit 9
+Microsoft XPS Document Writer
+Enviar para o OneNote 2007
+
+Default printer: 
+Microsoft XPS Document Writer
+
+
+Script settings:
+
+Operations:
+
+Format properties:
+    Extension: eps
+    bits per pixel : 24
+    create thumbnail : No
+
+Save properties:
+    Destination path: C:\Users\Gk\Desktop\Conversor Termoeléctrico\LaTeX Pro\Imagens
+    convert with subfolders : yes
+    restore subfolder structure in target folder : yes
+    open target folder after conversion : yes
+    create log file in target folder : yes
+
+Target file name properties:
+    Name template: {Title}.{Type}
+    what to do, if file exists : auto_rename
+    delete source images : no
+
+Processing files...
+
+=====================================================================
+
+File 1 of 2
+
+RAM free    :    1479.8 of    2048.0 Mb
+Virtual free:    1940.1 of    2047.9 Mb
+Target free disk space :  101603.3 of  296441.6 Mb
+Temp free disk space   :  101603.3 of  296441.6 Mb
+
+Src info : C:\Users\Gk\Desktop\Conversor Termoeléctrico\LaTeX Pro\Imagens\celula de peltier esquema de montagem 2.jpg
+jpg, 585x632px, 24bpp, 1 page(s), 96.000000x96.000000 dpi, 34050 bytes
+Load all pages :  ok
+
+Save :  ok
+
+=====================================================================
+
+File 2 of 2
+
+RAM free    :    1480.3 of    2048.0 Mb
+Virtual free:    1932.2 of    2047.9 Mb
+Target free disk space :  101601.2 of  296441.6 Mb
+Temp free disk space   :  101601.2 of  296441.6 Mb
+
+Src info : C:\Users\Gk\Desktop\Conversor Termoeléctrico\LaTeX Pro\Imagens\celula de peltier esquema de montagem 1.jpg
+jpg, 608x562px, 24bpp, 1 page(s), 96.000000x96.000000 dpi, 32164 bytes
+Load all pages :  ok
+
+Save :  ok
+
+Complete at Wednesday, March 24, 2010    10:01:33
+=========================================

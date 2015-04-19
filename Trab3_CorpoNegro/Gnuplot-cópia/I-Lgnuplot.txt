@@ -1,0 +1,23 @@
+set notitle
+set ylabel "Intensidade"
+set xlabel "λ(nm)"
+set yrange [0:1.1]
+set xrange[400:6000]
+h=6.62606957*10**(-34)
+c=299792458
+k=1.3806488*10**(-23)
+B=2.8977685*10**(-3)
+
+f(x)=a*(2*pi*h*c*c/(((x-b)*10**(-9))**5))*(1/(exp((h*c)/(k*t1*((x-b)*10**(-9))))-1))/(d*t1**5)
+g(x)=a*(2*pi*h*c*c/(((x)*10**(-9))**5))*(1/(exp((h*c)/(k*T*((x)*10**(-9))))-1))/(d*T**5)
+
+d=(2*pi*h*c*c/(B**5))*(1/(exp((h*c)/(k*B))-1))
+a=1;
+b=10;  #*10**(-9);
+t1=2404.311392;
+T=2404.311392;
+fit f(x) 'I-L.dat' using 1:($2/0.010393333) via b,t1
+
+#set key left top
+
+plot f(x) t "Fit" lw 1.5 lt rgb 'blue' , g(x) t "Curva teórica" lw 1.5 lt rgb '#006400', "< awk '{if($4 != \"red\") print}' I-L.dat" u 1:($2/0.010393333) notitle  , "< awk '{if($4 == \"red\") print}' I-L.dat" u 1:($2/0.010393333) lt rgb "red" notitle

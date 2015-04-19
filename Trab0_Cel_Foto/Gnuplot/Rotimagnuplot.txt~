@@ -1,0 +1,24 @@
+set title "Resistência de carga ótima" font ",15"
+set ylabel "Resistência (Ω)"
+set xlabel "Nível de iluminação (%)"
+set yrange [600:2100]
+set xrange [40:105]
+
+#Fitting  
+
+
+f2(x)=a2/x
+a2=2000; 
+fit f2(x) 'Rotima.dat' using 1:2 via a2
+
+
+#Fit Plot
+set key left top
+plot "< awk '{if($4 != \"red\") print}' Rotima.dat" u 1:2:3 w yerr lt rgb "blue" t "Resistência de carga ótima" ,\
+"< awk '{if($4 == \"red\") print}' Rotima.dat" u 1:2:3 w yerr lt rgb "red" notitle ,\
+f2(x)lt rgb "#228B22" notitle
+
+#Resultados:
+# f1= (5441.82+/- 937.3) *exp((-0.0279255+/- 0.005228)*x)+(603.657+/- 130.5)
+# f2= (96023.3+/- 1074)/x
+#acho que 1/x é melhor

@@ -1,0 +1,214 @@
+%%% Tipo de documento %%%
+\documentclass[
+ reprint,
+ amsmath,amssymb,
+ aps,
+]{revtex4-1}
+
+%%% Packages %%%
+\usepackage[ansinew]{inputenc}
+\usepackage[portuges]{babel}
+\usepackage{graphicx}
+\usepackage{dcolumn}
+\usepackage{bm}
+
+%%% Alterações na geometria da pagina %%%
+\setlength{\textheight}{750pt}
+
+\begin{document}
+
+%%% Título, autores e informações dos autores, data %%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\preprint{APS/123-QED}
+
+\title{Equação de Clausius-Clapeyron}
+
+\author{Gonçalo Quinta nº 65680, Fernando Rodrigues nº 66326, Teresa Jorge nº 65722 e Vera Patrício nº 65726}
+\vspace{2mm}
+\affiliation{
+ \vspace{3mm}
+ \textbf{Laboratório de Complementos de Electromagnetismo e Termodinâmica}\\
+ Mestrado Integrado em Engenheria Física Tecnológica 2009/2010\\
+ Instituto Superior Técnico (IST)
+ \vspace{3mm}
+}
+
+\date{\today}
+
+
+%%% Abstract %%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{abstract}
+
+Determinou-se o calor latente de vaporização da água através de sucessivas medições da sua pressão e temperatura durante o seu aquecimento e arrefecimento numa câmara de vapor. O valor obtido para o arrefecimento foi de (426,7 $\pm$ 5,2) cal/g e para o aquecimento de (509,3 $\pm$	5,2) cal/g.
+
+
+\vspace{2mm}
+\end{abstract}
+
+\maketitle
+
+
+%%% Introdução %%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Experiência realizada e fundamentos teóricos}
+
+Com o objectivo de determinar o calor latente da água, foi estudado a sua mudança de fase primeiramente de líquido para vapor e de seguida de vapor para líquido. Para tal, a água destilada foi encerrada numa câmara de vapor - figura 1 - e aquecida até que a pressão no seu interior atingisse os 40 bar. A câmara permite monitorizar a pressão e temperatura a que a água se encontra.
+
+\begin{figure}[h!]
+\includegraphics[scale=0.3]{Imagens/montagem}
+\caption{Esquema de montagem}
+\end{figure}
+
+O estado físico em que uma substância se encontra depende das suas características químicas (forças de ligação interatómicas, por exemplo) e também das condições físicas em que se encontra: pressão e temperatura \cite{LivroAzul}. A figura 2 ilustra o diagrama de fases da água, em que é indicado em que fase se encontra a água para uma dada pressão e temperatura:
+
+\begin{figure}[h!]
+\includegraphics[scale=1.2]{Imagens/fig1}
+\caption{Diagrama de fases da água}
+\end{figure}
+
+A recta que separa a fase líquida da fase gasosa pode ser descrita pela equação seguinte, obtida da relação de Gibbs-Duhem:
+
+\begin{equation}
+	\frac{\partial P}{\partial T} = \frac{\Delta S}{\Delta V}
+\end{equation}
+\footnotesize{P – pressão (atm)\\ 
+T  - temperatura (K)\\ 
+S – entropia molar (J/(k mol)\\ 
+V – volume molar $(m^3/mol)$}\\
+
+\normalsize
+Atendendo à definição de variação de entropia, assim como à lei dos gases perfeitos, e assumindo portanto que a variação do volume corresponde apenas à variação do volume da parte gasosa da água, esta equação pode ser reescrita como
+ 
+\begin{equation}
+	\frac{\partial P}{\partial T} = \frac{Q_{tran}}{T\frac{RT}{P}}
+\end{equation}
+\footnotesize{$Q_{tran}$ – calor latente de transição (cal/g)\\ 
+R – constante dos gases perfeitos (J/(K mol)}\\
+
+\normalsize
+Rearranjando a equação de modo a que a temperatura seja a variável independente:
+
+\begin{equation}
+	\frac{\partial P}{P} = \frac{Q_{tran}}{R}\frac{\partial T}{T^2}
+\end{equation}
+\hspace{-3.5mm}e integrando esta equação resulta que
+
+\begin{equation}
+\ln(P) = -\frac{Q_{tran}}{R}\frac{1}{T}
+\end{equation}
+
+Tomando os pares de logarítmos das pressões e respectivas temperaturas, ajustam-se esses valores à recta da expressão (4), sendo assim possível obter calor lantente de vaporização da água através do declive da recta.
+
+%%% Resultados %%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Resultados}
+
+\begin{figure}[h!]
+\includegraphics[scale=0.5]{Imagens/dados1}
+\caption{}
+\end{figure}
+
+\begin{figure}[h!]
+\includegraphics[scale=0.5]{Imagens/dados2}
+\caption{}
+\end{figure}
+
+
+%%% Análise dos Resultados %%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Análise dos resultados}
+
+Os ajustes estão representados nas figuras 5 e 6:
+
+\begin{figure}[h!]
+\includegraphics[scale=0.5]{Imagens/ajuste1}
+\caption{}
+\end{figure}
+
+\begin{figure}[h!]
+\includegraphics[scale=0.5]{Imagens/ajuste2}
+\caption{}
+\end{figure}
+
+\begin{table}[h!]
+\caption{Declives obtidos e calores latentes, durante o arrefecimento e aquecimento, respectivamente}
+\begin{ruledtabular}
+\begin{tabular}{cccc}
+\textrm{a}&
+\textrm{$e_a$}&
+\textrm{$Q_{tran}$(cal/g)}&
+\multicolumn{1}{c}{\textrm{$e_{Q_{tran}}$ (cal/g)\footnote{capacidade térmica da água - 4.18 cal\\
+R - 8.31 $Jmol^{-1}K^{-1}$\\ 
+Massa molar - 18,01 g/mol}}}\\
+\colrule
+3868,9 & 46,7 & 426,7 & 5,2\\
+4618,5 & 46,7 & 509,3 &	5,2\\
+\end{tabular}
+\end{ruledtabular}
+\end{table}
+
+
+
+
+
+%%% Conclusão e críticas %%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Conclusão e críticas}
+
+Da análise de resultdos obtemos que o calor latente da água para a subida da temperatura e da pressão é (509.3$\pm$5.2) cal/g com um desvio à exactidão de 6$\%$ e para a descida da temperatura e da pressão é (426.7$\pm$5.2) cal/g com um desvio à exactidão de 21$\%$. Nenhum dos erros calculados cobre o valor previsto de  540 cal/g.
+Uma vez que a montagem utilizada para a subida e para a descida da temperatura era a mesma, estando esta cheia de água e à pressão atmosférica e sendo esta isolada no início da experiência, era de esperar que o calor latente medido para as duas situações fosse o mesmo, o que não foi verificado. Isto pode ser explicado considerando o facto de que na última parte da experiência, após a descida da temperatura abaixo dos 100ºC, não foi possivel recuperar a pressão atmosférica  inicial de 1 bar no interior da câmara de vapor. Este facto foi ainda confirmado aquando da abertura da câmara, depois do completo arrefecimento da água, verificando-se que a câmara se encontrava pressurizada. Estas duas observações levam a crer que no interior se encontrava não só água destilada, mas também uma qualquer outra substância que se volatize abaixo das temperaturas atingidas, mas que não volta a condensar nas condições iniciais após o arrefecimento. Um possível candidato será a gordura que é necessária utilizar no aparelho, de modo a selá-lo, uma vez que estas substâncias têm um comportamento compatível com o observado, já que se podem degradar com o aumento de temperatura, modificando a sua estrutura química e consequentemente algumas das suas propriedades físicas. 
+
+Esta hipótese poderia ser morosamente verificada aquecendo e arrefecendo sucessivamente a água até várias temperaturas inferiores à temperatura de vaporização desta, de modo a tentar averiguar a que temperatura a possível substância se volatiza.
+Por outro lado, uma má calibração do manómetro ou do termómetro poderão também explicar algumas discrepâncias com os valores obtidos. A verificação da calibração do termómetro poderá ser feita facilmente, comparando-o com as leituras de outros aparelhos existentes no laboratório, embora a do manómetro já apresente alguma dificuldade. É de notar, no entanto, que este dá uma leitura correcta para a pressão atmosférica, o que diminui a probabilidade de contribuição significativa para o erro experimental.
+
+
+
+%%% Bibliografia %%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{thebibliography}{20}
+
+\bibitem{LivroAzul} \textit{Introdução à Física} by J. D. Deus, \textit{et al.}, McGraw-Hill, 2000
+
+\end{thebibliography}	
+
+	
+\end{document}
+
+
+
+
+
+
+
+%%% Modelo de tabela %%%
+
+%\begin{table}[h!]
+%\caption{Determinação da eficiência, da potência de arrefecimento e da eficiência de Carnot}
+%\begin{ruledtabular}
+%\begin{tabular}{ccccccc}
+%\textrm{$V2$ (V)}&
+%\textrm{$T_a$ (ºC)}&
+%\textrm{$\epsilon$}&
+%\textrm{$e_{\epsilon}$}&
+%\textrm{$\epsilon_{Carnot}$}&
+%\multicolumn{1}{c}{\textrm{$P1$ (W)}}&
+%\textrm{$e_{P1}$ (W)}\\
+%\colrule
+%2,344 & 17,11 & 2,47 & 0,06 & 29,01 & 1,996 & 0,068 \\
+%1,458 & 15,81 & 2,17 & 0,07 & 36,83 & 0,670 & 0,039 \\
+%2,320 & 20,90 & 3,75 & 0,08 & 36,09 & 2,842 & 0,081 \\
+%\end{tabular}
+%\end{ruledtabular}
+%\end{table}
+
+
+%\begin{figure}[h]
+%\includegraphics[scale=0.3]{Imagens/fig3}
+%\caption{Esquema de montagem para comparação de emissividades}
+%\end{figure}
+
+

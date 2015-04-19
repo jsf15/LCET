@@ -1,0 +1,21 @@
+set title "Compressão adiabática" font ",15"
+set ylabel "log(P)"
+set xlabel "log(V)"
+#set yrange [7:10]
+#set xrange [6:17]
+
+#Fitting  (linear é melhor)
+f1(x)=a1*x+b1
+a1=-1,4; b1=1;
+fit f1(x) 'LADB1a.dat' using 1:2 via a1,b1
+
+#Fit Plot
+
+#set key left top
+
+plot "LADB1a.dat" u 1:2 lt rgb "blue" t "Compressão Abiabática" ,\
+f1(x) lt rgb "#228B22" notitle 
+
+#plot "< awk '{if($5 != \"red\") print}' ADB1.dat" u 4:2:3 w yerr lt #rgb "blue" t "Resistência Térmica"  ,\
+#"< awk '{if($5 == \"red\") print}' Rt-T.dat" u 4:2:3 w yerr lt rgb #"red" notitle #,\
+#f1(x) lt rgb "#228B22" notitle 
